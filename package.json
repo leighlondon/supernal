@@ -1,0 +1,21 @@
+{
+  "name": "celestial",
+  "displayName": "celestial",
+  "description": "A theme",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.110.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Celestial",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Celestial-color-theme.json"
+      }
+    ]
+  }
+}
