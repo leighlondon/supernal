@@ -164,7 +164,7 @@
                 "entity.name.type"
             ],
             "settings": {
-                "foreground": "#70bdf1",
+                "foreground": "#f1ef70",
             }
         },
         {
@@ -256,5 +256,6 @@
                 "foreground": "#d0d0d0"
             }
         }
-    ]
+    ],
+    "semanticHighlighting": true,
 }
