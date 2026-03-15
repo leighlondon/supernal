@@ -100,10 +100,29 @@
                 "keyword.operator",
                 "punctuation.other.comma",
                 "punctuation.other.period",
+                "punctuation.separator",
+                "punctuation.definition.attribute",
+                "punctuation.brackets.attribute",
+                "meta.attribute",
                 "storage.modifier",
             ],
             "settings": {
                 "foreground": "#fc6984",
+            }
+        },
+        {
+            "scope": "variable.language.self",
+            "settings": {
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "scope": [
+                "support.type.property-name",
+                "meta.table"
+            ],
+            "settings": {
+                "foreground": "#bb6ae7",
             }
         },
         {
@@ -119,7 +138,25 @@
                 "entity.name.function"
             ],
             "settings": {
-                "foreground": "#70bdf1",
+                "foreground": "#f1c070",
+            }
+        },
+        {
+            "scope": [
+                "punctuation.definition.interpolation",
+                "meta.interpolation",
+            ],
+            "settings": {
+                "foreground": "#e783e9"
+            }
+        },
+        {
+            "scope": [
+                "meta.macro",
+                "entity.name.function.macro"
+            ],
+            "settings": {
+                "foreground": "#f1e070"
             }
         },
         {
@@ -127,7 +164,7 @@
                 "entity.name.type"
             ],
             "settings": {
-                "foreground": "#bf81fa",
+                "foreground": "#70bdf1",
             }
         },
         {
