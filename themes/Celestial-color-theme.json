@@ -117,7 +117,10 @@
             }
         },
         {
-            "scope": "variable.other.constant",
+            "scope": [
+                "constant.language",
+                "variable.other.constant",
+            ],
             "settings": {
                 "foreground": "#70bdf1",
             }
@@ -163,6 +166,14 @@
             ],
             "settings": {
                 "foreground": "#e783e9"
+            }
+        },
+        {
+            "scope": [
+                "entity.name.tag"
+            ],
+            "settings": {
+                "foreground": "#ffb539"
             }
         },
         {
