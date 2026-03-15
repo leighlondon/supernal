@@ -117,6 +117,12 @@
             }
         },
         {
+            "scope": "variable.other.constant",
+            "settings": {
+                "foreground": "#70bdf1",
+            }
+        },
+        {
             "scope": [
                 "support.type.property-name",
                 "meta.table"
@@ -131,6 +137,15 @@
             ],
             "settings": {
                 "foreground": "#e783e9",
+            }
+        },
+        {
+            "scope": [
+                "meta.macro",
+                "entity.name.function.macro"
+            ],
+            "settings": {
+                "foreground": "#e7d352"
             }
         },
         {
@@ -152,19 +167,10 @@
         },
         {
             "scope": [
-                "meta.macro",
-                "entity.name.function.macro"
-            ],
-            "settings": {
-                "foreground": "#f1e070"
-            }
-        },
-        {
-            "scope": [
                 "entity.name.type"
             ],
             "settings": {
-                "foreground": "#f1ef70",
+                "foreground": "#f1f090",
             }
         },
         {
@@ -258,4 +264,10 @@
         }
     ],
     "semanticHighlighting": true,
+    "semanticTokenColors": {
+        "parameter": "#70bdf1",
+        "macro": "#e7d352",
+        "type": "#e783e9",
+        "function": "#f1c070"
+    }
 }
