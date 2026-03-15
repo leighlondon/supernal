@@ -44,6 +44,101 @@
             }
         },
         {
+            "name": "Numbers",
+            "scope": [
+                "constant.numeric"
+            ],
+            "settings": {
+                "foreground": "#49e4da",
+            }
+        },
+        {
+            "name": "Character",
+            "scope": [
+                "constant.character"
+            ],
+            "settings": {
+                "foreground": "#fc6984",
+            }
+        },
+        {
+            "name": "Strings",
+            "scope": [
+                "string"
+            ],
+            "settings": {
+                "foreground": "#fc6969",
+            }
+        },
+        {
+            "name": "Escape",
+            "scope": [
+                "constant.character.escape"
+            ],
+            "settings": {
+                "foreground": "#bf81fa",
+            }
+        },
+        {
+            "scope": [
+                "keyword",
+            ],
+            "settings": {
+                "foreground": "#bf81fa",
+            }
+        },
+        {
+            "scope": [
+                "keyword.operator.assignment",
+            ],
+            "settings": {
+                "foreground": "#fa81ce",
+            }
+        },
+        {
+            "scope": [
+                "keyword.operator",
+                "punctuation.other.comma",
+                "punctuation.other.period",
+                "storage.modifier",
+            ],
+            "settings": {
+                "foreground": "#fc6984",
+            }
+        },
+        {
+            "scope": [
+                "storage.type"
+            ],
+            "settings": {
+                "foreground": "#e783e9",
+            }
+        },
+        {
+            "scope": [
+                "entity.name.function"
+            ],
+            "settings": {
+                "foreground": "#70bdf1",
+            }
+        },
+        {
+            "scope": [
+                "entity.name.type"
+            ],
+            "settings": {
+                "foreground": "#bf81fa",
+            }
+        },
+        {
+            "scope": [
+                "entity.name.namespace"
+            ],
+            "settings": {
+                "foreground": "#49e4da",
+            }
+        },
+        {
             "name": "JSON Key - Level 0",
             "scope": [
                 "source.json meta.structure.dictionary.json support.type.property-name.json"
