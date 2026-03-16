@@ -13,6 +13,8 @@
         "statusBar.background": "#047bca",
         "statusBar.debuggingBackground": "#f39f0f",
         "statusBar.noFolderBackground": "#6a3394",
+        "quickInput.background": "#21252b",
+        "list.activeSelectionBackground": "#333942",
         "input.background": "#21252b",
         "input.border": "#505050",
         "panel.background": "#21252b",
@@ -286,7 +288,15 @@
             "settings": {
                 "foreground": "#d0d0d0"
             }
-        }
+        },
+        {
+            "scope": [
+                "fenced_code.block.language"
+            ],
+            "settings": {
+                "foreground": "#bf81fa"
+            }
+        },
     ],
     "semanticHighlighting": true,
     "semanticTokenColors": {
