@@ -9,6 +9,8 @@
         "editorGroupHeader.tabsBackground": "#1d2125",
         "editor.background": "#1c2026",
         "sideBarSectionHeader.background": "#2d3138",
+        "peekViewEditor.background": "#282d35",
+        "peekViewResult.background": "#23262c",
         "sideBar.background": "#25282e",
         "statusBar.background": "#047bca",
         "statusBar.debuggingBackground": "#f39f0f",
