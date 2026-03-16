@@ -1,6 +1,6 @@
 {
-  "name": "celestial",
-  "displayName": "celestial",
+  "name": "supernal",
+  "displayName": "Supernal",
   "description": "A theme!",
   "version": "0.0.1",
   "license": "SEE LICENSE IN LICENSE",
@@ -9,10 +9,10 @@
   "author": {
     "name": "leighlondon"
   },
-  "homepage": "https://github.com/leighlondon/celestial",
+  "homepage": "https://github.com/leighlondon/supernal",
   "repository": {
     "type": "git",
-    "url": "https://github.com/leighlondon/celestial"
+    "url": "https://github.com/leighlondon/supernal"
   },
   "galleryBanner": {
     "color": "#FC6984",
@@ -27,9 +27,9 @@
   "contributes": {
     "themes": [
       {
-        "label": "Celestial",
+        "label": "supernal",
         "uiTheme": "vs-dark",
-        "path": "./themes/Celestial-color-theme.json"
+        "path": "./themes/supernal-color-theme.json"
       }
     ]
   }
