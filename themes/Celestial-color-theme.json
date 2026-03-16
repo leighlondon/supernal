@@ -46,6 +46,12 @@
             }
         },
         {
+            "scope": "variable.other",
+            "settings": {
+                "foreground": "#d0d0d0",
+            }
+        },
+        {
             "name": "Numbers",
             "scope": [
                 "constant.numeric"
@@ -110,13 +116,19 @@
         {
             "scope": [
                 "keyword.operator",
-                "punctuation",
+                "punctuation.other",
                 "punctuation.other.colon",
                 "punctuation.other.comma",
                 "punctuation.other.period",
+                "punctuation.other.semi",
+                "punctuation.colon",
+                "punctuation.comma",
+                "punctuation.period",
+                "punctuation.semi",
                 "punctuation.separator",
                 "punctuation.definition.attribute",
-                "punctuation.brackets.attribute",
+                "punctuation.definition markup.fenced_code.block",
+                "punctuation.brackets",
                 "meta.attribute",
                 "storage.modifier",
             ],
@@ -193,6 +205,48 @@
             }
         },
         {
+            "scope": "markup.bold",
+            "settings": {
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "scope": "markup.italic",
+            "settings": {
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "scope": "markup.bold markup.italic",
+            "settings": {
+                "fontStyle": "italic bold"
+            }
+        },
+        {
+            "scope": "markup.bold markup.underline",
+            "settings": {
+                "fontStyle": "bold underline"
+            }
+        },
+        {
+            "scope": "markup.underline",
+            "settings": {
+                "fontStyle": "underline"
+            }
+        },
+        {
+            "scope": "markup.inserted",
+            "settings": {
+                "foreground": "#49e4ab",
+            }
+        },
+        {
+            "scope": "markup.fenced_code.block.markdown",
+            "settings": {
+                "foreground": "#898989",
+            }
+        },
+        {
             "scope": [
                 "entity.name.type"
             ],
@@ -205,7 +259,7 @@
                 "entity.name.namespace"
             ],
             "settings": {
-                "foreground": "#49e4da",
+                "foreground": "#ffee68",
             }
         },
         {
@@ -297,12 +351,95 @@
                 "foreground": "#bf81fa"
             }
         },
+        {
+            "name": "JSON Key - Level 0",
+            "scope": [
+                "heading.1"
+            ],
+            "settings": {
+                "foreground": "#fc6984"
+            }
+        },
+        {
+            "name": "JSON Key - Level 1",
+            "scope": [
+                "markup.heading heading.2",
+            ],
+            "settings": {
+                "foreground": "#ffb539"
+            }
+        },
+        {
+            "name": "JSON Key - Level 2",
+            "scope": [
+                "markup.heading heading.3",
+            ],
+            "settings": {
+                "foreground": "#ffee68"
+            }
+        },
+        {
+            "name": "JSON Key - Level 3",
+            "scope": [
+                "markup.heading heading.4",
+            ],
+            "settings": {
+                "foreground": "#49e4ab"
+            }
+        },
+        {
+            "name": "JSON Key - Level 4",
+            "scope": [
+                "markup.heading heading.5",
+            ],
+            "settings": {
+                "foreground": "#49e4da"
+            }
+        },
+        {
+            "name": "JSON Key - Level 5",
+            "scope": [
+                "markup.heading heading.6",
+            ],
+            "settings": {
+                "foreground": "#70bdf1"
+            }
+        },
+        {
+            "name": "JSON Key - Level 6",
+            "scope": [
+                "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+            ],
+            "settings": {
+                "foreground": "#bf81fa"
+            }
+        },
+        {
+            "name": "JSON Key - Level 7",
+            "scope": [
+                "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+            ],
+            "settings": {
+                "foreground": "#e783e9"
+            }
+        },
+        {
+            "name": "JSON Key - Level 8",
+            "scope": [
+                "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+            ],
+            "settings": {
+                "foreground": "#d0d0d0"
+            }
+        },
     ],
     "semanticHighlighting": true,
     "semanticTokenColors": {
         "parameter": "#70bdf1",
         "macro": "#e7d352",
         "type": "#e783e9",
+        "namespace": "#ffee68",
+        "enumMember": "#ffb539",
         "function": "#f1c070",
         "constant": "#70bdf1",
         "keyword": "#bf81fa",
