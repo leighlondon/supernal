@@ -1,8 +1,23 @@
 {
   "name": "celestial",
   "displayName": "celestial",
-  "description": "A theme",
+  "description": "A theme!",
   "version": "0.0.1",
+  "license": "SEE LICENSE IN LICENSE",
+  "preview": true,
+  "publisher": "leighlondon",
+  "author": {
+    "name": "leighlondon"
+  },
+  "homepage": "https://github.com/leighlondon/celestial",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leighlondon/celestial"
+  },
+  "galleryBanner": {
+    "color": "#FC6984",
+    "theme": "light"
+  },
   "engines": {
     "vscode": "^1.110.0"
   },

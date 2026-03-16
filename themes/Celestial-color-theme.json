@@ -65,15 +65,6 @@
             }
         },
         {
-            "name": "Character",
-            "scope": [
-                "constant.character"
-            ],
-            "settings": {
-                "foreground": "#fc6984",
-            }
-        },
-        {
             "name": "Strings",
             "scope": [
                 "string"
@@ -120,6 +111,7 @@
         },
         {
             "scope": [
+                "constant.character",
                 "keyword.operator",
                 "punctuation.other",
                 "punctuation.other.colon",
