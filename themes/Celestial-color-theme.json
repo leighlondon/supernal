@@ -93,7 +93,8 @@
             "scope": [
                 "keyword",
                 "constant.other",
-                "constant.language.boolean"
+                "constant.language.boolean",
+                "markup.inline.raw"
             ],
             "settings": {
                 "foreground": "#bf81fa",
@@ -131,6 +132,7 @@
                 "punctuation.definition.attribute",
                 "punctuation.definition markup.fenced_code.block",
                 "punctuation.brackets",
+                "punctuation.definition.list",
                 "meta.attribute",
                 "storage.modifier",
             ],
@@ -439,6 +441,12 @@
             "settings": {
                 "foreground": "#d0d0d0"
             }
+        },
+        {
+            "scope": "meta.link",
+            "settings": {
+                "foreground": "#70bdf1",
+            },
         }
     ],
     "semanticHighlighting": true,
