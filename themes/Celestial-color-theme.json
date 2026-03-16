@@ -25,6 +25,8 @@
         "activityBarBadge.background": "#0854a7",
         "activityBar.background": "#1d2125",
         "banner.background": "#215dce",
+        "diffEditor.insertedLineBackground": "#18a47c2f",
+        "diffEditor.insertedTextBackground": "#18a47c2f",
         "editorBracketHighlight.foreground1": "#fc6984",
         "editorBracketHighlight.foreground2": "#e783e9",
         "editorBracketHighlight.foreground3": "#bf81fa",
@@ -205,31 +207,37 @@
             }
         },
         {
-            "scope": "markup.bold",
+            "scope": "markup.bold.markdown",
             "settings": {
                 "fontStyle": "bold"
             }
         },
         {
-            "scope": "markup.italic",
+            "scope": "markup.italic.markdown",
             "settings": {
                 "fontStyle": "italic"
             }
         },
         {
-            "scope": "markup.bold markup.italic",
+            "scope": "markup.strikethrough.markdown",
+            "settings": {
+                "fontStyle": "strikethrough"
+            }
+        },
+        {
+            "scope": "markup.bold.markdown markup.italic.markdown",
             "settings": {
                 "fontStyle": "italic bold"
             }
         },
         {
-            "scope": "markup.bold markup.underline",
+            "scope": "markup.bold.markdown markup.underline.markdown",
             "settings": {
                 "fontStyle": "bold underline"
             }
         },
         {
-            "scope": "markup.underline",
+            "scope": "markup.underline.markdown",
             "settings": {
                 "fontStyle": "underline"
             }
@@ -431,7 +439,7 @@
             "settings": {
                 "foreground": "#d0d0d0"
             }
-        },
+        }
     ],
     "semanticHighlighting": true,
     "semanticTokenColors": {
