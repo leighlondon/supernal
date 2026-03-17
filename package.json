@@ -32,5 +32,8 @@
         "path": "./themes/supernal-color-theme.json"
       }
     ]
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0"
   }
 }
