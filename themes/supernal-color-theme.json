@@ -103,7 +103,8 @@
                 "keyword",
                 "constant.other",
                 "constant.language.boolean",
-                "markup.inline.raw"
+                "markup.inline.raw",
+                "fenced_code.block.language"
             ],
             "settings": {
                 "foreground": "#bf81fa",
@@ -361,14 +362,6 @@
             ],
             "settings": {
                 "foreground": "#d0d0d0"
-            }
-        },
-        {
-            "scope": [
-                "fenced_code.block.language"
-            ],
-            "settings": {
-                "foreground": "#bf81fa"
             }
         },
         {
