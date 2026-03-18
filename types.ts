@@ -5,13 +5,15 @@ export interface Palette {
     darkgray: Hex;
     lightgray: Hex;
     gray: Hex;
-    red: Hex;
     pink: Hex;
     purple: Hex;
+    indigo: Hex;
     lightblue: Hex;
     cyan: Hex;
     green: Hex;
+    yellow: Hex;
     orange: Hex;
+    red: Hex;
     white: Hex;
 }
 

@@ -6,10 +6,12 @@ const BaseColors: Palette = {
     darkgray: "#21252b",
     gray: "#363b40",
     lightgray: "#5f5f74",
+    yellow: "#ffee68",
     orange: "#ffb539",
     red: "#fc6984",
     pink: "#e783e9",
     purple: "#bf81fa",
+    indigo: "#6f87ff",
     lightblue: "#70bdf1",
     cyan: "#49e4da",
     green: "#49e4ab",
@@ -53,6 +55,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         }
     },
     {
+        name: "Keywords",
         scope: [
             "keyword",
             "constant.other",
@@ -64,7 +67,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
     },
     {
         scope: ["variable.other.property",],
-        settings: { foreground: "#6f87ff", }
+        settings: { foreground: s.colors.indigo, }
     },
     {
         scope: [
@@ -221,7 +224,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
     },
     {
         scope: ["entity.name.namespace"],
-        settings: { foreground: "#ffee68", }
+        settings: { foreground: s.colors.yellow, }
     },
     {
         name: "JSON Key - Level 0",
@@ -229,7 +232,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "source.json meta.structure.dictionary.json support.type.property-name.json"
         ],
         settings: {
-            foreground: "#fc6984"
+            foreground: s.colors.red,
         }
     },
     {
@@ -238,7 +241,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
         ],
         settings: {
-            foreground: "#ffb539"
+            foreground: s.colors.orange,
         }
     },
     {
@@ -247,7 +250,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
         ],
         settings: {
-            foreground: "#ffee68"
+            foreground: s.colors.yellow,
         }
     },
     {
