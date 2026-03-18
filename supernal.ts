@@ -16,7 +16,7 @@ const BaseColors: Palette = {
     white: "#d0d0d0",
 }
 
-let pp: ColorScheme = {
+let supernal: ColorScheme = {
     background: BaseColors.darkgray,
     border: BaseColors.gray,
     fg: {
@@ -26,14 +26,14 @@ let pp: ColorScheme = {
     colors: BaseColors,
 }
 
-function syntaxHighlights(p: ColorScheme): TokenColorRule[] {
+function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
     return [{
         scope: ["comment", "punctuation.definition.comment", "string.comment"],
-        settings: { foreground: p.fg.comment }
+        settings: { foreground: s.fg.comment }
     },
     {
         scope: ["variable.other"],
-        settings: { foreground: p.fg.default, }
+        settings: { foreground: s.fg.default, }
     },
     {
         name: "Numbers",
@@ -43,7 +43,7 @@ function syntaxHighlights(p: ColorScheme): TokenColorRule[] {
     {
         name: "Strings",
         scope: ["string"],
-        settings: { foreground: p.colors.pink, }
+        settings: { foreground: s.colors.pink, }
     },
     {
         name: "Escape",
@@ -60,7 +60,7 @@ function syntaxHighlights(p: ColorScheme): TokenColorRule[] {
             "markup.inline.raw",
             "fenced_code.block.language"
         ],
-        settings: { foreground: p.colors.purple, }
+        settings: { foreground: s.colors.purple, }
     },
     {
         scope: ["variable.other.property",],
@@ -96,7 +96,7 @@ function syntaxHighlights(p: ColorScheme): TokenColorRule[] {
             "storage.modifier",
         ],
         settings: {
-            foreground: p.colors.red,
+            foreground: s.colors.red,
         }
     },
     {
@@ -127,7 +127,7 @@ function syntaxHighlights(p: ColorScheme): TokenColorRule[] {
             "storage.type"
         ],
         settings: {
-            foreground: "#e783e9",
+            foreground: s.colors.pink,
         }
     },
     {
@@ -394,18 +394,18 @@ function syntaxHighlights(p: ColorScheme): TokenColorRule[] {
     ]
 }
 
-function uiTheming(p: ColorScheme): WorkbenchColors {
+function uiTheming(s: ColorScheme): WorkbenchColors {
     return {
-        "menu.background": p.background,
+        "menu.background": s.background,
         "menu.selectionBackground": "#333942",
         "menubar.selectionBackground": "#333942",
         // title (top bar)
         "titleBar.activeBackground": "#1d2125",
         "titleBar.inactiveBackground": "#1d2125",
-        "statusBar.foreground": p.fg.default,
-        "titleBar.border": p.border,
+        "statusBar.foreground": s.fg.default,
+        "titleBar.border": s.border,
         // status bar (bottom bar)
-        "statusBar.border": p.border,
+        "statusBar.border": s.border,
         "statusBar.background": "#1d2125",
         "statusBar.debuggingBackground": "#952642",
         "statusBar.noFolderBackground": "#6a3394",
@@ -419,8 +419,8 @@ function uiTheming(p: ColorScheme): WorkbenchColors {
         "activityBarBadge.background": "#0854a7",
         "sideBar.background": "#25282e",
         "sideBarSectionHeader.background": "#2d3138",
-        "sideBar.border": p.border,
-        "activityBar.border": p.border,
+        "sideBar.border": s.border,
+        "activityBar.border": s.border,
         "activityBar.background": "#1d2125",
         // editor
         "editor.background": "#1c2026",
@@ -433,30 +433,30 @@ function uiTheming(p: ColorScheme): WorkbenchColors {
         "input.background": "#21252b",
         "input.border": "#505050",
         "panel.background": "#21252b",
-        "editor.foreground": p.fg.default,
+        "editor.foreground": s.fg.default,
         "banner.background": "#215dce",
         // diff stuff
         "diffEditor.insertedLineBackground": "#18a47c2f",
         "diffEditor.insertedTextBackground": "#18a47c2f",
         "gitDecoration.modifiedResourceForeground": "#ffee68", //todo(leigh): modified status theming
         // bracket highlights
-        "editorBracketHighlight.foreground1": p.colors.red,
-        "editorBracketHighlight.foreground2": p.colors.pink,
-        "editorBracketHighlight.foreground3": p.colors.purple,
-        "editorBracketHighlight.foreground4": p.colors.lightblue,
-        "editorBracketHighlight.foreground5": p.colors.cyan,
-        "editorBracketHighlight.foreground6": p.colors.green,
-        "editorBracketHighlight.unexpectedBracket.foreground": p.colors.orange
+        "editorBracketHighlight.foreground1": s.colors.red,
+        "editorBracketHighlight.foreground2": s.colors.pink,
+        "editorBracketHighlight.foreground3": s.colors.purple,
+        "editorBracketHighlight.foreground4": s.colors.lightblue,
+        "editorBracketHighlight.foreground5": s.colors.cyan,
+        "editorBracketHighlight.foreground6": s.colors.green,
+        "editorBracketHighlight.unexpectedBracket.foreground": s.colors.orange
     }
 }
 
 
-function renderTheme({ name, payload }: { name: string, payload: ColorScheme }): VSCodeTheme {
+function renderTheme({ name, scheme }: { name: string, scheme: ColorScheme }): VSCodeTheme {
     return {
         name: name,
-        tokenColors: syntaxHighlights(payload),
-        colors: uiTheming(payload),
+        tokenColors: syntaxHighlights(scheme),
+        colors: uiTheming(scheme),
     }
 }
 
-writeFileSync('./blah.json', JSON.stringify(renderTheme({ name: 'supernal', payload: pp })));
+writeFileSync('./blah.json', JSON.stringify(renderTheme({ name: 'supernal', scheme: supernal })));

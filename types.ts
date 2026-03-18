@@ -41,7 +41,7 @@ export interface TokenColorRule {
 
 
 export interface VSCodeTheme {
-    name?: string;
-    colors?: WorkbenchColors;
-    tokenColors?: TokenColorRule[];
+    name: string;
+    colors: WorkbenchColors;
+    tokenColors: TokenColorRule[];
 }
