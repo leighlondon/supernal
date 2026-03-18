@@ -374,6 +374,7 @@ function semanticTheming(s: ColorScheme): WorkbenchColors {
         "parameter": s.colors.lightblue,
         "macro": "#e7d352",
         "type": "#e783e9",
+        "interface": "#ffee68",
         "namespace": "#ffee68",
         "enumMember": "#ffb539",
         "function": "#f1c070",
