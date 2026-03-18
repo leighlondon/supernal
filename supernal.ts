@@ -393,8 +393,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         settings: {
             foreground: "#70bdf1",
         },
-    }
-    ]
+    }]
 }
 
 function uiTheming(s: ColorScheme): WorkbenchColors {
