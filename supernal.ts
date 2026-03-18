@@ -1,29 +1,5 @@
 import { writeFileSync } from "fs";
-
-interface Payload {
-    background: Hex;
-    border: Hex;
-    fg: {
-        default: Hex;
-        comment: Hex;
-    };
-    colors: Palette;
-}
-
-interface Palette {
-    black: Hex;
-    darkgray: Hex;
-    lightgray: Hex;
-    gray: Hex;
-    red: Hex;
-    pink: Hex;
-    purple: Hex;
-    lightblue: Hex;
-    cyan: Hex;
-    green: Hex;
-    orange: Hex;
-    white: Hex;
-}
+import { type Palette, type ColorScheme, type VSCodeTheme, type WorkbenchColors, type TokenColorRule } from "./types";
 
 const BaseColors: Palette = {
     black: "#1d2125",
@@ -40,7 +16,7 @@ const BaseColors: Palette = {
     white: "#d0d0d0",
 }
 
-let pp: Payload = {
+let pp: ColorScheme = {
     background: BaseColors.darkgray,
     border: BaseColors.gray,
     fg: {
@@ -50,14 +26,375 @@ let pp: Payload = {
     colors: BaseColors,
 }
 
-function syntaxHighlights(p: Payload): TokenColor[] {
+function syntaxHighlights(p: ColorScheme): TokenColorRule[] {
     return [{
         scope: ["comment", "punctuation.definition.comment", "string.comment"],
         settings: { foreground: p.fg.comment }
-    }]
+    },
+    {
+        scope: ["variable.other"],
+        settings: { foreground: p.fg.default, }
+    },
+    {
+        name: "Numbers",
+        scope: ["constant.numeric"],
+        settings: { foreground: "#49e4da", }
+    },
+    {
+        name: "Strings",
+        scope: ["string"],
+        settings: { foreground: p.colors.pink, }
+    },
+    {
+        name: "Escape",
+        scope: ["constant.character.escape"],
+        settings: {
+            foreground: "#86d5f4",
+        }
+    },
+    {
+        scope: [
+            "keyword",
+            "constant.other",
+            "constant.language.boolean",
+            "markup.inline.raw",
+            "fenced_code.block.language"
+        ],
+        settings: { foreground: p.colors.purple, }
+    },
+    {
+        scope: ["variable.other.property",],
+        settings: { foreground: "#6f87ff", }
+    },
+    {
+        scope: [
+            "keyword.operator.assignment",
+        ],
+        settings: {
+            foreground: "#fa81ce",
+        }
+    },
+    {
+        scope: [
+            "constant.character",
+            "keyword.operator",
+            "punctuation.other",
+            "punctuation.other.colon",
+            "punctuation.other.comma",
+            "punctuation.other.period",
+            "punctuation.other.semi",
+            "punctuation.colon",
+            "punctuation.comma",
+            "punctuation.period",
+            "punctuation.semi",
+            "punctuation.separator",
+            "punctuation.definition.attribute",
+            "punctuation.definition markup.fenced_code.block",
+            "punctuation.brackets",
+            "punctuation.definition.list",
+            "meta.attribute",
+            "storage.modifier",
+        ],
+        settings: {
+            foreground: p.colors.red,
+        }
+    },
+    {
+        scope: ["variable.language.self"],
+        settings: { fontStyle: "italic" }
+    },
+    {
+        scope: [
+            "constant.language",
+            "variable.other.constant",
+        ],
+        settings: {
+            foreground: "#70bdf1",
+            fontStyle: "italic",
+        }
+    },
+    {
+        scope: [
+            "support.type.property-name",
+            "meta.table"
+        ],
+        settings: {
+            foreground: "#bb6ae7",
+        }
+    },
+    {
+        scope: [
+            "storage.type"
+        ],
+        settings: {
+            foreground: "#e783e9",
+        }
+    },
+    {
+        scope: [
+            "support.function",
+            "meta.macro",
+            "entity.name.function.macro"
+        ],
+        settings: {
+            foreground: "#e7d352"
+        }
+    },
+    {
+        scope: [
+            "entity.name.function",
+        ],
+        settings: {
+            foreground: "#f1c070",
+        }
+    },
+    {
+        scope: [
+            "punctuation.definition.interpolation",
+            "meta.interpolation",
+        ],
+        settings: {
+            foreground: "#e783e9"
+        }
+    },
+    {
+        scope: [
+            "entity.name.tag"
+        ],
+        settings: {
+            foreground: "#53bff9"
+        }
+    },
+    {
+        scope: ["markup.bold.markdown"],
+        settings: {
+            fontStyle: "bold"
+        }
+    },
+    {
+        scope: ["markup.italic.markdown"],
+        settings: {
+            fontStyle: "italic"
+        }
+    },
+    {
+        scope: ["markup.strikethrough.markdown"],
+        settings: {
+            fontStyle: "strikethrough"
+        }
+    },
+    {
+        scope: ["markup.bold.markdown markup.italic.markdown"],
+        settings: {
+            fontStyle: "italic bold"
+        }
+    },
+    {
+        scope: ["markup.bold.markdown markup.underline.markdown"],
+        settings: {
+            fontStyle: "bold underline"
+        }
+    },
+    {
+        scope: ["markup.underline.markdown"],
+        settings: {
+            fontStyle: "underline"
+        }
+    },
+    {
+        scope: ["markup.inserted"],
+        settings: {
+            foreground: "#49e4ab",
+        }
+    },
+    {
+        scope: ["markup.fenced_code.block.markdown"],
+        settings: {
+            foreground: "#898989",
+        }
+    },
+    {
+        scope: ["entity.name.type"],
+        settings: {
+            foreground: "#f1f090",
+        }
+    },
+    {
+        scope: ["entity.name.namespace"],
+        settings: { foreground: "#ffee68", }
+    },
+    {
+        name: "JSON Key - Level 0",
+        scope: [
+            "source.json meta.structure.dictionary.json support.type.property-name.json"
+        ],
+        settings: {
+            foreground: "#fc6984"
+        }
+    },
+    {
+        name: "JSON Key - Level 1",
+        scope: [
+            "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+        ],
+        settings: {
+            foreground: "#ffb539"
+        }
+    },
+    {
+        name: "JSON Key - Level 2",
+        scope: [
+            "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+        ],
+        settings: {
+            foreground: "#ffee68"
+        }
+    },
+    {
+        name: "JSON Key - Level 3",
+        scope: [
+            "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+        ],
+        settings: {
+            foreground: "#49e4ab"
+        }
+    },
+    {
+        name: "JSON Key - Level 4",
+        scope: [
+            "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+        ],
+        settings: {
+            foreground: "#49e4da"
+        }
+    },
+    {
+        name: "JSON Key - Level 5",
+        scope: [
+            "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+        ],
+        settings: {
+            foreground: "#70bdf1"
+        }
+    },
+    {
+        name: "JSON Key - Level 6",
+        scope: [
+            "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+        ],
+        settings: {
+            foreground: "#bf81fa"
+        }
+    },
+    {
+        name: "JSON Key - Level 7",
+        scope: [
+            "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+        ],
+        settings: {
+            foreground: "#e783e9"
+        }
+    },
+    {
+        name: "JSON Key - Level 8",
+        scope: [
+            "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+        ],
+        settings: {
+            foreground: "#d0d0d0"
+        }
+    },
+    {
+        name: "JSON Key - Level 0",
+        scope: [
+            "heading.1"
+        ],
+        settings: {
+            foreground: "#fc6984"
+        }
+    },
+    {
+        name: "JSON Key - Level 1",
+        scope: [
+            "markup.heading heading.2",
+        ],
+        settings: {
+            foreground: "#ffb539"
+        }
+    },
+    {
+        name: "JSON Key - Level 2",
+        scope: [
+            "markup.heading heading.3",
+        ],
+        settings: {
+            foreground: "#ffee68"
+        }
+    },
+    {
+        name: "JSON Key - Level 3",
+        scope: [
+            "markup.heading heading.4",
+        ],
+        settings: {
+            foreground: "#49e4ab"
+        }
+    },
+    {
+        name: "JSON Key - Level 4",
+        scope: [
+            "markup.heading heading.5",
+        ],
+        settings: {
+            foreground: "#49e4da"
+        }
+    },
+    {
+        name: "JSON Key - Level 5",
+        scope: [
+            "markup.heading heading.6",
+        ],
+        settings: {
+            foreground: "#70bdf1"
+        }
+    },
+    {
+        name: "JSON Key - Level 6",
+        scope: [
+            "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+        ],
+        settings: {
+            foreground: "#bf81fa"
+        }
+    },
+    {
+        name: "JSON Key - Level 7",
+        scope: [
+            "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+        ],
+        settings: {
+            foreground: "#e783e9"
+        }
+    },
+    {
+        name: "JSON Key - Level 8",
+        scope: [
+            "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+        ],
+        settings: {
+            foreground: "#d0d0d0"
+        }
+    },
+    {
+        scope: ["meta.link"],
+        settings: {
+            foreground: "#70bdf1",
+        },
+    }
+    ]
 }
 
-function uiTheming(p: Payload): ColorMapping {
+function uiTheming(p: ColorScheme): WorkbenchColors {
     return {
         "menu.background": p.background,
         "menu.selectionBackground": "#333942",
@@ -114,40 +451,12 @@ function uiTheming(p: Payload): ColorMapping {
 }
 
 
-function renderTheme({ name, payload }: { name: string, payload: Payload }): Theme {
+function renderTheme({ name, payload }: { name: string, payload: ColorScheme }): VSCodeTheme {
     return {
         name: name,
         tokenColors: syntaxHighlights(payload),
         colors: uiTheming(payload),
     }
 }
-
-let theme: Theme = {
-    name: "supernal",
-
-};
-
-interface Theme {
-    name?: string;
-    colors?: ColorMapping;
-    tokenColors?: TokenColor[];
-}
-
-type Hex = `#${string}`;
-
-interface ColorMapping {
-    [index: string]: Hex;
-}
-interface TokenColor {
-    name?: string;
-    scope: string[];
-    settings: TokenColorSettings;
-}
-
-interface TokenColorSettings {
-    foreground?: Hex;
-    fontStyle?: string;
-}
-
 
 writeFileSync('./blah.json', JSON.stringify(renderTheme({ name: 'supernal', payload: pp })));
