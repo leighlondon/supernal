@@ -46,4 +46,6 @@ export interface VSCodeTheme {
     name: string;
     colors: WorkbenchColors;
     tokenColors: TokenColorRule[];
+    semanticHighlighting?: boolean;
+    semanticTokenColors?: WorkbenchColors;
 }
