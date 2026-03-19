@@ -11,7 +11,7 @@ export interface Palette {
     Blue: Hex; PaleBlue: Hex;
     Purple: Hex; PalePurple: Hex;
     Cyan: Hex; PaleCyan: Hex;
-    White: Hex; PaleWhite: Hex;
+    DarkWhite: Hex; White: Hex; PaleWhite: Hex;
 }
 
 export interface ColorScheme {

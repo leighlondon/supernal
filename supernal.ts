@@ -18,16 +18,17 @@ const Base: Palette = {
     PaleOrange: "#f1c070",
     Red: "#fc6984",
     PaleRed: "#f87c93",
-    Pink: "#e783e9",
-    PalePink: "#eaa7ec",
+    Pink: "#f390ec",
+    PalePink: "#f7affa",
     Purple: "#bf81fa",
-    PalePurple: "#d6abff",
+    PalePurple: "#d9b6f9",
     Blue: "#6f87ff",
     PaleBlue: "#70bdf1",
     Cyan: "#49e4da",
     PaleCyan: "#7fefe8",
     Green: "#49e4ab",
     PaleGreen: "#7decc3",
+    DarkWhite: "#a1a1a1",
     White: "#d0d0d0",
     PaleWhite: "#e8e5e5",
 }
@@ -58,12 +59,12 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
     {
         name: "Numbers",
         scope: ["constant.numeric"],
-        settings: { foreground: "#49e4da" }
+        settings: { foreground: s.colors.PaleCyan }
     },
     {
         name: "Strings",
         scope: ["string"],
-        settings: { foreground: s.colors.Pink }
+        settings: { foreground: s.colors.PalePurple }
     },
     {
         name: "Escape",
@@ -76,29 +77,17 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         name: "Keywords",
         scope: [
             "keyword",
-            "constant.other",
             "constant.language.boolean",
             "markup.inline.raw",
-            "fenced_code.block.language"
         ],
         settings: { foreground: s.colors.Purple }
     },
     {
-        name: "Annotation",
         scope: [
-            "fenced_code.block.language"
+            "variable.other.property",
+            "constant.other",
         ],
-        settings: { foreground: s.colors.PalePurple }
-    },
-    {
-        scope: ["variable.other.property",],
         settings: { foreground: s.colors.Blue }
-    },
-    {
-        scope: [
-            "keyword.operator.assignment",
-        ],
-        settings: { foreground: s.colors.Pink }
     },
     {
         scope: [
@@ -180,7 +169,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "meta.interpolation",
         ],
         settings: {
-            foreground: s.colors.Pink,
+            foreground: s.colors.PaleGreen,
         }
     },
     {
@@ -395,14 +384,14 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
 function semanticTheming(s: ColorScheme): WorkbenchColors {
     return {
         "parameter": s.colors.PaleBlue,
-        "macro": "#e7d352",
-        "type": "#e783e9",
-        "interface": "#ffee68",
-        "namespace": "#ffee68",
-        "enumMember": "#ffb539",
-        "function": "#f1c070",
-        "constant": "#70bdf1",
-        "keyword": "#bf81fa",
+        "macro": s.colors.PaleYellow,
+        "type": s.colors.Orange,
+        "interface": s.colors.PaleYellow,
+        "namespace": s.colors.PaleYellow,
+        "enumMember": s.colors.PaleOrange,
+        "function": s.colors.PaleOrange,
+        "constant": s.colors.PaleBlue,
+        "keyword": s.colors.Purple,
     }
 }
 
