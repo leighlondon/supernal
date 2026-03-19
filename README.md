@@ -4,14 +4,14 @@ A cosmic and celestial theme.
 
 ## Building
 
-```console
+```shell
 # execute the script to write the theme into json format.
 $ bun supernal.ts
 ```
 
 ## Packaging
 
-```console
+```shell
 # update the version id in package.json
 # and commit
 
