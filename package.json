@@ -1,8 +1,8 @@
 {
   "name": "supernal",
   "displayName": "Supernal",
-  "description": "A theme!",
-  "version": "0.0.5",
+  "description": "A celestial and colourful theme!",
+  "version": "0.1.0",
   "license": "SEE LICENSE IN LICENSE",
   "preview": true,
   "publisher": "leighlondon",
@@ -15,7 +15,7 @@
     "url": "https://github.com/leighlondon/supernal"
   },
   "galleryBanner": {
-    "color": "#FC6984",
+    "color": "#bf81fa",
     "theme": "light"
   },
   "icon": "etc/supernal.png",

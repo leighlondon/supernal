@@ -16,5 +16,5 @@ $ bun supernal.ts
 # and commit
 
 # then package up the .vsix
-$ npx --package @vscode/vsce -- vsce pack
+$ npx --package @vscode/vsce -- vsce pack --readme-path etc/MARKETPLACE.md
 ```
