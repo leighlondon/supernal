@@ -1,31 +1,45 @@
 import { writeFileSync } from "fs";
-import { type Palette, type ColorScheme, type VSCodeTheme, type WorkbenchColors, type TokenColorRule } from "./types";
+import {
+    type ColorScheme,
+    type VSCodeTheme,
+    type WorkbenchColors,
+    type TokenColorRule,
+    type Palette
+} from "./types";
 
-const BaseColors: Palette = {
-    black: "#1d2125",
-    darkgray: "#21252b",
-    gray: "#363b40",
-    lightgray: "#5f5f74",
-    yellow: "#ffee68",
-    orange: "#ffb539",
-    red: "#fc6984",
-    pink: "#e783e9",
-    purple: "#bf81fa",
-    indigo: "#6f87ff",
-    lightblue: "#70bdf1",
-    cyan: "#49e4da",
-    green: "#49e4ab",
-    white: "#d0d0d0",
+const Base: Palette = {
+    Black: "#1d2125",
+    DarkGray: "#21252b",
+    Gray: "#363b40",
+    LightGray: "#5f5f74",
+    Yellow: "#e7d352",
+    PaleYellow: "#ffee68",
+    Orange: "#ffb539",
+    PaleOrange: "#f1c070",
+    Red: "#fc6984",
+    PaleRed: "#f87c93",
+    Pink: "#e783e9",
+    PalePink: "#eaa7ec",
+    Purple: "#bf81fa",
+    PalePurple: "#d6abff",
+    Blue: "#6f87ff",
+    PaleBlue: "#70bdf1",
+    Cyan: "#49e4da",
+    PaleCyan: "#7fefe8",
+    Green: "#49e4ab",
+    PaleGreen: "#7decc3",
+    White: "#d0d0d0",
+    PaleWhite: "#e8e5e5",
 }
 
 let supernal: ColorScheme = {
-    background: BaseColors.darkgray,
-    border: BaseColors.gray,
+    background: Base.DarkGray,
+    border: Base.Gray,
     fg: {
-        comment: BaseColors.lightgray,
-        default: BaseColors.white,
+        comment: Base.LightGray,
+        default: Base.White,
     },
-    colors: BaseColors,
+    colors: Base,
 }
 
 function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
@@ -35,17 +49,17 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
     },
     {
         scope: ["variable.other"],
-        settings: { foreground: s.fg.default, }
+        settings: { foreground: s.fg.default }
     },
     {
         name: "Numbers",
         scope: ["constant.numeric"],
-        settings: { foreground: "#49e4da", }
+        settings: { foreground: "#49e4da" }
     },
     {
         name: "Strings",
         scope: ["string"],
-        settings: { foreground: s.colors.pink, }
+        settings: { foreground: s.colors.Pink }
     },
     {
         name: "Escape",
@@ -63,19 +77,17 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "markup.inline.raw",
             "fenced_code.block.language"
         ],
-        settings: { foreground: s.colors.purple, }
+        settings: { foreground: s.colors.Purple }
     },
     {
         scope: ["variable.other.property",],
-        settings: { foreground: s.colors.indigo, }
+        settings: { foreground: s.colors.Blue }
     },
     {
         scope: [
             "keyword.operator.assignment",
         ],
-        settings: {
-            foreground: "#fa81ce",
-        }
+        settings: { foreground: s.colors.Pink }
     },
     {
         scope: [
@@ -99,7 +111,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "storage.modifier",
         ],
         settings: {
-            foreground: s.colors.red,
+            foreground: s.colors.Red,
         }
     },
     {
@@ -112,7 +124,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "variable.other.constant",
         ],
         settings: {
-            foreground: "#70bdf1",
+            foreground: s.colors.PaleBlue,
             fontStyle: "italic",
         }
     },
@@ -122,7 +134,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "meta.table"
         ],
         settings: {
-            foreground: "#bb6ae7",
+            foreground: s.colors.Purple,
         }
     },
     {
@@ -130,7 +142,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "storage.type"
         ],
         settings: {
-            foreground: s.colors.pink,
+            foreground: s.colors.Pink,
         }
     },
     {
@@ -148,7 +160,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "entity.name.function",
         ],
         settings: {
-            foreground: "#f1c070",
+            foreground: s.colors.PaleOrange,
         }
     },
     {
@@ -157,7 +169,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "meta.interpolation",
         ],
         settings: {
-            foreground: "#e783e9"
+            foreground: s.colors.Pink,
         }
     },
     {
@@ -219,12 +231,12 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
     {
         scope: ["entity.name.type"],
         settings: {
-            foreground: "#f1f090",
+            foreground: s.colors.PaleYellow,
         }
     },
     {
         scope: ["entity.name.namespace"],
-        settings: { foreground: s.colors.yellow, }
+        settings: { foreground: s.colors.Yellow }
     },
     {
         name: "JSON Key - Level 0",
@@ -232,7 +244,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "source.json meta.structure.dictionary.json support.type.property-name.json"
         ],
         settings: {
-            foreground: s.colors.red
+            foreground: s.colors.Red
         }
     },
     {
@@ -241,7 +253,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
         ],
         settings: {
-            foreground: s.colors.orange
+            foreground: s.colors.Orange
         }
     },
     {
@@ -250,7 +262,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
         ],
         settings: {
-            foreground: s.colors.yellow
+            foreground: s.colors.Yellow
         }
     },
     {
@@ -259,7 +271,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
         ],
         settings: {
-            foreground: s.colors.green
+            foreground: s.colors.Green
         }
     },
     {
@@ -268,7 +280,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
         ],
         settings: {
-            foreground: s.colors.cyan
+            foreground: s.colors.Cyan
         }
     },
     {
@@ -277,7 +289,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
         ],
         settings: {
-            foreground: s.colors.lightblue
+            foreground: s.colors.PaleBlue
         }
     },
     {
@@ -286,7 +298,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
         ],
         settings: {
-            foreground: s.colors.purple
+            foreground: s.colors.Purple
         }
     },
     {
@@ -295,7 +307,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
         ],
         settings: {
-            foreground: s.colors.pink
+            foreground: s.colors.Pink
         }
     },
     {
@@ -304,7 +316,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
         ],
         settings: {
-            foreground: "#d0d0d0"
+            foreground: s.colors.White,
         }
     },
     {
@@ -313,7 +325,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "markup.heading heading.1"
         ],
         settings: {
-            foreground: s.colors.purple
+            foreground: s.colors.Purple
         }
     },
     {
@@ -322,7 +334,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "markup.heading heading.2",
         ],
         settings: {
-            foreground: s.colors.indigo
+            foreground: s.colors.Blue
         }
     },
     {
@@ -331,7 +343,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "markup.heading heading.3",
         ],
         settings: {
-            foreground: s.colors.lightblue
+            foreground: s.colors.PaleBlue
         }
     },
     {
@@ -340,7 +352,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "markup.heading heading.4",
         ],
         settings: {
-            foreground: s.colors.cyan
+            foreground: s.colors.Cyan
         }
     },
     {
@@ -349,7 +361,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "markup.heading heading.5",
         ],
         settings: {
-            foreground: s.colors.green
+            foreground: s.colors.Green
         }
     },
     {
@@ -358,20 +370,20 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "markup.heading heading.6",
         ],
         settings: {
-            foreground: s.colors.yellow
+            foreground: s.colors.Yellow
         }
     },
     {
         scope: ["meta.link"],
         settings: {
-            foreground: "#70bdf1",
+            foreground: s.colors.PaleBlue,
         },
     }]
 }
 
 function semanticTheming(s: ColorScheme): WorkbenchColors {
     return {
-        "parameter": s.colors.lightblue,
+        "parameter": s.colors.PaleBlue,
         "macro": "#e7d352",
         "type": "#e783e9",
         "interface": "#ffee68",
@@ -429,13 +441,13 @@ function uiTheming(s: ColorScheme): WorkbenchColors {
         "diffEditor.insertedTextBackground": "#18a47c2f",
         "gitDecoration.modifiedResourceForeground": "#ffee68", //todo(leigh): modified status theming
         // bracket highlights
-        "editorBracketHighlight.foreground1": s.colors.red,
-        "editorBracketHighlight.foreground2": s.colors.pink,
-        "editorBracketHighlight.foreground3": s.colors.purple,
-        "editorBracketHighlight.foreground4": s.colors.lightblue,
-        "editorBracketHighlight.foreground5": s.colors.cyan,
-        "editorBracketHighlight.foreground6": s.colors.green,
-        "editorBracketHighlight.unexpectedBracket.foreground": s.colors.orange
+        "editorBracketHighlight.foreground1": s.colors.Red,
+        "editorBracketHighlight.foreground2": s.colors.Pink,
+        "editorBracketHighlight.foreground3": s.colors.Purple,
+        "editorBracketHighlight.foreground4": s.colors.PaleBlue,
+        "editorBracketHighlight.foreground5": s.colors.Cyan,
+        "editorBracketHighlight.foreground6": s.colors.Green,
+        "editorBracketHighlight.unexpectedBracket.foreground": s.colors.Orange
     }
 }
 
