@@ -18,6 +18,7 @@
     "color": "#FC6984",
     "theme": "light"
   },
+  "icon": "etc/supernal.png",
   "engines": {
     "vscode": "^1.110.0"
   },
