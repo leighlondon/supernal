@@ -84,6 +84,13 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         settings: { foreground: s.colors.Purple }
     },
     {
+        name: "Annotation",
+        scope: [
+            "fenced_code.block.language"
+        ],
+        settings: { foreground: s.colors.PalePurple }
+    },
+    {
         scope: ["variable.other.property",],
         settings: { foreground: s.colors.Blue }
     },
