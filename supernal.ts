@@ -33,7 +33,11 @@ const Base: Palette = {
 }
 
 let supernal: ColorScheme = {
-    background: Base.DarkGray,
+    bg: {
+        default: Base.DarkGray,
+        darker: Base.Black,
+        lighter: Base.LightGray,
+    },
     border: Base.Gray,
     fg: {
         comment: Base.LightGray,
@@ -397,21 +401,21 @@ function semanticTheming(s: ColorScheme): WorkbenchColors {
 
 function uiTheming(s: ColorScheme): WorkbenchColors {
     return {
-        "menu.background": s.background,
+        "menu.background": s.bg.default,
         "menu.selectionBackground": "#333942",
         "menubar.selectionBackground": "#333942",
         // title (top bar)
-        "titleBar.activeBackground": "#1d2125",
-        "titleBar.inactiveBackground": "#1d2125",
+        "titleBar.activeBackground": s.bg.darker,
+        "titleBar.inactiveBackground": s.bg.darker,
         "statusBar.foreground": s.fg.default,
         "titleBar.border": s.border,
         // status bar (bottom bar)
         "statusBar.border": s.border,
-        "statusBar.background": "#1d2125",
+        "statusBar.background": s.bg.darker,
         "statusBar.debuggingBackground": "#952642",
         "statusBar.noFolderBackground": "#6a3394",
         // tabs
-        "tab.activeBackground": "#1d2125",
+        "tab.activeBackground": s.bg.darker,
         "tab.inactiveBackground": "#25282e",
         "tab.border": "#505050",
         "tab.hoverBorder": "#0854a7",
@@ -429,11 +433,11 @@ function uiTheming(s: ColorScheme): WorkbenchColors {
         "editor.selectionBackground": "#443550",
         "peekViewEditor.background": "#282d35",
         "peekViewResult.background": "#23262c",
-        "quickInput.background": "#21252b",
+        "quickInput.background": s.bg.default,
         "list.activeSelectionBackground": "#333942",
-        "input.background": "#21252b",
+        "input.background": s.bg.default,
         "input.border": "#505050",
-        "panel.background": "#21252b",
+        "panel.background": s.bg.default,
         "editor.foreground": s.fg.default,
         "banner.background": "#215dce",
         // diff stuff

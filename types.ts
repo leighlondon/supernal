@@ -15,7 +15,11 @@ export interface Palette {
 }
 
 export interface ColorScheme {
-    background: Hex;
+    bg: {
+        default: Hex;
+        darker: Hex;
+        lighter: Hex;
+    };
     border: Hex;
     fg: {
         default: Hex;
