@@ -431,4 +431,4 @@ function renderTheme({ name, scheme }: { name: string, scheme: ColorScheme }): V
     }
 }
 
-writeFileSync('themes/supernal-color-theme.json', JSON.stringify(renderTheme({ name: 'supernal', scheme: supernal })));
+writeFileSync('themes/supernal-color-theme.json', JSON.stringify(renderTheme({ name: 'supernal', scheme: supernal }), null, 2));
