@@ -44,13 +44,14 @@ let supernal: ColorScheme = {
         default: Base.White,
         comment: Base.LightGray,
         constant: Base.PaleBlue,
-        string: Base.PalePurple,
+        string: Base.White,
         type: Base.PaleYellow,
-        keyword: Base.Pink,
+        keyword: Base.Purple,
         punctuation: Base.Red,
-        interface: Base.Orange,
-        property: Base.Blue,
+        interface: Base.White,
+        property: Base.White,
     },
+    headings: [Base.Purple, Base.Blue, Base.PaleBlue, Base.PalePink, Base.Red, Base.PaleRed],
     colors: Base,
 }
 
@@ -88,7 +89,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "variable.other.property",
             "constant.other",
         ],
-        settings: { foreground: s.colors.Blue }
+        settings: { foreground: s.fg.default }
     }, {
         scope: [
             "constant.character",
@@ -214,7 +215,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
     }, {
         scope: ["entity.name.type"],
         settings: {
-            foreground: s.colors.PaleYellow,
+            foreground: s.fg.type,
         }
     }, {
         scope: ["entity.name.namespace"],
@@ -297,7 +298,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "markup.heading heading.1"
         ],
         settings: {
-            foreground: s.colors.Purple
+            foreground: s.headings[0]
         }
     }, {
         name: "markup-h2",
@@ -305,7 +306,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "markup.heading heading.2",
         ],
         settings: {
-            foreground: s.colors.Blue
+            foreground: s.headings[1]
         }
     }, {
         name: "markup-h3",
@@ -313,7 +314,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "markup.heading heading.3",
         ],
         settings: {
-            foreground: s.colors.PaleBlue
+            foreground: s.headings[2]
         }
     }, {
         name: "markup-h4",
@@ -321,7 +322,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "markup.heading heading.4",
         ],
         settings: {
-            foreground: s.colors.Cyan
+            foreground: s.headings[3]
         }
     }, {
         name: "markup-h5",
@@ -329,7 +330,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "markup.heading heading.5",
         ],
         settings: {
-            foreground: s.colors.Green
+            foreground: s.headings[4]
         }
     }, {
         name: "markup-h6",
@@ -337,7 +338,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "markup.heading heading.6",
         ],
         settings: {
-            foreground: s.colors.Yellow
+            foreground: s.headings[5]
         }
     }, {
         scope: ["meta.link"],
@@ -349,14 +350,14 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
 
 function semanticTheming(s: ColorScheme): WorkbenchColors {
     return {
-        "parameter": s.colors.PaleBlue,
-        "macro": s.colors.PaleYellow,
-        "type": s.colors.Orange,
-        "interface": s.colors.PaleYellow,
-        "namespace": s.colors.PaleYellow,
-        "enumMember": s.colors.PaleOrange,
-        "function": s.colors.PaleOrange,
-        "constant": s.colors.PaleBlue,
+        // "parameter": s.fg.default,
+        // "macro": s.fg.default,
+        // "type": s.colors.Orange,
+        // "interface": s.colors.PaleYellow,
+        // "namespace": s.colors.PaleYellow,
+        // "enumMember": s.colors.PaleOrange,
+        // "function": s.colors.PaleOrange,
+        // "constant": s.colors.PaleBlue,
         "keyword": s.colors.Purple,
     }
 }

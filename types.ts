@@ -32,6 +32,7 @@ export interface ColorScheme {
         keyword: Hex;
         property: Hex;
     };
+    headings: Hex[];
     colors: Palette;
 }
 
