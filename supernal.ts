@@ -51,7 +51,7 @@ let supernal: ColorScheme = {
         interface: Base.White,
         property: Base.White,
     },
-    headings: [Base.Purple, Base.Blue, Base.PaleBlue, Base.PalePink, Base.Red, Base.PaleRed],
+    headings: [Base.Purple, Base.Blue, Base.PaleBlue, Base.Green, Base.Yellow, Base.Orange],
     colors: Base,
 }
 
