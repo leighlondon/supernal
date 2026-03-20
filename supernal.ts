@@ -58,29 +58,24 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
     return [{
         scope: ["comment", "punctuation.definition.comment", "string.comment"],
         settings: { foreground: s.fg.comment }
-    },
-    {
+    }, {
         scope: ["variable.other"],
         settings: { foreground: s.fg.default }
-    },
-    {
+    }, {
         name: "Numbers",
         scope: ["constant.numeric"],
         settings: { foreground: s.fg.constant }
-    },
-    {
+    }, {
         name: "Strings",
         scope: ["string"],
         settings: { foreground: s.fg.string }
-    },
-    {
+    }, {
         name: "Escape",
         scope: ["constant.character.escape"],
         settings: {
             foreground: "#86d5f4",
         }
-    },
-    {
+    }, {
         name: "Keywords",
         scope: [
             "keyword",
@@ -88,15 +83,13 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "markup.inline.raw",
         ],
         settings: { foreground: s.fg.keyword }
-    },
-    {
+    }, {
         scope: [
             "variable.other.property",
             "constant.other",
         ],
         settings: { foreground: s.colors.Blue }
-    },
-    {
+    }, {
         scope: [
             "constant.character",
             "keyword.operator",
@@ -120,12 +113,10 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         settings: {
             foreground: s.fg.punctuation,
         }
-    },
-    {
+    }, {
         scope: ["variable.language.self"],
         settings: { fontStyle: "italic" }
-    },
-    {
+    }, {
         scope: [
             "constant.language",
             "variable.other.constant",
@@ -134,8 +125,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             foreground: s.fg.constant,
             fontStyle: "italic",
         }
-    },
-    {
+    }, {
         scope: [
             "support.type.property-name",
             "meta.table"
@@ -143,16 +133,14 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         settings: {
             foreground: s.colors.Purple,
         }
-    },
-    {
+    }, {
         scope: [
             "storage.type"
         ],
         settings: {
             foreground: s.colors.Pink,
         }
-    },
-    {
+    }, {
         scope: [
             "support.function",
             "meta.macro",
@@ -161,16 +149,14 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         settings: {
             foreground: "#e7d352"
         }
-    },
-    {
+    }, {
         scope: [
             "entity.name.function",
         ],
         settings: {
             foreground: s.colors.PaleOrange,
         }
-    },
-    {
+    }, {
         scope: [
             "punctuation.definition.interpolation",
             "meta.interpolation",
@@ -178,74 +164,62 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         settings: {
             foreground: s.colors.PaleGreen,
         }
-    },
-    {
+    }, {
         scope: [
             "entity.name.tag"
         ],
         settings: {
             foreground: "#53bff9"
         }
-    },
-    {
+    }, {
         scope: ["markup.bold.markdown"],
         settings: {
             fontStyle: "bold"
         }
-    },
-    {
+    }, {
         scope: ["markup.italic.markdown"],
         settings: {
             fontStyle: "italic"
         }
-    },
-    {
+    }, {
         scope: ["markup.strikethrough.markdown"],
         settings: {
             fontStyle: "strikethrough"
         }
-    },
-    {
+    }, {
         scope: ["markup.bold.markdown markup.italic.markdown"],
         settings: {
             fontStyle: "italic bold"
         }
-    },
-    {
+    }, {
         scope: ["markup.bold.markdown markup.underline.markdown"],
         settings: {
             fontStyle: "bold underline"
         }
-    },
-    {
+    }, {
         scope: ["markup.underline.markdown"],
         settings: {
             fontStyle: "underline"
         }
-    },
-    {
+    }, {
         scope: ["markup.inserted"],
         settings: {
             foreground: "#49e4ab",
         }
-    },
-    {
+    }, {
         scope: ["markup.fenced_code.block.markdown"],
         settings: {
             foreground: "#898989",
         }
-    },
-    {
+    }, {
         scope: ["entity.name.type"],
         settings: {
             foreground: s.colors.PaleYellow,
         }
-    },
-    {
+    }, {
         scope: ["entity.name.namespace"],
         settings: { foreground: s.colors.Yellow }
-    },
-    {
+    }, {
         name: "JSON Key - Level 0",
         scope: [
             "source.json meta.structure.dictionary.json support.type.property-name.json"
@@ -253,8 +227,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         settings: {
             foreground: s.colors.Red
         }
-    },
-    {
+    }, {
         name: "JSON Key - Level 1",
         scope: [
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
@@ -262,8 +235,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         settings: {
             foreground: s.colors.Orange
         }
-    },
-    {
+    }, {
         name: "JSON Key - Level 2",
         scope: [
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
@@ -271,8 +243,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         settings: {
             foreground: s.colors.Yellow
         }
-    },
-    {
+    }, {
         name: "JSON Key - Level 3",
         scope: [
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
@@ -280,8 +251,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         settings: {
             foreground: s.colors.Green
         }
-    },
-    {
+    }, {
         name: "JSON Key - Level 4",
         scope: [
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
@@ -289,8 +259,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         settings: {
             foreground: s.colors.Cyan
         }
-    },
-    {
+    }, {
         name: "JSON Key - Level 5",
         scope: [
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
@@ -298,8 +267,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         settings: {
             foreground: s.colors.PaleBlue
         }
-    },
-    {
+    }, {
         name: "JSON Key - Level 6",
         scope: [
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
@@ -307,8 +275,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         settings: {
             foreground: s.colors.Purple
         }
-    },
-    {
+    }, {
         name: "JSON Key - Level 7",
         scope: [
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
@@ -316,8 +283,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         settings: {
             foreground: s.colors.Pink
         }
-    },
-    {
+    }, {
         name: "JSON Key - Level 8",
         scope: [
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
@@ -325,8 +291,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         settings: {
             foreground: s.colors.White,
         }
-    },
-    {
+    }, {
         name: "markup-h1",
         scope: [
             "markup.heading heading.1"
@@ -334,8 +299,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         settings: {
             foreground: s.colors.Purple
         }
-    },
-    {
+    }, {
         name: "markup-h2",
         scope: [
             "markup.heading heading.2",
@@ -343,8 +307,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         settings: {
             foreground: s.colors.Blue
         }
-    },
-    {
+    }, {
         name: "markup-h3",
         scope: [
             "markup.heading heading.3",
@@ -352,8 +315,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         settings: {
             foreground: s.colors.PaleBlue
         }
-    },
-    {
+    }, {
         name: "markup-h4",
         scope: [
             "markup.heading heading.4",
@@ -361,8 +323,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         settings: {
             foreground: s.colors.Cyan
         }
-    },
-    {
+    }, {
         name: "markup-h5",
         scope: [
             "markup.heading heading.5",
@@ -370,8 +331,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         settings: {
             foreground: s.colors.Green
         }
-    },
-    {
+    }, {
         name: "markup-h6",
         scope: [
             "markup.heading heading.6",
@@ -379,8 +339,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         settings: {
             foreground: s.colors.Yellow
         }
-    },
-    {
+    }, {
         scope: ["meta.link"],
         settings: {
             foreground: s.colors.PaleBlue,
