@@ -89,7 +89,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "variable.other.property",
             "constant.other",
         ],
-        settings: { foreground: s.fg.default }
+        settings: { foreground: s.fg.constant }
     }, {
         scope: [
             "constant.character",
