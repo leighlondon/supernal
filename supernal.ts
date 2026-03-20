@@ -41,8 +41,15 @@ let supernal: ColorScheme = {
     },
     border: Base.Gray,
     fg: {
-        comment: Base.LightGray,
         default: Base.White,
+        comment: Base.LightGray,
+        constant: Base.PaleBlue,
+        string: Base.PalePurple,
+        type: Base.PaleYellow,
+        keyword: Base.Pink,
+        punctuation: Base.Red,
+        interface: Base.Orange,
+        property: Base.Blue,
     },
     colors: Base,
 }
@@ -59,12 +66,12 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
     {
         name: "Numbers",
         scope: ["constant.numeric"],
-        settings: { foreground: s.colors.PaleCyan }
+        settings: { foreground: s.fg.constant }
     },
     {
         name: "Strings",
         scope: ["string"],
-        settings: { foreground: s.colors.PalePurple }
+        settings: { foreground: s.fg.string }
     },
     {
         name: "Escape",
@@ -80,7 +87,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "constant.language.boolean",
             "markup.inline.raw",
         ],
-        settings: { foreground: s.colors.Purple }
+        settings: { foreground: s.fg.keyword }
     },
     {
         scope: [
@@ -111,7 +118,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "storage.modifier",
         ],
         settings: {
-            foreground: s.colors.Red,
+            foreground: s.fg.punctuation,
         }
     },
     {
@@ -124,7 +131,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "variable.other.constant",
         ],
         settings: {
-            foreground: s.colors.PaleBlue,
+            foreground: s.fg.constant,
             fontStyle: "italic",
         }
     },

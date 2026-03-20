@@ -24,6 +24,13 @@ export interface ColorScheme {
     fg: {
         default: Hex;
         comment: Hex;
+        string: Hex;
+        constant: Hex;
+        type: Hex;
+        interface: Hex;
+        punctuation: Hex;
+        keyword: Hex;
+        property: Hex;
     };
     colors: Palette;
 }
