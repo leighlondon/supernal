@@ -12,15 +12,15 @@ const Base: Palette = {
     DarkGray: "#21252b",
     Gray: "#363b40",
     LightGray: "#5f5f74",
-    Yellow: "#e7d352",
+    Yellow: "#fbc05d",
     PaleYellow: "#ffee68",
-    Orange: "#ffb539",
+    Orange: "#fd9570",
     PaleOrange: "#f1c070",
     Red: "#fc6984",
     PaleRed: "#f87c93",
-    Pink: "#f390ec",
+    Pink: "#d45cb0",
     PalePink: "#f7affa",
-    Purple: "#bf81fa",
+    Purple: "#845ec2",
     PalePurple: "#d9b6f9",
     Blue: "#6f87ff",
     PaleBlue: "#70bdf1",
@@ -236,7 +236,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
     },
     {
         scope: ["entity.name.namespace"],
-        settings: { foreground: s.colors.Yellow }
+        settings: { foreground: s.colors.PaleYellow }
     },
     {
         name: "JSON Key - Level 0",
@@ -253,7 +253,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
         ],
         settings: {
-            foreground: s.colors.Orange
+            foreground: s.colors.PaleOrange
         }
     },
     {
@@ -262,7 +262,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
         ],
         settings: {
-            foreground: s.colors.Yellow
+            foreground: s.colors.PaleYellow
         }
     },
     {
@@ -370,7 +370,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "markup.heading heading.6",
         ],
         settings: {
-            foreground: s.colors.Yellow
+            foreground: s.colors.PaleYellow
         }
     },
     {
@@ -385,7 +385,7 @@ function semanticTheming(s: ColorScheme): WorkbenchColors {
     return {
         "parameter": s.colors.PaleBlue,
         "macro": s.colors.PaleYellow,
-        "type": s.colors.Orange,
+        "type": s.colors.PaleOrange,
         "interface": s.colors.PaleYellow,
         "namespace": s.colors.PaleYellow,
         "enumMember": s.colors.PaleOrange,
@@ -447,7 +447,7 @@ function uiTheming(s: ColorScheme): WorkbenchColors {
         "editorBracketHighlight.foreground4": s.colors.PaleBlue,
         "editorBracketHighlight.foreground5": s.colors.Cyan,
         "editorBracketHighlight.foreground6": s.colors.Green,
-        "editorBracketHighlight.unexpectedBracket.foreground": s.colors.Orange
+        "editorBracketHighlight.unexpectedBracket.foreground": s.colors.PaleOrange
     }
 }
 
