@@ -1,7 +1,10 @@
 .vscode/**
 .vscode-test/**
 .gitignore
+
 tsconfig.json
 package-lock.json
 *.ts
+
 README.md
+testdata/
