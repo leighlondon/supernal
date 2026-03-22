@@ -29,7 +29,7 @@ const Base: Palette = {
     PaleCyan: "#49e4da",
     Green: "#49e4ab",
     PaleGreen: "#7decc3",
-    DarkWhite: "#bfbfbf",
+    DarkWhite: "#888a8d",
     White: "#d0d0d0",
     PaleWhite: "#e8e5e5",
 }
@@ -44,7 +44,7 @@ let supernal: ColorScheme = {
     fg: {
         number: Base.PaleCyan,
         default: Base.White,
-        comment: Base.LightGray,
+        comment: Base.DarkWhite,
         constant: Base.PaleBlue,
         string: Base.SuperPaleOrange,
         type: Base.Yellow,
