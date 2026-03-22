@@ -5,7 +5,7 @@ export interface Palette {
     DarkGray: Hex; Gray: Hex; LightGray: Hex;
     Pink: Hex; PalePink: Hex;
     Red: Hex; PaleRed: Hex;
-    Orange: Hex; PaleOrange: Hex;
+    Orange: Hex; PaleOrange: Hex; SuperPaleOrange: Hex;
     Green: Hex; PaleGreen: Hex;
     Yellow: Hex; PaleYellow: Hex;
     Blue: Hex; PaleBlue: Hex;
