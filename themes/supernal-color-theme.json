@@ -58,14 +58,6 @@
       }
     },
     {
-      "scope": [
-        "variable.other"
-      ],
-      "settings": {
-        "foreground": "#d0d0d0"
-      }
-    },
-    {
       "name": "Numbers",
       "scope": [
         "constant.numeric"
@@ -105,11 +97,10 @@
     },
     {
       "scope": [
-        "variable.other.property",
-        "constant.other"
+        "variable.other.property"
       ],
       "settings": {
-        "foreground": "#70bdf1"
+        "foreground": "#d0d0d0"
       }
     },
     {
@@ -131,6 +122,8 @@
         "punctuation.definition markup.fenced_code.block",
         "punctuation.brackets",
         "punctuation.definition.list",
+        "punctuation.definition.interpolation",
+        "meta.interpolation",
         "meta.attribute",
         "storage.modifier"
       ],
@@ -189,15 +182,6 @@
       ],
       "settings": {
         "foreground": "#edc078"
-      }
-    },
-    {
-      "scope": [
-        "punctuation.definition.interpolation",
-        "meta.interpolation"
-      ],
-      "settings": {
-        "foreground": "#7decc3"
       }
     },
     {

@@ -70,9 +70,6 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         scope: ["comment", "punctuation.definition.comment", "string.comment"],
         settings: { foreground: s.fg.comment }
     }, {
-        scope: ["variable.other"],
-        settings: { foreground: s.fg.default }
-    }, {
         name: "Numbers",
         scope: ["constant.numeric"],
         settings: { foreground: s.fg.constant }
@@ -97,9 +94,8 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
     }, {
         scope: [
             "variable.other.property",
-            "constant.other",
         ],
-        settings: { foreground: s.fg.constant }
+        settings: { foreground: s.fg.property }
     }, {
         scope: [
             "constant.character",
@@ -119,6 +115,8 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "punctuation.definition markup.fenced_code.block",
             "punctuation.brackets",
             "punctuation.definition.list",
+            "punctuation.definition.interpolation",
+            "meta.interpolation",
             "meta.attribute",
             "storage.modifier",
         ],
@@ -167,14 +165,6 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         ],
         settings: {
             foreground: s.colors.PaleOrange,
-        }
-    }, {
-        scope: [
-            "punctuation.definition.interpolation",
-            "meta.interpolation",
-        ],
-        settings: {
-            foreground: s.colors.PaleGreen,
         }
     }, {
         scope: [
