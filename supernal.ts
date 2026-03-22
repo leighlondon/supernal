@@ -84,7 +84,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         name: "Escape",
         scope: ["constant.character.escape"],
         settings: {
-            foreground: s.fg.type,
+            foreground: s.fg.keyword,
         }
     }, {
         name: "Keywords",
@@ -104,6 +104,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         scope: [
             "constant.character",
             "keyword.operator",
+            "constant.other.placeholder",
             "punctuation.other",
             "punctuation.other.colon",
             "punctuation.other.comma",

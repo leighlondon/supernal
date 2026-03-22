@@ -89,7 +89,7 @@
         "constant.character.escape"
       ],
       "settings": {
-        "foreground": "#ffee68"
+        "foreground": "#bf81fa"
       }
     },
     {
@@ -116,6 +116,7 @@
       "scope": [
         "constant.character",
         "keyword.operator",
+        "constant.other.placeholder",
         "punctuation.other",
         "punctuation.other.colon",
         "punctuation.other.comma",
