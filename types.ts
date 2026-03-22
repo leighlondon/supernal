@@ -29,6 +29,8 @@ export interface ColorScheme {
         type: Hex;
         interface: Hex;
         punctuation: Hex;
+        function: Hex;
+        macro: Hex;
         keyword: Hex;
         property: Hex;
     };

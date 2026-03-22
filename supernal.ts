@@ -14,7 +14,7 @@ const Base: Palette = {
     LightGray: "#5f5f74",
     Yellow: "#ffee68",
     PaleYellow: "#fdf4af",
-    Orange: "#ffb539",
+    Orange: "#fdb231",
     PaleOrange: "#edc078",
     Red: "#fc6984",
     PaleRed: "#f87c93",
@@ -49,6 +49,8 @@ let supernal: ColorScheme = {
         keyword: Base.Purple,
         punctuation: Base.Red,
         interface: Base.White,
+        function: Base.PaleOrange,
+        macro: Base.Orange,
         property: Base.White,
     },
     headings: [Base.Purple, Base.Blue, Base.PaleBlue, Base.Green, Base.Yellow, Base.Orange],
@@ -152,19 +154,19 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         }
     }, {
         scope: [
+            "entity.name.function",
+        ],
+        settings: {
+            foreground: s.fg.function,
+        }
+    }, {
+        scope: [
             "support.function",
             "meta.macro",
             "entity.name.function.macro"
         ],
         settings: {
-            foreground: "#e7d352"
-        }
-    }, {
-        scope: [
-            "entity.name.function",
-        ],
-        settings: {
-            foreground: s.colors.PaleOrange,
+            foreground: s.fg.macro
         }
     }, {
         scope: [
@@ -352,14 +354,14 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
 function semanticTheming(s: ColorScheme): WorkbenchColors {
     return {
         // "parameter": s.fg.default,
-        // "macro": s.fg.default,
-        // "type": s.colors.Orange,
-        // "interface": s.colors.PaleYellow,
+        "macro": s.fg.macro,
+        // "type": s.fg.type,
+        // "interface": s.fg.interface,
         // "namespace": s.colors.PaleYellow,
-        // "enumMember": s.colors.PaleOrange,
-        // "function": s.colors.PaleOrange,
-        // "constant": s.colors.PaleBlue,
-        "keyword": s.colors.Purple,
+        // "enumMember": s.fg.function,
+        "function": s.fg.function,
+        // "constant": s.fg.constant,
+        "keyword": s.fg.keyword,
     }
 }
 
