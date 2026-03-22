@@ -52,6 +52,16 @@ let supernal: ColorScheme = {
         property: Base.White,
     },
     headings: [Base.Purple, Base.Blue, Base.PaleBlue, Base.Green, Base.Yellow, Base.Orange],
+    bracketColors: [
+        "#fc6984",
+        "#ea7398",
+        "#d87aaa",
+        "#c67fbc",
+        "#b283cd",
+        "#9e86de",
+        "#8887ef",
+        "#6f87ff",
+    ],
     colors: Base,
 }
 
@@ -74,7 +84,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         name: "Escape",
         scope: ["constant.character.escape"],
         settings: {
-            foreground: "#86d5f4",
+            foreground: s.fg.type,
         }
     }, {
         name: "Keywords",
@@ -408,12 +418,12 @@ function uiTheming(s: ColorScheme): WorkbenchColors {
         "diffEditor.insertedTextBackground": "#18a47c2f",
         "gitDecoration.modifiedResourceForeground": "#ffee68", //todo(leigh): modified status theming
         // bracket highlights
-        "editorBracketHighlight.foreground1": s.colors.Red,
-        "editorBracketHighlight.foreground2": s.colors.Pink,
-        "editorBracketHighlight.foreground3": s.colors.Purple,
-        "editorBracketHighlight.foreground4": s.colors.PaleBlue,
-        "editorBracketHighlight.foreground5": s.colors.Cyan,
-        "editorBracketHighlight.foreground6": s.colors.Green,
+        "editorBracketHighlight.foreground1": s.bracketColors[0],
+        "editorBracketHighlight.foreground2": s.bracketColors[1],
+        "editorBracketHighlight.foreground3": s.bracketColors[2],
+        "editorBracketHighlight.foreground4": s.bracketColors[3],
+        "editorBracketHighlight.foreground5": s.bracketColors[4],
+        "editorBracketHighlight.foreground6": s.bracketColors[5],
         "editorBracketHighlight.unexpectedBracket.foreground": s.colors.Orange
     }
 }

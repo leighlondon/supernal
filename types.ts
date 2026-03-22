@@ -33,6 +33,7 @@ export interface ColorScheme {
         property: Hex;
     };
     headings: Hex[];
+    bracketColors: Hex[];
     colors: Palette;
 }
 

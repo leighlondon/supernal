@@ -39,11 +39,11 @@
     "diffEditor.insertedTextBackground": "#18a47c2f",
     "gitDecoration.modifiedResourceForeground": "#ffee68",
     "editorBracketHighlight.foreground1": "#fc6984",
-    "editorBracketHighlight.foreground2": "#f390ec",
-    "editorBracketHighlight.foreground3": "#bf81fa",
-    "editorBracketHighlight.foreground4": "#70bdf1",
-    "editorBracketHighlight.foreground5": "#49e4da",
-    "editorBracketHighlight.foreground6": "#49e4ab",
+    "editorBracketHighlight.foreground2": "#ea7398",
+    "editorBracketHighlight.foreground3": "#d87aaa",
+    "editorBracketHighlight.foreground4": "#c67fbc",
+    "editorBracketHighlight.foreground5": "#b283cd",
+    "editorBracketHighlight.foreground6": "#9e86de",
     "editorBracketHighlight.unexpectedBracket.foreground": "#ffb539"
   },
   "tokenColors": [
@@ -89,7 +89,7 @@
         "constant.character.escape"
       ],
       "settings": {
-        "foreground": "#86d5f4"
+        "foreground": "#ffee68"
       }
     },
     {
