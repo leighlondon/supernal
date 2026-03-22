@@ -418,6 +418,7 @@
   ],
   "semanticHighlighting": true,
   "semanticTokenColors": {
+    "property.declaration": "#70bdf1",
     "macro": "#f7affa",
     "function": "#ebb867",
     "keyword": "#bf81fa"

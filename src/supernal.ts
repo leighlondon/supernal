@@ -354,6 +354,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
 
 function semanticTheming(s: ColorScheme): WorkbenchColors {
     return {
+        "property.declaration": s.fg.constant,
         // "parameter": s.fg.default,
         "macro": s.fg.macro,
         // "type": s.fg.type,
