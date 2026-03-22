@@ -1,6 +1,6 @@
 .PHONY: clean theme pack
 theme:
-	bun supernal.ts
+	bun src/supernal.ts
 clean:
 	rm *.vsix
 pack: theme
