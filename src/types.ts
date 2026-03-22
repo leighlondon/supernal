@@ -22,6 +22,7 @@ export interface ColorScheme {
     };
     border: Hex;
     fg: {
+        number: Hex;
         default: Hex;
         comment: Hex;
         string: Hex;

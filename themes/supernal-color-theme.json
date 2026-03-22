@@ -63,7 +63,7 @@
         "constant.numeric"
       ],
       "settings": {
-        "foreground": "#70bdf1"
+        "foreground": "#49e4da"
       }
     },
     {
@@ -93,14 +93,6 @@
       ],
       "settings": {
         "foreground": "#bf81fa"
-      }
-    },
-    {
-      "scope": [
-        "variable.other.property"
-      ],
-      "settings": {
-        "foreground": "#d0d0d0"
       }
     },
     {
@@ -261,7 +253,7 @@
         "entity.name.type"
       ],
       "settings": {
-        "foreground": "#ffef7a"
+        "foreground": "#fff185"
       }
     },
     {
@@ -269,7 +261,7 @@
         "entity.name.namespace"
       ],
       "settings": {
-        "foreground": "#ffef7a"
+        "foreground": "#fff185"
       }
     },
     {
@@ -296,7 +288,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "#ffef7a"
+        "foreground": "#fff185"
       }
     },
     {
@@ -395,7 +387,7 @@
         "markup.heading heading.5"
       ],
       "settings": {
-        "foreground": "#ffef7a"
+        "foreground": "#fff185"
       }
     },
     {
@@ -418,7 +410,7 @@
   ],
   "semanticHighlighting": true,
   "semanticTokenColors": {
-    "property.declaration": "#70bdf1",
+    "property.declaration": "#f5a0af",
     "macro": "#f7affa",
     "function": "#ebb867",
     "keyword": "#bf81fa"

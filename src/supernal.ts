@@ -12,13 +12,13 @@ const Base: Palette = {
     DarkGray: "#21252b",
     Gray: "#363b40",
     LightGray: "#5f5f74",
-    Yellow: "#ffef7a",
-    PaleYellow: "#fdf4af",
+    Yellow: "#fff185",
+    PaleYellow: "#fbe578",
     Orange: "#fdb231",
     PaleOrange: "#ebb867",
     SuperPaleOrange: "#eed09f",
     Red: "#fc6984",
-    PaleRed: "#f87c93",
+    PaleRed: "#f5a0af",
     Pink: "#f390ec",
     PalePink: "#f7affa",
     Purple: "#bf81fa",
@@ -26,7 +26,7 @@ const Base: Palette = {
     Blue: "#6f87ff",
     PaleBlue: "#70bdf1",
     Cyan: "#49e4da",
-    PaleCyan: "#7fefe8",
+    PaleCyan: "#49e4da",
     Green: "#49e4ab",
     PaleGreen: "#7decc3",
     DarkWhite: "#bfbfbf",
@@ -42,6 +42,7 @@ let supernal: ColorScheme = {
     },
     border: Base.Gray,
     fg: {
+        number: Base.PaleCyan,
         default: Base.White,
         comment: Base.LightGray,
         constant: Base.PaleBlue,
@@ -52,7 +53,7 @@ let supernal: ColorScheme = {
         interface: Base.White,
         function: Base.PaleOrange,
         macro: Base.PalePink,
-        property: Base.White,
+        property: Base.PaleRed,
     },
     headings: [Base.Purple, Base.Blue, Base.PaleBlue, Base.Green, Base.Yellow, Base.Orange],
     bracketColors: [
@@ -75,7 +76,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
     }, {
         name: "Numbers",
         scope: ["constant.numeric"],
-        settings: { foreground: s.fg.constant }
+        settings: { foreground: s.fg.number }
     }, {
         name: "Strings",
         scope: ["string"],
@@ -94,11 +95,6 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "markup.inline.raw",
         ],
         settings: { foreground: s.fg.keyword }
-    }, {
-        scope: [
-            "variable.other.property",
-        ],
-        settings: { foreground: s.fg.property }
     }, {
         scope: [
             "constant.character",
@@ -354,7 +350,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
 
 function semanticTheming(s: ColorScheme): WorkbenchColors {
     return {
-        "property.declaration": s.fg.constant,
+        "property.declaration": s.fg.property,
         // "parameter": s.fg.default,
         "macro": s.fg.macro,
         // "type": s.fg.type,
