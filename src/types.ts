@@ -38,6 +38,7 @@ export interface ColorScheme {
     };
     headings: Hex[];
     bracketColors: Hex[];
+    jsonKeyColors: Hex[];
     colors: Palette;
 }
 

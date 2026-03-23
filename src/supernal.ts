@@ -27,7 +27,7 @@ const Base: Palette = {
     PaleBlue: "#70bdf1",
     Cyan: "#49e4da",
     PaleCyan: "#49e4da",
-    Green: "#36e78ed5",
+    Green: "#37f495",
     PaleGreen: "#80ffc0d5",
     DarkWhite: "#888a8d",
     White: "#d0d0d0",
@@ -66,6 +66,17 @@ let supernal: ColorScheme = {
         "#9e86de",
         "#8887ef",
         "#6f87ff",
+    ],
+    jsonKeyColors: [
+        Base.Red,
+        Base.Orange,
+        Base.Yellow,
+        Base.Green,
+        Base.Cyan,
+        Base.PaleBlue,
+        Base.Purple,
+        Base.Pink,
+        Base.White,
     ],
     colors: Base,
 }
@@ -141,14 +152,14 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "meta.table"
         ],
         settings: {
-            foreground: s.colors.Purple,
+            foreground: s.fg.property,
         }
     }, {
         scope: [
             "storage.type"
         ],
         settings: {
-            foreground: s.colors.Pink,
+            foreground: s.fg.keyword,
         }
     }, {
         scope: [
@@ -220,14 +231,14 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         }
     }, {
         scope: ["entity.name.namespace"],
-        settings: { foreground: s.colors.Yellow }
+        settings: { foreground: s.fg.type }
     }, {
         name: "JSON Key - Level 0",
         scope: [
             "source.json meta.structure.dictionary.json support.type.property-name.json"
         ],
         settings: {
-            foreground: s.colors.Red
+            foreground: s.jsonKeyColors[0]
         }
     }, {
         name: "JSON Key - Level 1",
@@ -235,7 +246,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
         ],
         settings: {
-            foreground: s.colors.Orange
+            foreground: s.jsonKeyColors[1]
         }
     }, {
         name: "JSON Key - Level 2",
@@ -243,7 +254,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
         ],
         settings: {
-            foreground: s.colors.Yellow
+            foreground: s.jsonKeyColors[2]
         }
     }, {
         name: "JSON Key - Level 3",
@@ -251,7 +262,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
         ],
         settings: {
-            foreground: s.colors.Green
+            foreground: s.jsonKeyColors[3]
         }
     }, {
         name: "JSON Key - Level 4",
@@ -259,7 +270,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
         ],
         settings: {
-            foreground: s.colors.Cyan
+            foreground: s.jsonKeyColors[4]
         }
     }, {
         name: "JSON Key - Level 5",
@@ -267,7 +278,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
         ],
         settings: {
-            foreground: s.colors.PaleBlue
+            foreground: s.jsonKeyColors[5]
         }
     }, {
         name: "JSON Key - Level 6",
@@ -275,7 +286,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
         ],
         settings: {
-            foreground: s.colors.Purple
+            foreground: s.jsonKeyColors[6]
         }
     }, {
         name: "JSON Key - Level 7",
@@ -283,7 +294,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
         ],
         settings: {
-            foreground: s.colors.Pink
+            foreground: s.jsonKeyColors[7]
         }
     }, {
         name: "JSON Key - Level 8",
@@ -291,7 +302,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
         ],
         settings: {
-            foreground: s.colors.White,
+            foreground: s.jsonKeyColors[8],
         }
     }, {
         name: "markup-h1",
@@ -344,7 +355,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
     }, {
         scope: ["meta.link"],
         settings: {
-            foreground: s.colors.PaleBlue,
+            foreground: s.fg.constant,
         },
     }]
 }
@@ -417,7 +428,7 @@ function uiTheming(s: ColorScheme): WorkbenchColors {
         "editorBracketHighlight.foreground4": s.bracketColors[3],
         "editorBracketHighlight.foreground5": s.bracketColors[4],
         "editorBracketHighlight.foreground6": s.bracketColors[5],
-        "editorBracketHighlight.unexpectedBracket.foreground": s.colors.Orange
+        "editorBracketHighlight.unexpectedBracket.foreground": s.fg.function
     }
 }
 
