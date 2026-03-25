@@ -437,9 +437,7 @@ function renderTheme({ name, scheme }: { name: string, scheme: ColorScheme }): V
     return {
         name: name,
         colors: uiTheming(scheme),
-
         tokenColors: syntaxHighlights(scheme),
-
         semanticHighlighting: true,
         semanticTokenColors: semanticTheming(scheme),
     }
