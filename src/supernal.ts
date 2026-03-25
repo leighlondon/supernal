@@ -432,8 +432,7 @@ function uiTheming(s: ColorScheme): WorkbenchColors {
     }
 }
 
-
-function renderTheme({ name, scheme }: { name: string, scheme: ColorScheme }): VSCodeTheme {
+function vsCodeTheme({ name, scheme }: { name: string, scheme: ColorScheme }): VSCodeTheme {
     return {
         name: name,
         colors: uiTheming(scheme),
@@ -443,4 +442,8 @@ function renderTheme({ name, scheme }: { name: string, scheme: ColorScheme }): V
     }
 }
 
-writeFileSync('themes/supernal-color-theme.json', JSON.stringify(renderTheme({ name: 'supernal', scheme: supernal }), null, 2));
+function renderVSCodeTheme(theme: VSCodeTheme): string {
+    return JSON.stringify(theme, null, 2);
+}
+
+writeFileSync('themes/supernal-color-theme.json', renderVSCodeTheme(vsCodeTheme({ name: 'supernal', scheme: supernal })));
