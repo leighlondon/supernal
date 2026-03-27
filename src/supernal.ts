@@ -13,10 +13,10 @@ const Base: Palette = {
     Gray: "#363b40",
     LightGray: "#5f5f74",
     Yellow: "#fdea56",
-    PaleYellow: "#ffef9f",
+    PaleYellow: "#f5e593",
     Orange: "#fdb231",
     PaleOrange: "#f2be6a",
-    SuperPaleOrange: "#eed09f",
+    SuperPaleOrange: "#f3d8ac",
     Red: "#fc6984",
     PaleRed: "#f5a0af",
     Pink: "#f390ec",
@@ -44,18 +44,19 @@ let supernal: ColorScheme = {
     fg: {
         number: Base.PaleCyan,
         default: Base.White,
-        namespace: Base.PaleOrange,
+        primitive: Base.PalePink,
+        string: Base.PaleRed,
+        type: Base.PaleYellow,
+        interface: Base.PaleYellow,
+        function: Base.PaleOrange,
+        macro: Base.SuperPaleOrange,
+        namespace: Base.White,
         comment: Base.DarkWhite,
         variable: Base.White,
         constant: Base.PaleBlue,
-        string: Base.SuperPaleOrange,
-        type: Base.Yellow,
         keyword: Base.Purple,
         punctuation: Base.Red,
-        interface: Base.Yellow,
-        function: Base.PaleOrange,
-        macro: Base.PalePink,
-        property: Base.PaleRed,
+        property: Base.SuperPaleOrange,
     },
     headings: [Base.Purple, Base.Blue, Base.PaleBlue, Base.Green, Base.Yellow, Base.Orange],
     bracketColors: [
@@ -146,6 +147,13 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         settings: {
             foreground: s.fg.constant,
             fontStyle: "italic",
+        }
+    }, {
+        scope: [
+            "support.type.primitive",
+        ],
+        settings: {
+            foreground: s.fg.primitive,
         }
     }, {
         scope: [
@@ -365,7 +373,9 @@ function semanticTheming(s: ColorScheme): WorkbenchColors {
     return {
         "property.declaration": s.fg.property,
         // "parameter": s.fg.default,
+        "string.format": s.fg.punctuation,
         "macro": s.fg.macro,
+        "type.defaultLibrary": s.fg.primitive,
         "type": s.fg.type,
         "interface": s.fg.interface,
         "variable": s.fg.variable,

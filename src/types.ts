@@ -28,6 +28,7 @@ export interface ColorScheme {
         variable: Hex;
         namespace: Hex;
         string: Hex;
+        primitive: Hex;
         constant: Hex;
         type: Hex;
         interface: Hex;
