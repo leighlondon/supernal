@@ -44,6 +44,7 @@ let supernal: ColorScheme = {
     fg: {
         number: Base.PaleCyan,
         default: Base.White,
+        namespace: Base.PaleOrange,
         comment: Base.DarkWhite,
         variable: Base.White,
         constant: Base.PaleBlue,
@@ -231,7 +232,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         }
     }, {
         scope: ["entity.name.namespace"],
-        settings: { foreground: s.fg.type }
+        settings: { foreground: s.fg.namespace }
     }, {
         name: "JSON Key - Level 0",
         scope: [
