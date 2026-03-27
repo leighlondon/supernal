@@ -425,6 +425,7 @@
     "type": "#f5e593",
     "interface": "#f5e593",
     "variable": "#d0d0d0",
+    "variable.readonly": "#70bdf1",
     "function": "#f2be6a",
     "keyword": "#bf81fa"
   }

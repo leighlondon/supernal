@@ -379,6 +379,7 @@ function semanticTheming(s: ColorScheme): WorkbenchColors {
         "type": s.fg.type,
         "interface": s.fg.interface,
         "variable": s.fg.variable,
+        "variable.readonly": s.fg.constant,
         // "namespace": s.colors.PaleYellow,
         // "enumMember": s.fg.function,
         "function": s.fg.function,
