@@ -378,6 +378,7 @@ function semanticTheming(s: ColorScheme): WorkbenchColors {
         "type.defaultLibrary": s.fg.primitive,
         "type": s.fg.type,
         "interface": s.fg.interface,
+        "builtinType": s.fg.primitive,
         "variable": s.fg.variable,
         "variable.readonly": s.fg.constant,
         // "namespace": s.colors.PaleYellow,

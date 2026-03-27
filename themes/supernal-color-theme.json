@@ -424,6 +424,7 @@
     "type.defaultLibrary": "#f7affa",
     "type": "#f5e593",
     "interface": "#f5e593",
+    "builtinType": "#f7affa",
     "variable": "#d0d0d0",
     "variable.readonly": "#70bdf1",
     "function": "#f2be6a",
