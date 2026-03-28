@@ -19,8 +19,8 @@ const Base: Palette = {
     SuperPaleOrange: "#f3d8ac",
     Red: "#fc6984",
     PaleRed: "#f5a0af",
-    Pink: "#f390ec",
-    PalePink: "#f7affa",
+    Pink: "#f29ded",
+    PalePink: "#efb0f1",
     Purple: "#bf81fa",
     PalePurple: "#d6bcf0",
     Blue: "#6f87ff",
@@ -42,21 +42,26 @@ let supernal: ColorScheme = {
     },
     border: Base.Gray,
     fg: {
-        number: Base.PaleCyan,
         default: Base.White,
-        primitive: Base.PalePink,
+        comment: Base.DarkWhite,
+        punctuation: Base.Red,
+        keyword: Base.Purple,
+
+        constant: Base.PaleBlue,
+        primitive: Base.Pink,
+        number: Base.PaleCyan,
         string: Base.PaleRed,
+
+        namespace: Base.White,
         type: Base.PaleYellow,
         interface: Base.PaleYellow,
+        property: Base.SuperPaleOrange,
+        variable: Base.White,
+        // to add: parameter
+
+
         function: Base.PaleOrange,
         macro: Base.SuperPaleOrange,
-        namespace: Base.White,
-        comment: Base.DarkWhite,
-        variable: Base.White,
-        constant: Base.PaleBlue,
-        keyword: Base.Purple,
-        punctuation: Base.Red,
-        property: Base.SuperPaleOrange,
     },
     headings: [Base.Purple, Base.Blue, Base.PaleBlue, Base.Green, Base.Yellow, Base.Orange],
     bracketColors: [
@@ -98,9 +103,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
     }, {
         name: "Escape",
         scope: ["constant.character.escape"],
-        settings: {
-            foreground: s.fg.keyword,
-        }
+        settings: { foreground: s.fg.keyword }
     }, {
         name: "Keywords",
         scope: [
@@ -131,7 +134,8 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "punctuation.definition.interpolation",
             "meta.interpolation",
             "meta.attribute",
-            "storage.modifier",
+            "meta.template.expression",
+            // "storage.modifier",
         ],
         settings: {
             foreground: s.fg.punctuation,
@@ -151,6 +155,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
     }, {
         scope: [
             "support.type.primitive",
+            "storage.type.primitive",
         ],
         settings: {
             foreground: s.fg.primitive,
@@ -165,7 +170,8 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         }
     }, {
         scope: [
-            "storage.type"
+            "storage.type",
+            "storage.modifier"
         ],
         settings: {
             foreground: s.fg.keyword,
@@ -239,7 +245,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             foreground: s.fg.type,
         }
     }, {
-        scope: ["entity.name.namespace"],
+        scope: ["entity.name.namespace", "storage.modifier.package", "entity.name.import", "storage.modifier.import"],
         settings: { foreground: s.fg.namespace }
     }, {
         name: "JSON Key - Level 0",

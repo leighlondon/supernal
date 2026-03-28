@@ -117,7 +117,7 @@
         "punctuation.definition.interpolation",
         "meta.interpolation",
         "meta.attribute",
-        "storage.modifier"
+        "meta.template.expression"
       ],
       "settings": {
         "foreground": "#fc6984"
@@ -143,10 +143,11 @@
     },
     {
       "scope": [
-        "support.type.primitive"
+        "support.type.primitive",
+        "storage.type.primitive"
       ],
       "settings": {
-        "foreground": "#f7affa"
+        "foreground": "#f29ded"
       }
     },
     {
@@ -160,7 +161,8 @@
     },
     {
       "scope": [
-        "storage.type"
+        "storage.type",
+        "storage.modifier"
       ],
       "settings": {
         "foreground": "#bf81fa"
@@ -266,7 +268,10 @@
     },
     {
       "scope": [
-        "entity.name.namespace"
+        "entity.name.namespace",
+        "storage.modifier.package",
+        "entity.name.import",
+        "storage.modifier.import"
       ],
       "settings": {
         "foreground": "#d0d0d0"
@@ -341,7 +346,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "#f390ec"
+        "foreground": "#f29ded"
       }
     },
     {
@@ -421,10 +426,10 @@
     "property.declaration": "#f3d8ac",
     "string.format": "#fc6984",
     "macro": "#f3d8ac",
-    "type.defaultLibrary": "#f7affa",
+    "type.defaultLibrary": "#f29ded",
     "type": "#f5e593",
     "interface": "#f5e593",
-    "builtinType": "#f7affa",
+    "builtinType": "#f29ded",
     "variable": "#d0d0d0",
     "variable.readonly": "#70bdf1",
     "function": "#f2be6a",
