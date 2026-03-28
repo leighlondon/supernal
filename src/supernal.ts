@@ -19,16 +19,16 @@ const Base: Palette = {
     SuperPaleOrange: "#f3d8ac",
     Red: "#fc6984",
     PaleRed: "#f5a0af",
-    Pink: "#f29ded",
-    PalePink: "#efb0f1",
+    Pink: "#dc7ed6",
+    PalePink: "#eaabed",
     Purple: "#bf81fa",
     PalePurple: "#d6bcf0",
     Blue: "#6f87ff",
     PaleBlue: "#70bdf1",
     Cyan: "#49e4da",
     PaleCyan: "#49e4da",
-    Green: "#37f495",
-    PaleGreen: "#80ffc0d5",
+    Green: "#e5e4b0",
+    PaleGreen: "#b1bff2",
     DarkWhite: "#888a8d",
     White: "#d0d0d0",
     PaleWhite: "#e8e5e5",
@@ -55,7 +55,7 @@ let supernal: ColorScheme = {
         namespace: Base.White,
         type: Base.PaleYellow,
         interface: Base.PaleYellow,
-        property: Base.SuperPaleOrange,
+        property: Base.Green,
         variable: Base.White,
         // to add: parameter
 
@@ -103,7 +103,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
     }, {
         name: "Escape",
         scope: ["constant.character.escape"],
-        settings: { foreground: s.fg.keyword }
+        settings: { foreground: s.fg.number }
     }, {
         name: "Keywords",
         scope: [
@@ -240,7 +240,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             foreground: "#898989",
         }
     }, {
-        scope: ["entity.name.type"],
+        scope: ["entity.name.type", "storage.type.java", "storage.type.generic"],
         settings: {
             foreground: s.fg.type,
         }

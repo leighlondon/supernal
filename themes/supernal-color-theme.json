@@ -81,7 +81,7 @@
         "constant.character.escape"
       ],
       "settings": {
-        "foreground": "#bf81fa"
+        "foreground": "#49e4da"
       }
     },
     {
@@ -147,7 +147,7 @@
         "storage.type.primitive"
       ],
       "settings": {
-        "foreground": "#f29ded"
+        "foreground": "#dc7ed6"
       }
     },
     {
@@ -156,7 +156,7 @@
         "meta.table"
       ],
       "settings": {
-        "foreground": "#f3d8ac"
+        "foreground": "#e5e4b0"
       }
     },
     {
@@ -260,7 +260,9 @@
     },
     {
       "scope": [
-        "entity.name.type"
+        "entity.name.type",
+        "storage.type.java",
+        "storage.type.generic"
       ],
       "settings": {
         "foreground": "#f5e593"
@@ -310,7 +312,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "#37f495"
+        "foreground": "#e5e4b0"
       }
     },
     {
@@ -346,7 +348,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "#f29ded"
+        "foreground": "#dc7ed6"
       }
     },
     {
@@ -391,7 +393,7 @@
         "markup.heading heading.4"
       ],
       "settings": {
-        "foreground": "#37f495"
+        "foreground": "#e5e4b0"
       }
     },
     {
@@ -423,13 +425,13 @@
   ],
   "semanticHighlighting": true,
   "semanticTokenColors": {
-    "property.declaration": "#f3d8ac",
+    "property.declaration": "#e5e4b0",
     "string.format": "#fc6984",
     "macro": "#f3d8ac",
-    "type.defaultLibrary": "#f29ded",
+    "type.defaultLibrary": "#dc7ed6",
     "type": "#f5e593",
     "interface": "#f5e593",
-    "builtinType": "#f29ded",
+    "builtinType": "#dc7ed6",
     "variable": "#d0d0d0",
     "variable.readonly": "#70bdf1",
     "function": "#f2be6a",
