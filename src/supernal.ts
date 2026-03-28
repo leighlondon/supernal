@@ -21,7 +21,7 @@ const Base: Palette = {
     PaleRed: "#f5a0af",
     Pink: "#dc7ed6",
     PalePink: "#eaabed",
-    Purple: "#bf81fa",
+    Purple: "#b27ee3ed",
     PalePurple: "#d6bcf0",
     Blue: "#6f87ff",
     PaleBlue: "#70bdf1",
