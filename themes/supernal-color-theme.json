@@ -6,7 +6,7 @@
     "menubar.selectionBackground": "#333942",
     "titleBar.activeBackground": "#1d2125",
     "titleBar.inactiveBackground": "#1d2125",
-    "statusBar.foreground": "#d0d0d0",
+    "statusBar.foreground": "#eeeeee",
     "titleBar.border": "#363b40",
     "statusBar.border": "#363b40",
     "statusBar.background": "#1d2125",
@@ -33,7 +33,7 @@
     "input.background": "#21252b",
     "input.border": "#505050",
     "panel.background": "#21252b",
-    "editor.foreground": "#d0d0d0",
+    "editor.foreground": "#eeeeee",
     "banner.background": "#215dce",
     "diffEditor.insertedLineBackground": "#18a47c2f",
     "diffEditor.insertedTextBackground": "#18a47c2f",
@@ -92,7 +92,7 @@
         "markup.inline.raw"
       ],
       "settings": {
-        "foreground": "#a07ee3ed"
+        "foreground": "#a07ee3"
       }
     },
     {
@@ -167,7 +167,7 @@
         "storage.modifier"
       ],
       "settings": {
-        "foreground": "#a07ee3ed"
+        "foreground": "#a07ee3"
       }
     },
     {
@@ -278,7 +278,7 @@
         "storage.modifier.import"
       ],
       "settings": {
-        "foreground": "#d0d0d0"
+        "foreground": "#eeeeee"
       }
     },
     {
@@ -341,7 +341,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "#a07ee3ed"
+        "foreground": "#a07ee3"
       }
     },
     {
@@ -359,7 +359,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "#d0d0d0"
+        "foreground": "#eeeeee"
       }
     },
     {
@@ -368,7 +368,7 @@
         "markup.heading heading.1"
       ],
       "settings": {
-        "foreground": "#a07ee3ed"
+        "foreground": "#a07ee3"
       }
     },
     {
@@ -435,13 +435,13 @@
     "type": "#f4de55",
     "interface": "#f1d049",
     "builtinType": "#c67fbc",
-    "variable": "#d0d0d0",
-    "namespace": "#d0d0d0",
+    "variable": "#eeeeee",
+    "namespace": "#eeeeee",
     "enum": "#d79ebb",
     "type.interface": "#f1d049",
     "enumMember": "#c67fbc",
     "function": "#ebab3b",
     "constant": "#3a97f3",
-    "keyword": "#a07ee3ed"
+    "keyword": "#a07ee3"
   }
 }
