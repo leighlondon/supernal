@@ -158,7 +158,7 @@
         "meta.table"
       ],
       "settings": {
-        "foreground": "#ebdc8d"
+        "foreground": "#70bdf1"
       }
     },
     {
@@ -193,7 +193,7 @@
         "entity.name.tag"
       ],
       "settings": {
-        "foreground": "#ebdc8d"
+        "foreground": "#70bdf1"
       }
     },
     {
@@ -427,8 +427,8 @@
   ],
   "semanticHighlighting": true,
   "semanticTokenColors": {
-    "property": "#ebdc8d",
-    "parameter": "#e7e88a",
+    "property": "#70bdf1",
+    "parameter": "#ebdc8d",
     "string.format": "#f95959",
     "macro": "#dfbc85",
     "type.defaultLibrary": "#c67fbc",
