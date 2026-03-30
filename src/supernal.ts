@@ -409,6 +409,7 @@ function semanticTheming(s: any): WorkbenchColors {
         "variable.readonly": s.fg.constant,
         "namespace": s.fg.namespace,
         "enum": s.fg.enum,
+        "type.interface": s.fg.interface,
         "enumMember": s.fg.enumMember,
         "function": s.fg.function,
         "constant": s.fg.constant,
