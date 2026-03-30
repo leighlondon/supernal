@@ -7,6 +7,23 @@ import {
     type Palette
 } from "./types";
 
+const p = {
+    Red: "#f95959",
+    Coral: "#ff8060",
+    Orange: "#ebae46",
+    PaleOrange: "#dfbc85",
+    Yellow: "#ead75e",
+    Lime: "#b5e045",
+    Green: "#28e275",
+    Aqua: "#4ed1b6",
+    Blue: "#70bdf1",
+    DarkBlue: "#6395d1",
+    Purple: "#a07ee3",
+    Pink: "#eb82cf",
+    White: "#ccc",
+    Gray: "#888",
+}
+
 const Base: any = {
     Black: "#1d2125",
     DarkGray: "#21252b",
