@@ -7,34 +7,51 @@ import {
     type Palette
 } from "./types";
 
-const Base: Palette = {
+const Base: any = {
     Black: "#1d2125",
     DarkGray: "#21252b",
     Gray: "#363b40",
     LightGray: "#5f5f74",
-    Yellow: "#fdea56",
+    Yellow: "#f2e069",
     PaleYellow: "#f5e593",
-    Orange: "#fdb231",
+    Orange: "#ecae42",
     PaleOrange: "#f2be6a",
-    SuperPaleOrange: "#f3d8ac",
-    Red: "#fc6984",
-    PaleRed: "#f5a0af",
-    Pink: "#dc7ed6",
-    PalePink: "#eaabed",
-    Purple: "#b27ee3ed",
-    PalePurple: "#d6bcf0",
-    Blue: "#6f87ff",
-    PaleBlue: "#70bdf1",
-    Cyan: "#49e4da",
-    PaleCyan: "#49e4da",
-    Green: "#e5e4b0",
-    PaleGreen: "#b1bff2",
+    SuperPaleOrange: "#ebca95",
+    OrigRed: "#fc6984",
+    Red: "#f95959",
+    PaleRed: "#f48989",
+    Pink: "#c67fbc",
+    PalePink: "#d79ebb",
+    Purple: "#a07ee3ed",
+    PalePurple: "#c8a6ea",
+    Blue: "#56a1ed",
+    PaleBlue: "#7ec1ed",
+    Cyan: "#68eae1",
+    PaleCyan: "#98e3de",
+    Green: "#37f495",
+    PaleGreen: "#80ffc0d5",
     DarkWhite: "#888a8d",
     White: "#d0d0d0",
     PaleWhite: "#e8e5e5",
+
+    turqoise: "#55dfc4",
+    darkTurqoise: "#19ac8e",
+    green: "#40e083",
+    darkGreen: "#36c471",
+    blue: "#72baea",
+    darkBlue: "#2ea4f2",
+    purple: "#966bc8",
+    darkPurple: "#7753a1",
+    yellow: "#f1d049",
+    orange: "#d98c49",
+    lightOrange: "#e7b15a",
+    darkOrange: "#d27e46",
+    red: "#e56052",
+    darkRed: "#c9584c",
+
 }
 
-let supernal: ColorScheme = {
+let supernal: any = {
     bg: {
         default: Base.DarkGray,
         darker: Base.Black,
@@ -44,18 +61,20 @@ let supernal: ColorScheme = {
     fg: {
         default: Base.White,
         comment: Base.DarkWhite,
-        punctuation: Base.Red,
+        punctuation: Base.OrigRed,
         keyword: Base.Purple,
 
-        constant: Base.PaleBlue,
-        primitive: Base.Pink,
-        number: Base.PaleCyan,
+        constant: Base.Blue,
+        number: Base.Cyan,
         string: Base.PaleRed,
 
         namespace: Base.White,
-        type: Base.PaleYellow,
-        interface: Base.PaleYellow,
-        property: Base.Green,
+        primitive: Base.Pink,
+        type: Base.blue,
+        interface: Base.Blue,
+        property: Base.White,
+        enum: Base.darkTurqoise,
+        enumMember: Base.turqoise,
         variable: Base.White,
         // to add: parameter
 
@@ -75,13 +94,13 @@ let supernal: ColorScheme = {
         "#6f87ff",
     ],
     jsonKeyColors: [
-        Base.Red,
-        Base.Orange,
-        Base.Yellow,
-        Base.Green,
-        Base.Cyan,
-        Base.PaleBlue,
-        Base.Purple,
+        Base.red,
+        Base.orange,
+        Base.yellow,
+        Base.green,
+        Base.turqoise,
+        Base.blue,
+        Base.purple,
         Base.Pink,
         Base.White,
     ],
@@ -130,6 +149,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "punctuation.definition.attribute",
             "punctuation.definition markup.fenced_code.block",
             "punctuation.brackets",
+            "punctuation.bracket",
             "punctuation.definition.list",
             "punctuation.definition.interpolation",
             "meta.interpolation",
@@ -375,10 +395,10 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
     }]
 }
 
-function semanticTheming(s: ColorScheme): WorkbenchColors {
+function semanticTheming(s: any): WorkbenchColors {
     return {
         "property.declaration": s.fg.property,
-        // "parameter": s.fg.default,
+        "parameter": s.fg.default,
         "string.format": s.fg.punctuation,
         "macro": s.fg.macro,
         "type.defaultLibrary": s.fg.primitive,
@@ -387,10 +407,11 @@ function semanticTheming(s: ColorScheme): WorkbenchColors {
         "builtinType": s.fg.primitive,
         "variable": s.fg.variable,
         "variable.readonly": s.fg.constant,
-        // "namespace": s.colors.PaleYellow,
-        // "enumMember": s.fg.function,
+        "namespace": s.fg.namespace,
+        "enum": s.fg.enum,
+        "enumMember": s.fg.enumMember,
         "function": s.fg.function,
-        // "constant": s.fg.constant,
+        "constant": s.fg.constant,
         "keyword": s.fg.keyword,
     }
 }
