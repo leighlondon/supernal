@@ -437,8 +437,8 @@
     "variable": "#d0d0d0",
     "variable.readonly": "#56a1ed",
     "namespace": "#d0d0d0",
-    "enum": "#19ac8e",
-    "enumMember": "#55dfc4",
+    "enum": "#d79ebb",
+    "enumMember": "#c67fbc",
     "function": "#f2be6a",
     "constant": "#56a1ed",
     "keyword": "#a07ee3ed"

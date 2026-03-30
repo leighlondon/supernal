@@ -73,8 +73,8 @@ let supernal: any = {
         type: Base.blue,
         interface: Base.Blue,
         property: Base.White,
-        enum: Base.darkTurqoise,
-        enumMember: Base.turqoise,
+        enum: Base.PalePink,
+        enumMember: Base.Pink,
         variable: Base.White,
         // to add: parameter
 
