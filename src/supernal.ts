@@ -12,14 +12,15 @@ const Base: any = {
     DarkGray: "#21252b",
     Gray: "#363b40",
     LightGray: "#5f5f74",
-    Yellow: "#f2e069",
-    PaleYellow: "#f5e593",
-    Orange: "#ecae42",
-    PaleOrange: "#f2be6a",
-    SuperPaleOrange: "#ebca95",
+    Yellow: "#f4de55",
+    PaleYellow: "#ebdc8d",
+    Orange: "#ebab3b",
+    PaleOrange: "#dea64d",
+    SuperPaleOrange: "#dfbc85",
     OrigRed: "#fc6984",
     Red: "#f95959",
     PaleRed: "#f48989",
+    SuperPaleRed: "#eeafaf",
     Pink: "#c67fbc",
     PalePink: "#d79ebb",
     Purple: "#a07ee3ed",
@@ -27,8 +28,7 @@ const Base: any = {
     Blue: "#3a97f3",
     PaleBlue: "#70bdf1",
     SuperPaleBlue: "#b3c8fd",
-    Cyan: "#07f9e9",
-    PaleCyan: "#98e3de",
+    Cyan: "#2fe3a1",
     Green: "#37f495",
     PaleGreen: "#80ffc0d5",
     DarkWhite: "#888a8d",
@@ -49,7 +49,7 @@ const Base: any = {
     darkOrange: "#d27e46",
     red: "#e56052",
     darkRed: "#c9584c",
-
+    palePink: "#e7e88a",
 }
 
 let supernal: any = {
@@ -62,25 +62,21 @@ let supernal: any = {
     fg: {
         default: Base.White,
         comment: Base.DarkWhite,
-        punctuation: Base.OrigRed,
+        punctuation: Base.Red,
         keyword: Base.Purple,
-
         constant: Base.Blue,
         number: Base.Cyan,
-        string: Base.PaleRed,
-
+        string: Base.SuperPaleRed,
         namespace: Base.White,
+        parameter: Base.palePink,
         primitive: Base.Pink,
-        type: Base.Blue,
-        interface: Base.PaleBlue,
-        property: Base.White,
+        type: Base.Yellow,
+        interface: Base.yellow,
+        property: Base.PaleYellow,
         enum: Base.PalePink,
         enumMember: Base.Pink,
         variable: Base.White,
-        // to add: parameter
-
-
-        function: Base.PaleOrange,
+        function: Base.Orange,
         macro: Base.SuperPaleOrange,
     },
     headings: [Base.Purple, Base.Blue, Base.PaleBlue, Base.Green, Base.Yellow, Base.Orange],
@@ -219,7 +215,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "entity.name.tag"
         ],
         settings: {
-            foreground: "#53bff9"
+            foreground: s.fg.property
         }
     }, {
         scope: ["markup.bold.markdown"],
@@ -399,8 +395,8 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
 
 function semanticTheming(s: any): WorkbenchColors {
     return {
-        "property.declaration": s.fg.property,
-        "parameter": s.fg.default,
+        "property": s.fg.property,
+        "parameter": s.fg.parameter,
         "string.format": s.fg.punctuation,
         "macro": s.fg.macro,
         "type.defaultLibrary": s.fg.primitive,
@@ -408,7 +404,6 @@ function semanticTheming(s: any): WorkbenchColors {
         "interface": s.fg.interface,
         "builtinType": s.fg.primitive,
         "variable": s.fg.variable,
-        "variable.readonly": s.fg.constant,
         "namespace": s.fg.namespace,
         "enum": s.fg.enum,
         "type.interface": s.fg.interface,
