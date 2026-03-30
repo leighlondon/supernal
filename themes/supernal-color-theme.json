@@ -72,13 +72,14 @@
         "string"
       ],
       "settings": {
-        "foreground": "#ce8076"
+        "foreground": "#ee8878"
       }
     },
     {
       "name": "Escape",
       "scope": [
-        "constant.character.escape"
+        "constant.character.escape",
+        "support.other.escape"
       ],
       "settings": {
         "foreground": "#4ed1b6"
@@ -118,7 +119,6 @@
         "punctuation.definition.interpolation",
         "meta.interpolation",
         "variable.other.normal",
-        "meta.attribute",
         "meta.template.expression"
       ],
       "settings": {
@@ -145,6 +145,14 @@
     },
     {
       "scope": [
+        "variable.parameter"
+      ],
+      "settings": {
+        "foreground": "#70bdf1"
+      }
+    },
+    {
+      "scope": [
         "support.type.primitive",
         "storage.type.primitive"
       ],
@@ -155,10 +163,12 @@
     {
       "scope": [
         "support.type.property-name",
+        "meta.attribute",
+        "entity.name.tag",
         "meta.table"
       ],
       "settings": {
-        "foreground": "#6395d1"
+        "foreground": "#eb89a8"
       }
     },
     {
@@ -186,14 +196,6 @@
       ],
       "settings": {
         "foreground": "#dfbc85"
-      }
-    },
-    {
-      "scope": [
-        "entity.name.tag"
-      ],
-      "settings": {
-        "foreground": "#6395d1"
       }
     },
     {
@@ -427,8 +429,8 @@
   ],
   "semanticHighlighting": true,
   "semanticTokenColors": {
-    "property": "#6395d1",
-    "parameter": "#ccc",
+    "property": "#eb89a8",
+    "parameter": "#70bdf1",
     "string.format": "#f95959",
     "macro": "#dfbc85",
     "type.defaultLibrary": "#eb82cf",

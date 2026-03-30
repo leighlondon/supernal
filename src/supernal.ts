@@ -9,7 +9,7 @@ import {
 
 const p = {
     Red: "#f95959",
-    Coral: "#ce8076",
+    Coral: "#ee8878",
     Orange: "#ebae46",
     PaleOrange: "#dfbc85",
     Yellow: "#ead75e",
@@ -18,6 +18,7 @@ const p = {
     Blue: "#70bdf1",
     DarkBlue: "#6395d1",
     Purple: "#a07ee3",
+    Rose: "#eb89a8",
     Pink: "#eb82cf",
     White: "#ccc",
     Gray: "#888",
@@ -84,12 +85,12 @@ let supernal: any = {
         number: p.Aqua,
         string: p.Coral,
         namespace: p.White,
-        parameter: p.White,
+        parameter: p.Blue,
         primitive: p.Pink,
         type: p.Yellow,
         interface: p.Yellow,
         enum: p.Green,
-        property: p.DarkBlue,
+        property: p.Rose,
         enumMember: p.Aqua,
         variable: p.White,
         function: p.Orange,
@@ -120,7 +121,7 @@ let supernal: any = {
     colors: Base,
 }
 
-function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
+function syntaxHighlights(s: any): TokenColorRule[] {
     return [{
         scope: ["comment", "punctuation.definition.comment", "string.comment"],
         settings: { foreground: s.fg.comment }
@@ -134,7 +135,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         settings: { foreground: s.fg.string }
     }, {
         name: "Escape",
-        scope: ["constant.character.escape"],
+        scope: ["constant.character.escape", "support.other.escape"],
         settings: { foreground: s.fg.number }
     }, {
         name: "Keywords",
@@ -167,7 +168,6 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "punctuation.definition.interpolation",
             "meta.interpolation",
             "variable.other.normal",
-            "meta.attribute",
             "meta.template.expression",
             // "storage.modifier",
         ],
@@ -187,6 +187,9 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             fontStyle: "italic",
         }
     }, {
+        scope: ["variable.parameter"],
+        settings: { foreground: s.fg.parameter },
+    }, {
         scope: [
             "support.type.primitive",
             "storage.type.primitive",
@@ -197,6 +200,8 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
     }, {
         scope: [
             "support.type.property-name",
+            "meta.attribute",
+            "entity.name.tag",
             "meta.table"
         ],
         settings: {
@@ -225,13 +230,6 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
         ],
         settings: {
             foreground: s.fg.macro
-        }
-    }, {
-        scope: [
-            "entity.name.tag"
-        ],
-        settings: {
-            foreground: s.fg.property
         }
     }, {
         scope: ["markup.bold.markdown"],
