@@ -154,6 +154,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "punctuation.definition.list",
             "punctuation.definition.interpolation",
             "meta.interpolation",
+            "variable.other.normal",
             "meta.attribute",
             "meta.template.expression",
             // "storage.modifier",
