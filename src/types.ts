@@ -1,19 +1,25 @@
 export type Hex = `#${string}`;
 
 export interface Palette {
-    Black: Hex;
-    DarkGray: Hex;
-    Gray: Hex;
-    LightGray: Hex;
-    Yellow: Hex;
-    Orange: Hex;
     Red: Hex;
-    Pink: Hex;
-    Purple: Hex;
-    Blue: Hex;
-    PaleBlue: Hex;
+    Coral: Hex;
+    Orange: Hex;
+    PaleOrange: Hex;
+    Yellow: Hex;
     Green: Hex;
+    Aqua: Hex;
+    Blue: Hex;
+    DarkBlue: Hex;
+    Purple: Hex;
+    Lavender: Hex;
+    Rose: Hex;
+    Pink: Hex;
     White: Hex;
+    LighterGray: Hex;
+    LightGray: Hex;
+    Gray: Hex;
+    DarkGray: Hex;
+    Black: Hex;
 }
 
 export interface ColorScheme {

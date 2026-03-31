@@ -308,7 +308,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "#ebab3b"
+        "foreground": "#ebae46"
       }
     },
     {
@@ -317,7 +317,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "#f4de55"
+        "foreground": "#ead75e"
       }
     },
     {
@@ -326,7 +326,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "#37f495"
+        "foreground": "#6ece7f"
       }
     },
     {
@@ -335,7 +335,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "#70bdf1"
+        "foreground": "#83b5f1"
       }
     },
     {
@@ -353,7 +353,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "#a07ee3"
+        "foreground": "#9274cc"
       }
     },
     {
@@ -362,7 +362,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "#c67fbc"
+        "foreground": "#dd8ac7"
       }
     },
     {
@@ -371,7 +371,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "#eeeeee"
+        "foreground": "#ccc"
       }
     },
     {
@@ -380,7 +380,7 @@
         "markup.heading heading.1"
       ],
       "settings": {
-        "foreground": "#a07ee3"
+        "foreground": "#9274cc"
       }
     },
     {
@@ -398,7 +398,7 @@
         "markup.heading heading.3"
       ],
       "settings": {
-        "foreground": "#70bdf1"
+        "foreground": "#83b5f1"
       }
     },
     {
@@ -407,7 +407,7 @@
         "markup.heading heading.4"
       ],
       "settings": {
-        "foreground": "#37f495"
+        "foreground": "#6ece7f"
       }
     },
     {
@@ -416,7 +416,7 @@
         "markup.heading heading.5"
       ],
       "settings": {
-        "foreground": "#f4de55"
+        "foreground": "#ead75e"
       }
     },
     {
@@ -425,7 +425,7 @@
         "markup.heading heading.6"
       ],
       "settings": {
-        "foreground": "#ebab3b"
+        "foreground": "#ebae46"
       }
     },
     {

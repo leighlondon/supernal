@@ -8,7 +8,7 @@ import {
     type Palette,
 } from "./types";
 
-const p = {
+const p: Palette = {
     Red: "#f95959",
     Coral: "#f6a497",
     Orange: "#ebae46",
@@ -23,35 +23,23 @@ const p = {
     Rose: "#eb89a8",
     Pink: "#dd8ac7",
     White: "#ccc",
-    Gray: "#888",
-} satisfies Record<string, Hex>
-
-const Base: Palette = {
-    Black: "#1d2125",
-    DarkGray: "#21252b",
+    LighterGray: "#888",
     Gray: "#363b40",
     LightGray: "#5f5f74",
-    Yellow: "#f4de55",
-    Orange: "#ebab3b",
-    Red: "#f95959",
-    Pink: "#c67fbc",
-    Purple: "#a07ee3",
-    Blue: "#3a97f3",
-    PaleBlue: "#70bdf1",
-    Green: "#37f495",
-    White: "#eeeeee",
+    DarkGray: "#21252b",
+    Black: "#1d2125",
 }
 
 const supernal: ColorScheme = {
     bg: {
-        default: Base.DarkGray,
-        darker: Base.Black,
-        lighter: Base.LightGray,
+        default: p.DarkGray,
+        darker: p.Black,
+        lighter: p.LightGray,
     },
-    border: Base.Gray,
+    border: p.Gray,
     fg: {
         default: p.White,
-        comment: p.Gray,
+        comment: p.LighterGray,
         punctuation: p.Red,
         keyword: p.Purple,
         constant: p.Lavender,
@@ -65,12 +53,11 @@ const supernal: ColorScheme = {
         enum: p.Aqua,
         property: p.Rose,
         enumMember: p.DarkBlue,
-        // enumMember: "#8090e8",
         variable: p.White,
         function: p.Orange,
         macro: p.PaleOrange,
     },
-    headings: [Base.Purple, Base.Blue, Base.PaleBlue, Base.Green, Base.Yellow, Base.Orange],
+    headings: [p.Purple, p.DarkBlue, p.Blue, p.Green, p.Yellow, p.Orange],
     bracketColors: [
         "#fc6984",
         "#ea7398",
@@ -82,19 +69,19 @@ const supernal: ColorScheme = {
         "#6f87ff",
     ],
     jsonKeyColors: [
-        Base.Red,
-        Base.Orange,
-        Base.Yellow,
-        Base.Green,
-        Base.PaleBlue,
-        Base.Blue,
-        Base.Purple,
-        Base.Pink,
-        Base.White,
+        p.Red,
+        p.Orange,
+        p.Yellow,
+        p.Green,
+        p.Blue,
+        p.DarkBlue,
+        p.Purple,
+        p.Pink,
+        p.White,
     ],
 }
 
-function syntaxHighlights(s: any): TokenColorRule[] {
+function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
     return [{
         scope: ["comment", "punctuation.definition.comment", "string.comment"],
         settings: { foreground: s.fg.comment }
@@ -391,7 +378,7 @@ function syntaxHighlights(s: any): TokenColorRule[] {
     }]
 }
 
-function semanticTheming(s: any): WorkbenchColors {
+function semanticTheming(s: ColorScheme): WorkbenchColors {
     return {
         "property": s.fg.property,
         "parameter": s.fg.parameter,
