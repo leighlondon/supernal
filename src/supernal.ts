@@ -10,14 +10,16 @@ import {
 
 const p = {
     Red: "#f95959",
-    Coral: "#ee8878",
+    Coral: "#f6a497",
     Orange: "#ebae46",
     PaleOrange: "#dfbc85",
     Yellow: "#ead75e",
     Green: "#6ece7f",
     Aqua: "#4ed1b6",
-    Blue: "#70bdf1",
+    Blue: "#83b5f1",
+    DarkBlue: "#3a97f3",
     Purple: "#9274cc",
+    Lavender: "#c0aaee",
     Rose: "#eb89a8",
     Pink: "#dd8ac7",
     White: "#ccc",
@@ -52,7 +54,7 @@ const supernal: ColorScheme = {
         comment: p.Gray,
         punctuation: p.Red,
         keyword: p.Purple,
-        constant: p.Blue,
+        constant: p.Lavender,
         number: p.Aqua,
         string: p.Coral,
         namespace: p.PaleOrange,
@@ -60,9 +62,10 @@ const supernal: ColorScheme = {
         primitive: p.Pink,
         type: p.Yellow,
         interface: p.Yellow,
-        enum: p.Green,
+        enum: p.Aqua,
         property: p.Rose,
-        enumMember: p.Aqua,
+        enumMember: p.DarkBlue,
+        // enumMember: "#8090e8",
         variable: p.White,
         function: p.Orange,
         macro: p.PaleOrange,
@@ -116,6 +119,12 @@ function syntaxHighlights(s: any): TokenColorRule[] {
         ],
         settings: { foreground: s.fg.keyword }
     }, {
+        name: "Variable",
+        scope: [
+            "variable.other",
+        ],
+        settings: { foreground: s.fg.variable }
+    }, {
         scope: [
             "constant.character",
             "keyword.operator",
@@ -136,7 +145,7 @@ function syntaxHighlights(s: any): TokenColorRule[] {
             "punctuation.bracket",
             "punctuation.definition.list",
             "punctuation.definition.interpolation",
-            "meta.interpolation",
+            "keyword.other.interpolation",
             "variable.other.normal",
             "meta.template.expression",
             // "storage.modifier",
@@ -401,7 +410,9 @@ function semanticTheming(s: any): WorkbenchColors {
         "constant": s.fg.constant,
         "keyword": s.fg.keyword,
         "variable.readonly": s.fg.constant,
-        "hcl-blockLabel": s.fg.constant,
+        "hcl-blockLabel": s.fg.parameter,
+        "hcl-blockType": s.fg.keyword,
+        "hcl-blockLabel.terraform-type": s.fg.type,
     }
 }
 

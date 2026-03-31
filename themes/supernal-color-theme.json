@@ -72,7 +72,7 @@
         "string"
       ],
       "settings": {
-        "foreground": "#ee8878"
+        "foreground": "#f6a497"
       }
     },
     {
@@ -97,6 +97,15 @@
       }
     },
     {
+      "name": "Variable",
+      "scope": [
+        "variable.other"
+      ],
+      "settings": {
+        "foreground": "#ccc"
+      }
+    },
+    {
       "scope": [
         "constant.character",
         "keyword.operator",
@@ -117,7 +126,7 @@
         "punctuation.bracket",
         "punctuation.definition.list",
         "punctuation.definition.interpolation",
-        "meta.interpolation",
+        "keyword.other.interpolation",
         "variable.other.normal",
         "meta.template.expression"
       ],
@@ -139,7 +148,7 @@
         "variable.other.constant"
       ],
       "settings": {
-        "foreground": "#70bdf1",
+        "foreground": "#c0aaee",
         "fontStyle": "italic"
       }
     },
@@ -148,7 +157,7 @@
         "variable.parameter"
       ],
       "settings": {
-        "foreground": "#70bdf1"
+        "foreground": "#83b5f1"
       }
     },
     {
@@ -424,7 +433,7 @@
         "meta.link"
       ],
       "settings": {
-        "foreground": "#70bdf1"
+        "foreground": "#c0aaee"
       }
     },
     {
@@ -439,7 +448,7 @@
   "semanticHighlighting": true,
   "semanticTokenColors": {
     "property": "#eb89a8",
-    "parameter": "#70bdf1",
+    "parameter": "#83b5f1",
     "string.format": "#f95959",
     "macro": "#dfbc85",
     "type.defaultLibrary": "#dd8ac7",
@@ -448,11 +457,15 @@
     "builtinType": "#dd8ac7",
     "variable": "#ccc",
     "namespace": "#dfbc85",
-    "enum": "#6ece7f",
+    "enum": "#4ed1b6",
     "type.interface": "#ead75e",
-    "enumMember": "#4ed1b6",
+    "enumMember": "#3a97f3",
     "function": "#ebae46",
-    "constant": "#70bdf1",
-    "keyword": "#9274cc"
+    "constant": "#c0aaee",
+    "keyword": "#9274cc",
+    "variable.readonly": "#c0aaee",
+    "hcl-blockLabel": "#83b5f1",
+    "hcl-blockType": "#9274cc",
+    "hcl-blockLabel.terraform-type": "#ead75e"
   }
 }
