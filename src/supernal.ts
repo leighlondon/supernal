@@ -196,7 +196,8 @@ function syntaxHighlights(s: any): TokenColorRule[] {
         scope: [
             "support.function",
             "meta.macro",
-            "entity.name.function.macro"
+            "entity.name.function.macro",
+            "entity.other.inherited-class",
         ],
         settings: {
             foreground: s.fg.macro
