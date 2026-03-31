@@ -17,9 +17,9 @@ const p = {
     Green: "#6ece7f",
     Aqua: "#4ed1b6",
     Blue: "#70bdf1",
-    Purple: "#a07ee3",
+    Purple: "#9274cc",
     Rose: "#eb89a8",
-    Pink: "#eb82cf",
+    Pink: "#dd8ac7",
     White: "#ccc",
     Gray: "#888",
 } satisfies Record<string, Hex>
@@ -55,7 +55,7 @@ const supernal: ColorScheme = {
         constant: p.Blue,
         number: p.Aqua,
         string: p.Coral,
-        namespace: p.White,
+        namespace: p.PaleOrange,
         parameter: p.Blue,
         primitive: p.Pink,
         type: p.Yellow,
@@ -163,6 +163,7 @@ function syntaxHighlights(s: any): TokenColorRule[] {
         scope: [
             "support.type.primitive",
             "storage.type.primitive",
+
         ],
         settings: {
             foreground: s.fg.primitive,
@@ -172,7 +173,8 @@ function syntaxHighlights(s: any): TokenColorRule[] {
             "support.type.property-name",
             "meta.attribute",
             "entity.name.tag",
-            "meta.table"
+            "meta.table",
+            "entity.other.inherited-class",
         ],
         settings: {
             foreground: s.fg.property,
@@ -197,7 +199,6 @@ function syntaxHighlights(s: any): TokenColorRule[] {
             "support.function",
             "meta.macro",
             "entity.name.function.macro",
-            "entity.other.inherited-class",
         ],
         settings: {
             foreground: s.fg.macro
@@ -248,7 +249,7 @@ function syntaxHighlights(s: any): TokenColorRule[] {
             foreground: s.fg.type,
         }
     }, {
-        scope: ["entity.name.namespace", "entity.name.import", "storage.modifier.package", "entity.name.import", "storage.modifier.import"],
+        scope: ["entity.name.namespace", "storage.modifier.package", "storage.modifier.import"],
         settings: { foreground: s.fg.namespace }
     }, {
         name: "JSON Key - Level 0",
@@ -375,6 +376,9 @@ function syntaxHighlights(s: any): TokenColorRule[] {
         settings: {
             foreground: s.fg.constant,
         },
+    }, {
+        scope: ["entity.name.import"],
+        settings: { foreground: s.fg.default }
     }]
 }
 

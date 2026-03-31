@@ -93,7 +93,7 @@
         "markup.inline.raw"
       ],
       "settings": {
-        "foreground": "#a07ee3"
+        "foreground": "#9274cc"
       }
     },
     {
@@ -157,7 +157,7 @@
         "storage.type.primitive"
       ],
       "settings": {
-        "foreground": "#eb82cf"
+        "foreground": "#dd8ac7"
       }
     },
     {
@@ -165,7 +165,8 @@
         "support.type.property-name",
         "meta.attribute",
         "entity.name.tag",
-        "meta.table"
+        "meta.table",
+        "entity.other.inherited-class"
       ],
       "settings": {
         "foreground": "#eb89a8"
@@ -177,7 +178,7 @@
         "storage.modifier"
       ],
       "settings": {
-        "foreground": "#a07ee3"
+        "foreground": "#9274cc"
       }
     },
     {
@@ -192,8 +193,7 @@
       "scope": [
         "support.function",
         "meta.macro",
-        "entity.name.function.macro",
-        "entity.other.inherited-class"
+        "entity.name.function.macro"
       ],
       "settings": {
         "foreground": "#dfbc85"
@@ -277,13 +277,11 @@
     {
       "scope": [
         "entity.name.namespace",
-        "entity.name.import",
         "storage.modifier.package",
-        "entity.name.import",
         "storage.modifier.import"
       ],
       "settings": {
-        "foreground": "#ccc"
+        "foreground": "#dfbc85"
       }
     },
     {
@@ -428,6 +426,14 @@
       "settings": {
         "foreground": "#70bdf1"
       }
+    },
+    {
+      "scope": [
+        "entity.name.import"
+      ],
+      "settings": {
+        "foreground": "#ccc"
+      }
     }
   ],
   "semanticHighlighting": true,
@@ -436,17 +442,17 @@
     "parameter": "#70bdf1",
     "string.format": "#f95959",
     "macro": "#dfbc85",
-    "type.defaultLibrary": "#eb82cf",
+    "type.defaultLibrary": "#dd8ac7",
     "type": "#ead75e",
     "interface": "#ead75e",
-    "builtinType": "#eb82cf",
+    "builtinType": "#dd8ac7",
     "variable": "#ccc",
-    "namespace": "#ccc",
+    "namespace": "#dfbc85",
     "enum": "#6ece7f",
     "type.interface": "#ead75e",
     "enumMember": "#4ed1b6",
     "function": "#ebae46",
     "constant": "#70bdf1",
-    "keyword": "#a07ee3"
+    "keyword": "#9274cc"
   }
 }
