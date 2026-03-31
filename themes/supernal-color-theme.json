@@ -148,7 +148,7 @@
         "variable.other.constant"
       ],
       "settings": {
-        "foreground": "#c0aaee",
+        "foreground": "#3a97f3",
         "fontStyle": "italic"
       }
     },
@@ -433,7 +433,7 @@
         "meta.link"
       ],
       "settings": {
-        "foreground": "#c0aaee"
+        "foreground": "#3a97f3"
       }
     },
     {
@@ -459,11 +459,11 @@
     "namespace": "#dfbc85",
     "enum": "#4ed1b6",
     "type.interface": "#ead75e",
-    "enumMember": "#3a97f3",
+    "enumMember": "#c0aaee",
     "function": "#ebae46",
-    "constant": "#c0aaee",
+    "constant": "#3a97f3",
     "keyword": "#9274cc",
-    "variable.readonly": "#c0aaee",
+    "variable.readonly": "#3a97f3",
     "hcl-blockLabel": "#83b5f1",
     "hcl-blockType": "#9274cc",
     "hcl-blockLabel.terraform-type": "#ead75e"
