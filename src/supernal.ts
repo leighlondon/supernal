@@ -400,6 +400,8 @@ function semanticTheming(s: any): WorkbenchColors {
         "function": s.fg.function,
         "constant": s.fg.constant,
         "keyword": s.fg.keyword,
+        "variable.readonly": s.fg.constant,
+        "hcl-blockLabel": s.fg.constant,
     }
 }
 
