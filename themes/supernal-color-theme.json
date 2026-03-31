@@ -265,6 +265,7 @@
     {
       "scope": [
         "entity.name.type",
+        "entity.name.class",
         "storage.type.java",
         "storage.type.generic"
       ],
@@ -275,6 +276,7 @@
     {
       "scope": [
         "entity.name.namespace",
+        "entity.name.import",
         "storage.modifier.package",
         "entity.name.import",
         "storage.modifier.import"

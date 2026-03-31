@@ -242,12 +242,12 @@ function syntaxHighlights(s: any): TokenColorRule[] {
             foreground: "#898989",
         }
     }, {
-        scope: ["entity.name.type", "storage.type.java", "storage.type.generic"],
+        scope: ["entity.name.type", "entity.name.class", "storage.type.java", "storage.type.generic"],
         settings: {
             foreground: s.fg.type,
         }
     }, {
-        scope: ["entity.name.namespace", "storage.modifier.package", "entity.name.import", "storage.modifier.import"],
+        scope: ["entity.name.namespace", "entity.name.import", "storage.modifier.package", "entity.name.import", "storage.modifier.import"],
         settings: { foreground: s.fg.namespace }
     }, {
         name: "JSON Key - Level 0",
