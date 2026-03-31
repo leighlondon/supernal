@@ -2,16 +2,18 @@ export type Hex = `#${string}`;
 
 export interface Palette {
     Black: Hex;
-    DarkGray: Hex; Gray: Hex; LightGray: Hex;
-    Pink: Hex; PalePink: Hex;
-    Red: Hex; PaleRed: Hex;
-    Orange: Hex; PaleOrange: Hex; SuperPaleOrange: Hex;
-    Green: Hex; PaleGreen: Hex;
-    Yellow: Hex; PaleYellow: Hex;
-    Blue: Hex; PaleBlue: Hex;
-    Purple: Hex; PalePurple: Hex;
-    Cyan: Hex; PaleCyan: Hex;
-    DarkWhite: Hex; White: Hex; PaleWhite: Hex;
+    DarkGray: Hex;
+    Gray: Hex;
+    LightGray: Hex;
+    Yellow: Hex;
+    Orange: Hex;
+    Red: Hex;
+    Pink: Hex;
+    Purple: Hex;
+    Blue: Hex;
+    PaleBlue: Hex;
+    Green: Hex;
+    White: Hex;
 }
 
 export interface ColorScheme {
@@ -37,11 +39,13 @@ export interface ColorScheme {
         macro: Hex;
         keyword: Hex;
         property: Hex;
+        parameter: Hex;
+        enum: Hex;
+        enumMember: Hex;
     };
     headings: Hex[];
     bracketColors: Hex[];
     jsonKeyColors: Hex[];
-    colors: Palette;
 }
 
 export interface WorkbenchColors {

@@ -1,10 +1,11 @@
 import { writeFileSync } from "fs";
 import {
+    type Hex,
     type ColorScheme,
     type VSCodeTheme,
     type WorkbenchColors,
     type TokenColorRule,
-    type Palette
+    type Palette,
 } from "./types";
 
 const p = {
@@ -16,60 +17,30 @@ const p = {
     Green: "#6ece7f",
     Aqua: "#4ed1b6",
     Blue: "#70bdf1",
-    DarkBlue: "#6395d1",
     Purple: "#a07ee3",
     Rose: "#eb89a8",
     Pink: "#eb82cf",
     White: "#ccc",
     Gray: "#888",
-}
+} satisfies Record<string, Hex>
 
-const Base: any = {
+const Base: Palette = {
     Black: "#1d2125",
     DarkGray: "#21252b",
     Gray: "#363b40",
     LightGray: "#5f5f74",
     Yellow: "#f4de55",
-    PaleYellow: "#ebdc8d",
     Orange: "#ebab3b",
-    // PaleOrange: "#dea64d",
-    SuperPaleOrange: "#dfbc85",
-    // OrigRed: "#fc6984",
     Red: "#f95959",
-    // PaleRed: "#f48989",
-    SuperPaleRed: "#eeafaf",
     Pink: "#c67fbc",
-    PalePink: "#d79ebb",
     Purple: "#a07ee3",
-    // PalePurple: "#c3afda",
     Blue: "#3a97f3",
     PaleBlue: "#70bdf1",
-    Cyan: "#2fe3a1",
     Green: "#37f495",
-    // PaleGreen: "#80ffc0d5",
-    DarkWhite: "#888a8d",
-    // MidWhite: "#cccccc",
     White: "#eeeeee",
-    // PaleWhite: "#c5c0eb",
-
-    // turqoise: "#55dfc4",
-    // darkTurqoise: "#19ac8e",
-    // green: "#40e083",
-    // darkGreen: "#36c471",
-    // blue: "#72baea",
-    // darkBlue: "#2ea4f2",
-    // purple: "#966bc8",
-    // darkPurple: "#7753a1",
-    yellow: "#f1d049",
-    // orange: "#d98c49",
-    // lightOrange: "#e7b15a",
-    // brightWhite: "#f4f4f4",
-    // red: "#e56052",
-    // darkRed: "#c9584c",
-    // palePink: "#f3a8da",
 }
 
-let supernal: any = {
+const supernal: ColorScheme = {
     bg: {
         default: Base.DarkGray,
         darker: Base.Black,
@@ -118,7 +89,6 @@ let supernal: any = {
         Base.Pink,
         Base.White,
     ],
-    colors: Base,
 }
 
 function syntaxHighlights(s: any): TokenColorRule[] {
