@@ -58,6 +58,15 @@
       }
     },
     {
+      "scope": [
+        "comment.documentation",
+        "string.quoted.docstring"
+      ],
+      "settings": {
+        "foreground": "#d7cf9c"
+      }
+    },
+    {
       "name": "Numbers",
       "scope": [
         "constant.numeric"
@@ -464,6 +473,7 @@
     "constant": "#3a97f3",
     "keyword": "#9274cc",
     "variable.readonly": "#3a97f3",
+    "comment.documentation": "#d7cf9c",
     "hcl-blockLabel": "#83b5f1",
     "hcl-blockType": "#9274cc",
     "hcl-blockLabel.terraform-type": "#ead75e"

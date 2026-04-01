@@ -10,6 +10,7 @@ export interface Palette {
     Aqua: Hex;
     Blue: Hex;
     DarkBlue: Hex;
+    PaleYellow: Hex;
     Purple: Hex;
     Lavender: Hex;
     Rose: Hex;
@@ -33,6 +34,7 @@ export interface ColorScheme {
         number: Hex;
         default: Hex;
         comment: Hex;
+        documentation: Hex;
         variable: Hex;
         namespace: Hex;
         string: Hex;

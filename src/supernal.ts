@@ -1,6 +1,5 @@
 import { writeFileSync } from "fs";
 import {
-    type Hex,
     type ColorScheme,
     type VSCodeTheme,
     type WorkbenchColors,
@@ -14,6 +13,7 @@ const p: Palette = {
     Orange: "#ebae46",
     PaleOrange: "#dfbc85",
     Yellow: "#ead75e",
+    PaleYellow: "#d7cf9c",
     Green: "#6ece7f",
     Aqua: "#4ed1b6",
     Blue: "#83b5f1",
@@ -40,6 +40,7 @@ const supernal: ColorScheme = {
     fg: {
         default: p.White,
         comment: p.LighterGray,
+        documentation: p.PaleYellow,
         punctuation: p.Red,
         keyword: p.Purple,
         constant: p.DarkBlue,
@@ -85,6 +86,9 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
     return [{
         scope: ["comment", "punctuation.definition.comment", "string.comment"],
         settings: { foreground: s.fg.comment }
+    }, {
+        scope: ["comment.documentation", "string.quoted.docstring"],
+        settings: { foreground: s.fg.documentation }
     }, {
         name: "Numbers",
         scope: ["constant.numeric"],
@@ -397,6 +401,7 @@ function semanticTheming(s: ColorScheme): WorkbenchColors {
         "constant": s.fg.constant,
         "keyword": s.fg.keyword,
         "variable.readonly": s.fg.constant,
+        "comment.documentation": s.fg.documentation,
         "hcl-blockLabel": s.fg.parameter,
         "hcl-blockType": s.fg.keyword,
         "hcl-blockLabel.terraform-type": s.fg.type,
