@@ -5,16 +5,17 @@ A cosmic and celestial theme.
 ## Building
 
 ```shell
-# execute the script to write the theme into json format.
-$ bun supernal.ts
+# the build script is in the makefile
+
+# to compile the new themes/*.json
+$ make
 ```
 
 ## Packaging
 
 ```shell
-# update the version id in package.json
-# and commit
+# to cut a new version, update the version id in `package.json` and commit
 
-# then package up the .vsix
-$ npx --package @vscode/vsce -- vsce pack --readme-path etc/MARKETPLACE.md
+# package up the .vsix
+$ make pack
 ```
