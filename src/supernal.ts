@@ -494,6 +494,7 @@ function renderKakouneTheme(p: Palette): string {
     green="rgb:${rgb(p.Green)}"
     yellow="rgb:${rgb(p.Yellow)}"
     orange="rgb:${rgb(p.Orange)}"
+    coral="rgb:${rgb(p.Coral)}"
     red="rgb:${rgb(p.Red)}"
     error="rgb:${rgb(p.Red)}"
 
@@ -504,7 +505,7 @@ function renderKakouneTheme(p: Palette): string {
          face global variable   $blue
          face global function   $orange
          face global module     $red
-         face global string     $orange
+         face global string     $coral
          face global error      $error
          face global keyword    $purple
          face global operator   $red

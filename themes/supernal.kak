@@ -11,6 +11,7 @@ evaluate-commands %sh{
     green="rgb:6ece7f"
     yellow="rgb:ead75e"
     orange="rgb:ebae46"
+    coral="rgb:f6a497"
     red="rgb:f95959"
     error="rgb:f95959"
 
@@ -21,7 +22,7 @@ evaluate-commands %sh{
          face global variable   $blue
          face global function   $orange
          face global module     $red
-         face global string     $orange
+         face global string     $coral
          face global error      $error
          face global keyword    $purple
          face global operator   $red
