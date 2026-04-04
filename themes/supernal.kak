@@ -1,29 +1,29 @@
 evaluate-commands %sh{
     black="rgb:1d2125"
     darkgray="rgb:21252b"
-    gray="rgb:363b40"
-    white="rgb:cccccc"
+    gray="rgb:808080"
+    white="rgb:c0c0c0"
 
     pink="rgb:dd8ac7"
     purple="rgb:9274cc"
     blue="rgb:83b5f1"
     cyan="rgb:83b5f1"
-    green="rgb:6DF584"
-    yellow="rgb:FFEE68"
-    orange="rgb:FFB539"
-    red="rgb:FC6984"
-    error="rgb:FC4234"
+    green="rgb:6ece7f"
+    yellow="rgb:ead75e"
+    orange="rgb:ebae46"
+    red="rgb:f95959"
+    error="rgb:f95959"
 
     echo "
          face global value      $green
-         face global type $yellow
+         face global type       $yellow
          face global identifier $red+i
          face global variable   $blue
-         face global function $purple
-         face global module $red
+         face global function   $orange
+         face global module     $red
          face global string     $orange
          face global error      $error
-         face global keyword    $pink
+         face global keyword    $purple
          face global operator   $red
          face global attribute  $blue
          face global comment    $gray
@@ -73,9 +73,9 @@ evaluate-commands %sh{
          face global Information    $yellow,$black
          face global Error          $black,$red
 
-         # all status line: what we type, but also client @[session]
+         # all status line: what we type,but also client @[session]
          face global StatusLine     $white,$black
-         # insert mode, prompt mode
+         # insert mode,prompt mode
          face global StatusLineMode $black,$pink
          # message like '1 sel'
          face global StatusLineInfo  $purple,$black
