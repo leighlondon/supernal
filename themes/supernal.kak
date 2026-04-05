@@ -7,16 +7,17 @@ evaluate-commands %sh{
     pink="rgb:dd8ac7"
     purple="rgb:9274cc"
     blue="rgb:83b5f1"
-    cyan="rgb:83b5f1"
+    cyan="rgb:4ed1b6"
     green="rgb:6ece7f"
     yellow="rgb:ead75e"
+    paleorange="rgb:dfbc85"
     orange="rgb:ebae46"
     coral="rgb:f6a497"
     red="rgb:f95959"
     error="rgb:f95959"
 
     echo "
-         face global value      $green
+         face global value      $blue
          face global type       $yellow
          face global identifier $red+i
          face global variable   $blue
@@ -29,7 +30,7 @@ evaluate-commands %sh{
          face global attribute  $blue
          face global comment    $gray
          face global meta       $purple
-         face global builtin    $blue
+         face global builtin    $paleorange
 
          face global title    $red
          face global header   $green

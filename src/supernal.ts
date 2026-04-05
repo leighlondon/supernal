@@ -490,16 +490,17 @@ function renderKakouneTheme(p: Palette): string {
     pink="rgb:${rgb(p.Pink)}"
     purple="rgb:${rgb(p.Purple)}"
     blue="rgb:${rgb(p.Blue)}"
-    cyan="rgb:${rgb(p.Blue)}"
+    cyan="rgb:${rgb(p.Aqua)}"
     green="rgb:${rgb(p.Green)}"
     yellow="rgb:${rgb(p.Yellow)}"
+    paleorange="rgb:${rgb(p.PaleOrange)}"
     orange="rgb:${rgb(p.Orange)}"
     coral="rgb:${rgb(p.Coral)}"
     red="rgb:${rgb(p.Red)}"
     error="rgb:${rgb(p.Red)}"
 
     echo "
-         face global value      $green
+         face global value      $blue
          face global type       $yellow
          face global identifier $red+i
          face global variable   $blue
@@ -512,7 +513,7 @@ function renderKakouneTheme(p: Palette): string {
          face global attribute  $blue
          face global comment    $gray
          face global meta       $purple
-         face global builtin    $blue
+         face global builtin    $paleorange
 
          face global title    $red
          face global header   $green
