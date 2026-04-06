@@ -31,7 +31,7 @@ const p: Palette = {
     Black: "#1d2125",
 }
 
-const rgb = (h: Hex): string => h.slice(1);
+const rgb = (h: Hex): string => `rgb:${h.slice(1)}`;
 
 const supernal: ColorScheme = {
     bg: {
@@ -481,40 +481,40 @@ function renderVSCodeTheme(theme: VSCodeTheme): string {
     return JSON.stringify(theme, null, 2);
 }
 
-function renderKakouneTheme(p: Palette): string {
+function renderKakouneTheme(p: Palette, s: ColorScheme): string {
     return `evaluate-commands %sh{
-    black="rgb:${rgb(p.Black)}"
-    darkgray="rgb:${rgb(p.DarkGray)}"
-    gray="rgb:${rgb(p.LighterGray)}"
-    white="rgb:${rgb(p.White)}"
-    pink="rgb:${rgb(p.Pink)}"
-    lavender="rgb:${rgb(p.Lavender)}"
-    purple="rgb:${rgb(p.Purple)}"
-    blue="rgb:${rgb(p.Blue)}"
-    cyan="rgb:${rgb(p.Aqua)}"
-    green="rgb:${rgb(p.Green)}"
-    yellow="rgb:${rgb(p.Yellow)}"
-    paleorange="rgb:${rgb(p.PaleOrange)}"
-    orange="rgb:${rgb(p.Orange)}"
-    coral="rgb:${rgb(p.Coral)}"
-    red="rgb:${rgb(p.Red)}"
-    error="rgb:${rgb(p.Red)}"
+    black="${rgb(p.Black)}"
+    darkgray="${rgb(p.DarkGray)}"
+    gray="${rgb(p.LighterGray)}"
+    white="${rgb(p.White)}"
+    pink="${rgb(p.Pink)}"
+    lavender="${rgb(p.Lavender)}"
+    purple="${rgb(p.Purple)}"
+    blue="${rgb(p.Blue)}"
+    cyan="${rgb(p.Aqua)}"
+    green="${rgb(p.Green)}"
+    yellow="${rgb(p.Yellow)}"
+    paleorange="${rgb(p.PaleOrange)}"
+    orange="${rgb(p.Orange)}"
+    coral="${rgb(p.Coral)}"
+    red="${rgb(p.Red)}"
+    error="${rgb(p.Red)}"
 
     echo "
          face global value      $cyan
-         face global type       $pink
+         face global type       ${rgb(s.syntax.type)}
          face global identifier $red+i
-         face global variable   $blue
-         face global function   $orange
-         face global module     $paleorange
-         face global string     $coral
+         face global variable   ${rgb(s.syntax.parameter)}
+         face global function   ${rgb(s.syntax.function)}
+         face global module     ${rgb(s.syntax.namespace)}
+         face global string     ${rgb(s.syntax.string)}
          face global error      $error
-         face global keyword    $purple
-         face global operator   $red
-         face global attribute  $pink
-         face global comment    $gray
-         face global meta       $red
-         face global builtin    $paleorange
+         face global keyword    ${rgb(s.syntax.keyword)}
+         face global operator   ${rgb(s.syntax.punctuation)}
+         face global attribute  ${rgb(s.syntax.primitive)}
+         face global comment    ${rgb(s.syntax.comment)}
+         face global meta       ${rgb(s.syntax.property)}
+         face global builtin    ${rgb(s.syntax.macro)}
 
          face global title    $red
          face global header   $green
@@ -576,4 +576,4 @@ function renderKakouneTheme(p: Palette): string {
 }
 
 writeFileSync('themes/supernal-color-theme.json', renderVSCodeTheme(vsCodeTheme({ name: 'supernal', scheme: supernal })));
-writeFileSync('themes/supernal.kak', renderKakouneTheme(p));
+writeFileSync('themes/supernal.kak', renderKakouneTheme(p, supernal));

@@ -18,19 +18,19 @@ evaluate-commands %sh{
 
     echo "
          face global value      $cyan
-         face global type       $pink
+         face global type       rgb:ead75e
          face global identifier $red+i
-         face global variable   $blue
-         face global function   $orange
-         face global module     $paleorange
-         face global string     $coral
+         face global variable   rgb:83b5f1
+         face global function   rgb:ebae46
+         face global module     rgb:dfbc85
+         face global string     rgb:f6a497
          face global error      $error
-         face global keyword    $purple
-         face global operator   $red
-         face global attribute  $pink
-         face global comment    $gray
-         face global meta       $red
-         face global builtin    $paleorange
+         face global keyword    rgb:9274cc
+         face global operator   rgb:f95959
+         face global attribute  rgb:dd8ac7
+         face global comment    rgb:808080
+         face global meta       rgb:eb89a8
+         face global builtin    rgb:dfbc85
 
          face global title    $red
          face global header   $green
