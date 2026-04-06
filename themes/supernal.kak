@@ -3,8 +3,8 @@ evaluate-commands %sh{
     darkgray="rgb:21252b"
     gray="rgb:808080"
     white="rgb:c0c0c0"
-
     pink="rgb:dd8ac7"
+    lavender="rgb:c0aaee"
     purple="rgb:9274cc"
     blue="rgb:83b5f1"
     cyan="rgb:4ed1b6"
@@ -17,19 +17,19 @@ evaluate-commands %sh{
     error="rgb:f95959"
 
     echo "
-         face global value      $blue
-         face global type       $yellow
+         face global value      $cyan
+         face global type       $pink
          face global identifier $red+i
          face global variable   $blue
          face global function   $orange
-         face global module     $red
+         face global module     $paleorange
          face global string     $coral
          face global error      $error
          face global keyword    $purple
          face global operator   $red
-         face global attribute  $blue
+         face global attribute  $pink
          face global comment    $gray
-         face global meta       $purple
+         face global meta       $red
          face global builtin    $paleorange
 
          face global title    $red

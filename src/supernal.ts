@@ -486,8 +486,8 @@ function renderKakouneTheme(p: Palette): string {
     darkgray="rgb:${rgb(p.DarkGray)}"
     gray="rgb:${rgb(p.LighterGray)}"
     white="rgb:${rgb(p.White)}"
-
     pink="rgb:${rgb(p.Pink)}"
+    lavender="rgb:${rgb(p.Lavender)}"
     purple="rgb:${rgb(p.Purple)}"
     blue="rgb:${rgb(p.Blue)}"
     cyan="rgb:${rgb(p.Aqua)}"
@@ -500,19 +500,19 @@ function renderKakouneTheme(p: Palette): string {
     error="rgb:${rgb(p.Red)}"
 
     echo "
-         face global value      $blue
-         face global type       $yellow
+         face global value      $cyan
+         face global type       $pink
          face global identifier $red+i
          face global variable   $blue
          face global function   $orange
-         face global module     $red
+         face global module     $paleorange
          face global string     $coral
          face global error      $error
          face global keyword    $purple
          face global operator   $red
-         face global attribute  $blue
+         face global attribute  $pink
          face global comment    $gray
-         face global meta       $purple
+         face global meta       $red
          face global builtin    $paleorange
 
          face global title    $red
