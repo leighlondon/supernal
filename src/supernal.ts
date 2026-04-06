@@ -1,5 +1,6 @@
 import { writeFileSync } from "fs";
 import {
+    type Hex,
     type ColorScheme,
     type VSCodeTheme,
     type WorkbenchColors,
@@ -39,7 +40,7 @@ const supernal: ColorScheme = {
         lighter: p.LightGray,
     },
     border: p.Gray,
-    fg: {
+    syntax: {
         default: p.White,
         comment: p.LighterGray,
         documentation: p.PaleYellow,
@@ -87,22 +88,22 @@ const supernal: ColorScheme = {
 function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
     return [{
         scope: ["comment", "punctuation.definition.comment", "string.comment"],
-        settings: { foreground: s.fg.comment }
+        settings: { foreground: s.syntax.comment }
     }, {
         scope: ["comment.documentation", "string.quoted.docstring"],
-        settings: { foreground: s.fg.documentation }
+        settings: { foreground: s.syntax.documentation }
     }, {
         name: "Numbers",
         scope: ["constant.numeric"],
-        settings: { foreground: s.fg.number }
+        settings: { foreground: s.syntax.number }
     }, {
         name: "Strings",
         scope: ["string"],
-        settings: { foreground: s.fg.string }
+        settings: { foreground: s.syntax.string }
     }, {
         name: "Escape",
         scope: ["constant.character.escape", "support.other.escape"],
-        settings: { foreground: s.fg.number }
+        settings: { foreground: s.syntax.number }
     }, {
         name: "Keywords",
         scope: [
@@ -110,13 +111,13 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "constant.language.boolean",
             "markup.inline.raw",
         ],
-        settings: { foreground: s.fg.keyword }
+        settings: { foreground: s.syntax.keyword }
     }, {
         name: "Variable",
         scope: [
             "variable.other",
         ],
-        settings: { foreground: s.fg.variable }
+        settings: { foreground: s.syntax.variable }
     }, {
         scope: [
             "constant.character",
@@ -144,7 +145,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             // "storage.modifier",
         ],
         settings: {
-            foreground: s.fg.punctuation,
+            foreground: s.syntax.punctuation,
         }
     }, {
         scope: ["variable.language.self"],
@@ -155,12 +156,12 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "variable.other.constant",
         ],
         settings: {
-            foreground: s.fg.constant,
+            foreground: s.syntax.constant,
             fontStyle: "italic",
         }
     }, {
         scope: ["variable.parameter"],
-        settings: { foreground: s.fg.parameter },
+        settings: { foreground: s.syntax.parameter },
     }, {
         scope: [
             "support.type.primitive",
@@ -168,7 +169,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
 
         ],
         settings: {
-            foreground: s.fg.primitive,
+            foreground: s.syntax.primitive,
         }
     }, {
         scope: [
@@ -179,7 +180,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "entity.other.inherited-class",
         ],
         settings: {
-            foreground: s.fg.property,
+            foreground: s.syntax.property,
         }
     }, {
         scope: [
@@ -187,14 +188,14 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "storage.modifier"
         ],
         settings: {
-            foreground: s.fg.keyword,
+            foreground: s.syntax.keyword,
         }
     }, {
         scope: [
             "entity.name.function",
         ],
         settings: {
-            foreground: s.fg.function,
+            foreground: s.syntax.function,
         }
     }, {
         scope: [
@@ -203,7 +204,7 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
             "entity.name.function.macro",
         ],
         settings: {
-            foreground: s.fg.macro
+            foreground: s.syntax.macro
         }
     }, {
         scope: ["markup.bold.markdown"],
@@ -248,11 +249,11 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
     }, {
         scope: ["entity.name.type", "entity.name.class", "storage.type.java", "storage.type.generic"],
         settings: {
-            foreground: s.fg.type,
+            foreground: s.syntax.type,
         }
     }, {
         scope: ["entity.name.namespace", "storage.modifier.package", "storage.modifier.import"],
-        settings: { foreground: s.fg.namespace }
+        settings: { foreground: s.syntax.namespace }
     }, {
         name: "JSON Key - Level 0",
         scope: [
@@ -376,37 +377,37 @@ function syntaxHighlights(s: ColorScheme): TokenColorRule[] {
     }, {
         scope: ["meta.link"],
         settings: {
-            foreground: s.fg.constant,
+            foreground: s.syntax.constant,
         },
     }, {
         scope: ["entity.name.import"],
-        settings: { foreground: s.fg.default }
+        settings: { foreground: s.syntax.default }
     }]
 }
 
 function semanticTheming(s: ColorScheme): WorkbenchColors {
     return {
-        "property": s.fg.property,
-        "parameter": s.fg.parameter,
-        "string.format": s.fg.punctuation,
-        "macro": s.fg.macro,
-        "type.defaultLibrary": s.fg.primitive,
-        "type": s.fg.type,
-        "interface": s.fg.interface,
-        "builtinType": s.fg.primitive,
-        "variable": s.fg.variable,
-        "namespace": s.fg.namespace,
-        "enum": s.fg.enum,
-        "type.interface": s.fg.interface,
-        "enumMember": s.fg.enumMember,
-        "function": s.fg.function,
-        "constant": s.fg.constant,
-        "keyword": s.fg.keyword,
-        "variable.readonly": s.fg.constant,
-        "comment.documentation": s.fg.documentation,
-        "hcl-blockLabel": s.fg.parameter,
-        "hcl-blockType": s.fg.keyword,
-        "hcl-blockLabel.terraform-type": s.fg.type,
+        "property": s.syntax.property,
+        "parameter": s.syntax.parameter,
+        "string.format": s.syntax.punctuation,
+        "macro": s.syntax.macro,
+        "type.defaultLibrary": s.syntax.primitive,
+        "type": s.syntax.type,
+        "interface": s.syntax.interface,
+        "builtinType": s.syntax.primitive,
+        "variable": s.syntax.variable,
+        "namespace": s.syntax.namespace,
+        "enum": s.syntax.enum,
+        "type.interface": s.syntax.interface,
+        "enumMember": s.syntax.enumMember,
+        "function": s.syntax.function,
+        "constant": s.syntax.constant,
+        "keyword": s.syntax.keyword,
+        "variable.readonly": s.syntax.constant,
+        "comment.documentation": s.syntax.documentation,
+        "hcl-blockLabel": s.syntax.parameter,
+        "hcl-blockType": s.syntax.keyword,
+        "hcl-blockLabel.terraform-type": s.syntax.type,
     }
 }
 
@@ -418,7 +419,7 @@ function uiTheming(s: ColorScheme): WorkbenchColors {
         // title (top bar)
         "titleBar.activeBackground": s.bg.darker,
         "titleBar.inactiveBackground": s.bg.darker,
-        "statusBar.foreground": s.fg.default,
+        "statusBar.foreground": s.syntax.default,
         "titleBar.border": s.border,
         // status bar (bottom bar)
         "statusBar.border": s.border,
@@ -449,7 +450,7 @@ function uiTheming(s: ColorScheme): WorkbenchColors {
         "input.background": s.bg.default,
         "input.border": "#505050",
         "panel.background": s.bg.default,
-        "editor.foreground": s.fg.default,
+        "editor.foreground": s.syntax.default,
         "banner.background": "#215dce",
         // diff stuff
         "diffEditor.insertedLineBackground": "#18a47c2f",
@@ -462,7 +463,7 @@ function uiTheming(s: ColorScheme): WorkbenchColors {
         "editorBracketHighlight.foreground4": s.bracketColors[3],
         "editorBracketHighlight.foreground5": s.bracketColors[4],
         "editorBracketHighlight.foreground6": s.bracketColors[5],
-        "editorBracketHighlight.unexpectedBracket.foreground": s.fg.function
+        "editorBracketHighlight.unexpectedBracket.foreground": s.syntax.function
     }
 }
 

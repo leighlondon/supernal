@@ -30,7 +30,7 @@ export interface ColorScheme {
         lighter: Hex;
     };
     border: Hex;
-    fg: {
+    syntax: {
         number: Hex;
         default: Hex;
         comment: Hex;
