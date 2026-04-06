@@ -19,3 +19,7 @@ $ make
 # package up the .vsix
 $ make pack
 ```
+
+## Experimental
+
+There's an experimental Kakoune theme being emitted too.
