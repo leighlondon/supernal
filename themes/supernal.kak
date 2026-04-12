@@ -45,9 +45,9 @@ evaluate-commands %sh{
          face global Default $white
 
          face global PrimarySelection   $black,$purple
-         face global PrimaryCursor      $black,$red
+         face global PrimaryCursor      $black,$lavender
          face global PrimaryCursorEol   $black,$gray
-         face global SecondarySelection $black,$pink
+         face global SecondarySelection $black,$blue
          face global SecondaryCursor    $black,$gray
          face global SecondaryCursorEol $black,$gray
 
@@ -61,8 +61,8 @@ evaluate-commands %sh{
          face global BufferPadding $gray
 
          face global LineNumbers        $gray
-         face global LineNumberCursor   $red,$black+b
-         face global LineNumbersWrapped $darkgray,$black+i
+         face global LineNumberCursor   $lavender,+b
+         face global LineNumbersWrapped $darkgray,+i
 
          # when item focused in menu
          face global MenuForeground $black,$yellow
