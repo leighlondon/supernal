@@ -4,6 +4,7 @@
     "menu.background": "#21252b",
     "menu.selectionBackground": "#333942",
     "menubar.selectionBackground": "#333942",
+    "list.hoverBackground": "#333942",
     "titleBar.activeBackground": "#1d2125",
     "titleBar.inactiveBackground": "#1d2125",
     "statusBar.foreground": "#c0c0c0",

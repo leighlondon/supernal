@@ -416,6 +416,7 @@ function uiTheming(s: ColorScheme): WorkbenchColors {
         "menu.background": s.bg.default,
         "menu.selectionBackground": "#333942",
         "menubar.selectionBackground": "#333942",
+        "list.hoverBackground": "#333942",
         // title (top bar)
         "titleBar.activeBackground": s.bg.darker,
         "titleBar.inactiveBackground": s.bg.darker,
