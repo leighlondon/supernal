@@ -28,7 +28,8 @@ const p: Palette = {
     Gray: "#363b40",
     LightGray: "#5f5f74",
     DarkGray: "#21252b",
-    Black: "#1d2125",
+    DarkerGray: "#1b1c1f",
+    Black: "#191e24",
 }
 
 const rgb = (h: Hex): string => `rgb:${h.slice(1)}`;
@@ -38,6 +39,11 @@ const supernal: ColorScheme = {
         default: p.DarkGray,
         darker: p.Black,
         lighter: p.LightGray,
+    },
+    focus: {
+        default: p.LightGray,
+        darker: p.DarkGray,
+        lighter: p.LighterGray,
     },
     border: p.Gray,
     syntax: {
@@ -411,6 +417,8 @@ function semanticTheming(s: ColorScheme): WorkbenchColors {
     }
 }
 
+const darkerdarkerGray = "#1b1d23";
+
 function uiTheming(s: ColorScheme): WorkbenchColors {
     return {
         "menu.background": s.bg.default,
@@ -418,32 +426,34 @@ function uiTheming(s: ColorScheme): WorkbenchColors {
         "menubar.selectionBackground": "#333942",
         "list.hoverBackground": "#333942",
         // title (top bar)
-        "titleBar.activeBackground": s.bg.darker,
-        "titleBar.inactiveBackground": s.bg.darker,
-        "statusBar.foreground": s.syntax.default,
-        "titleBar.border": s.border,
+        "titleBar.activeBackground": darkerdarkerGray,
+        "titleBar.activeForeground": "#8b9798",
+        "titleBar.inactiveBackground": darkerdarkerGray,
+        "titleBar.inactiveForeground": "#545f62",
+        "titleBar.border": darkerdarkerGray,
         // status bar (bottom bar)
-        "statusBar.border": s.border,
+        "statusBar.foreground": s.syntax.default,
+        "statusBar.border": darkerdarkerGray,
         "statusBar.background": s.bg.darker,
         "statusBar.debuggingBackground": "#952642",
         "statusBar.noFolderBackground": "#6a3394",
         // tabs
         "tab.activeBackground": s.bg.darker,
-        "tab.inactiveBackground": "#25282e",
+        "tab.inactiveBackground": s.bg.darker,
         "tab.border": "#505050",
         "tab.hoverBorder": "#0854a7",
-        "editorGroupHeader.tabsBackground": "#25282e",
+        "editorGroupHeader.tabsBackground": darkerdarkerGray,
         // side bar & activity bar
         "activityBarBadge.background": "#0854a7",
         "sideBar.background": "#25282e",
-        "sideBarSectionHeader.background": "#2d3138",
-        "sideBar.border": s.border,
-        "activityBar.border": s.border,
-        "activityBar.background": "#1d2125",
+        "sideBarSectionHeader.background": s.bg.darker,
+        "sideBar.border": darkerdarkerGray,
+        "activityBar.border": darkerdarkerGray,
+        "activityBar.background": darkerdarkerGray,
         // editor
         "editor.background": "#1c2026",
         "editorPane.background": "#333942",
-        "editor.selectionBackground": "#443550",
+        "editor.selectionBackground": "#354350",
         "peekViewEditor.background": "#282d35",
         "peekViewResult.background": "#23262c",
         "quickInput.background": s.bg.default,

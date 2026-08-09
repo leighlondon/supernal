@@ -20,6 +20,7 @@ export interface Palette {
     LightGray: Hex;
     Gray: Hex;
     DarkGray: Hex;
+    DarkerGray: Hex;
     Black: Hex;
 }
 
@@ -28,6 +29,11 @@ export interface ColorScheme {
         default: Hex;
         darker: Hex;
         lighter: Hex;
+    };
+    focus: {
+        darker: Hex;
+        lighter: Hex;
+        default: Hex;
     };
     border: Hex;
     syntax: {

@@ -1,5 +1,5 @@
 evaluate-commands %sh{
-    black="rgb:1d2125"
+    black="rgb:191e24"
     darkgray="rgb:21252b"
     gray="rgb:808080"
     white="rgb:c0c0c0"
