@@ -84,3 +84,5 @@ export interface VSCodeTheme {
     semanticHighlighting?: boolean;
     semanticTokenColors?: WorkbenchColors;
 }
+
+export const rgb = (h: Hex): string => `rgb:${h.slice(1)}`;
