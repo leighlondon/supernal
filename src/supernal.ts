@@ -20,7 +20,7 @@ const p: types.Palette = {
     Pink: "#dd8ac7",
     White: "#c0c0c0",
     LighterGray: "#808080",
-    Gray: "#363b40",
+    Gray: "#3b434f",
     LightGray: "#323943",
     DarkGray: "#21252b",
     DarkerGray: "#1b1c1f",
@@ -32,16 +32,23 @@ const supernal: any = {
     editor: {
         bg: p.DarkGray,
         fg: p.White,
+        fold: "#191e24b1",
     },
     bg: {
         darker: p.Black,
         default: p.DarkGray,
         lighter: p.LightGray,
+
+        active: p.Gray,
+        hover: p.LightGray,
     },
     focus: {
         default: p.LightGray,
         darker: p.DarkGray,
         lighter: p.LighterGray,
+
+        active: p.Purple,
+        hover: p.Lavender,
     },
     border: p.Gray,
     syntax: {
@@ -82,7 +89,22 @@ function uiTheming(s: any): types.WorkbenchColors {
         "titleBar.activeForeground": s.syntax.default,
         "titleBar.inactiveBackground": s.bg.default,
         "titleBar.inactiveForeground": "#545f62",
-        "list.hoverBackground": s.bg.lighter,
+
+        // hovers
+        "list.hoverBackground": s.bg.hover,
+        "menubar.selectionBackground": s.bg.hover,
+
+        // activitybar (side)
+        "activityBar.activeBackground": s.bg.active,
+        "activityBar.background": s.bg.default,
+        "modernActivityBar.hoverBackground": s.bg.hover,
+        "modernActivityBar.activeBackground": s.bg.default,
+        "modernActivityBar.activeForeground": s.focus.active,
+        "modernActivityBar.hoverForeground": s.focus.hover,
+
+        // the badge
+        "activityBarBadge.background": s.focus.active,
+        "activityBarBadge.foreground": s.bg.default, // inverted - it's the background for the bar.
 
         // status bar (bottom bar)
         "statusBar.foreground": s.syntax.default,
@@ -97,7 +119,11 @@ function uiTheming(s: any): types.WorkbenchColors {
         "editorBracketHighlight.foreground4": s.bracketColors[3],
         "editorBracketHighlight.foreground5": s.bracketColors[4],
         "editorBracketHighlight.foreground6": s.bracketColors[5],
-        "editorBracketHighlight.unexpectedBracket.foreground": s.syntax.function
+        "editorBracketHighlight.unexpectedBracket.foreground": s.syntax.function,
+
+        "editor.background": s.editor.bg,
+        "editor.foreground": s.editor.fg,
+        "editor.foldBackground": s.editor.fold,
 
     }
     return {
