@@ -89,6 +89,16 @@ function uiTheming(s: any): types.WorkbenchColors {
         "statusBar.background": s.bg.darker,
         "statusBar.debuggingBackground": "#952642",
         "statusBar.noFolderBackground": "#6a3394",
+
+        // bracket highlights
+        "editorBracketHighlight.foreground1": s.bracketColors[0],
+        "editorBracketHighlight.foreground2": s.bracketColors[1],
+        "editorBracketHighlight.foreground3": s.bracketColors[2],
+        "editorBracketHighlight.foreground4": s.bracketColors[3],
+        "editorBracketHighlight.foreground5": s.bracketColors[4],
+        "editorBracketHighlight.foreground6": s.bracketColors[5],
+        "editorBracketHighlight.unexpectedBracket.foreground": s.syntax.function
+
     }
     return {
         "menu.selectionBackground": "#333942",
@@ -125,14 +135,6 @@ function uiTheming(s: any): types.WorkbenchColors {
         "diffEditor.insertedLineBackground": "#18a47c2f",
         "diffEditor.insertedTextBackground": "#18a47c2f",
         "gitDecoration.modifiedResourceForeground": "#ffee68", //todo(leigh): modified status theming
-        // bracket highlights
-        "editorBracketHighlight.foreground1": s.bracketColors[0],
-        "editorBracketHighlight.foreground2": s.bracketColors[1],
-        "editorBracketHighlight.foreground3": s.bracketColors[2],
-        "editorBracketHighlight.foreground4": s.bracketColors[3],
-        "editorBracketHighlight.foreground5": s.bracketColors[4],
-        "editorBracketHighlight.foreground6": s.bracketColors[5],
-        "editorBracketHighlight.unexpectedBracket.foreground": s.syntax.function
     }
 }
 
