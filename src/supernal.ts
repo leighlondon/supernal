@@ -21,17 +21,21 @@ const p: types.Palette = {
     White: "#c0c0c0",
     LighterGray: "#808080",
     Gray: "#363b40",
-    LightGray: "#5f5f74",
+    LightGray: "#323943",
     DarkGray: "#21252b",
     DarkerGray: "#1b1c1f",
     Black: "#191e24",
 }
 
 
-const supernal: types.ColorScheme = {
+const supernal: any = {
+    editor: {
+        bg: p.DarkGray,
+        fg: p.White,
+    },
     bg: {
-        default: p.DarkGray,
         darker: p.Black,
+        default: p.DarkGray,
         lighter: p.LightGray,
     },
     focus: {
@@ -62,50 +66,35 @@ const supernal: types.ColorScheme = {
         macro: p.PaleOrange,
     },
     headings: [p.Purple, p.DarkBlue, p.Blue, p.Green, p.Yellow, p.Orange],
-    bracketColors: [
-        "#fc6984",
-        "#ea7398",
-        "#d87aaa",
-        "#c67fbc",
-        "#b283cd",
-        "#9e86de",
-        "#8887ef",
-        "#6f87ff",
-    ],
-    jsonKeyColors: [
-        p.Red,
-        p.Orange,
-        p.Yellow,
-        p.Green,
-        p.Blue,
-        p.DarkBlue,
-        p.Purple,
-        p.Pink,
-        p.White,
-    ],
+    bracketColors: ["#fc6984", "#ea7398", "#d87aaa", "#c67fbc", "#b283cd", "#9e86de", "#8887ef", "#6f87ff"],
+    jsonKeyColors: [p.Red, p.Orange, p.Yellow, p.Green, p.Blue, p.DarkBlue, p.Purple, p.Pink, p.White],
 }
 
 
 const darkerdarkerGray = "#1b1d23";
 
-function uiTheming(s: types.ColorScheme): types.WorkbenchColors {
+function uiTheming(s: any): types.WorkbenchColors {
     return {
         "menu.background": s.bg.default,
-        "menu.selectionBackground": "#333942",
-        "menubar.selectionBackground": "#333942",
-        "list.hoverBackground": "#333942",
+
         // title (top bar)
-        "titleBar.activeBackground": darkerdarkerGray,
-        "titleBar.activeForeground": "#8b9798",
-        "titleBar.inactiveBackground": darkerdarkerGray,
+        "titleBar.activeBackground": s.bg.darker,
+        "titleBar.activeForeground": s.syntax.default,
+        "titleBar.inactiveBackground": s.bg.default,
         "titleBar.inactiveForeground": "#545f62",
-        "titleBar.border": darkerdarkerGray,
+        "list.hoverBackground": s.bg.lighter,
+
         // status bar (bottom bar)
         "statusBar.foreground": s.syntax.default,
-        "statusBar.border": darkerdarkerGray,
         "statusBar.background": s.bg.darker,
         "statusBar.debuggingBackground": "#952642",
         "statusBar.noFolderBackground": "#6a3394",
+    }
+    return {
+        "menu.selectionBackground": "#333942",
+        "menubar.selectionBackground": "#333942",
+        "list.hoverBackground": "#333942",
+
         // tabs
         "tab.activeBackground": s.bg.darker,
         "tab.inactiveBackground": s.bg.darker,
