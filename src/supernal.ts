@@ -30,13 +30,13 @@ const p: types.Palette = {
 
 const supernal: any = {
     editor: {
-        bg: p.DarkGray,
-        fg: p.White,
+        bg: "#21252b",
+        fg: "#c0c0c0",
         fold: "#191e24b1",
     },
     bg: {
-        darker: p.Black,
-        default: p.DarkGray,
+        darker: "#191e24",
+        default: "#21252b",
         lighter: p.LightGray,
 
         active: p.Gray,
@@ -44,7 +44,7 @@ const supernal: any = {
     },
     focus: {
         default: p.LightGray,
-        darker: p.DarkGray,
+        darker: "#21252b",
         lighter: p.LighterGray,
 
         active: p.Purple,
@@ -82,17 +82,20 @@ const darkerdarkerGray = "#1b1d23";
 
 function uiTheming(s: any): types.WorkbenchColors {
     return {
+        // menus & hovers
+        "list.hoverBackground": s.bg.hover,
+        "menubar.selectionBackground": s.bg.hover,
         "menu.background": s.bg.default,
+        "quickInputList.focusBackground": s.bg.hover,
+        "quickInput.background": s.bg.lighter,
+        "editorSuggestWidget.background": s.bg.default,
+        "editorWidget.background": s.bg.darker,
 
         // title (top bar)
         "titleBar.activeBackground": s.bg.darker,
         "titleBar.activeForeground": s.syntax.default,
         "titleBar.inactiveBackground": s.bg.default,
         "titleBar.inactiveForeground": "#545f62",
-
-        // hovers
-        "list.hoverBackground": s.bg.hover,
-        "menubar.selectionBackground": s.bg.hover,
 
         // activitybar (side)
         "activityBar.activeBackground": s.bg.active,
@@ -121,10 +124,22 @@ function uiTheming(s: any): types.WorkbenchColors {
         "editorBracketHighlight.foreground6": s.bracketColors[5],
         "editorBracketHighlight.unexpectedBracket.foreground": s.syntax.function,
 
+        // editor
         "editor.background": s.editor.bg,
         "editor.foreground": s.editor.fg,
         "editor.foldBackground": s.editor.fold,
 
+        // sidebar
+        "sideBar.background": s.bg.darker,
+        "sideBarTitle.background": s.bg.darker,
+
+        // text inputs, etc
+        "input.background": s.editor.bg,
+        "input.border": s.editor.fg,
+
+        // the tooltip thingo
+        "editorHoverWidget.background": s.editor.bg,
+        "editorHoverWidget.foreground": s.editor.fg,
     }
     return {
         "menu.selectionBackground": "#333942",

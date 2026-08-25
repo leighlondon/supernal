@@ -1,13 +1,17 @@
 {
   "name": "supernal",
   "colors": {
+    "list.hoverBackground": "#323943",
+    "menubar.selectionBackground": "#323943",
     "menu.background": "#21252b",
+    "quickInputList.focusBackground": "#323943",
+    "quickInput.background": "#323943",
+    "editorSuggestWidget.background": "#21252b",
+    "editorWidget.background": "#191e24",
     "titleBar.activeBackground": "#191e24",
     "titleBar.activeForeground": "#c0c0c0",
     "titleBar.inactiveBackground": "#21252b",
     "titleBar.inactiveForeground": "#545f62",
-    "list.hoverBackground": "#323943",
-    "menubar.selectionBackground": "#323943",
     "activityBar.activeBackground": "#3b434f",
     "activityBar.background": "#21252b",
     "modernActivityBar.hoverBackground": "#323943",
@@ -29,7 +33,13 @@
     "editorBracketHighlight.unexpectedBracket.foreground": "#ebae46",
     "editor.background": "#21252b",
     "editor.foreground": "#c0c0c0",
-    "editor.foldBackground": "#191e24b1"
+    "editor.foldBackground": "#191e24b1",
+    "sideBar.background": "#191e24",
+    "sideBarTitle.background": "#191e24",
+    "input.background": "#21252b",
+    "input.border": "#c0c0c0",
+    "editorHoverWidget.background": "#21252b",
+    "editorHoverWidget.foreground": "#c0c0c0"
   },
   "tokenColors": [
     {
