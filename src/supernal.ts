@@ -61,28 +61,10 @@ const supernal: types.ColorScheme = {
         function: p.Orange,
         macro: p.PaleOrange,
     },
+
     headings: [p.Purple, p.DarkBlue, p.Blue, p.Green, p.Yellow, p.Orange],
-    bracketColors: [
-        "#fc6984",
-        "#ea7398",
-        "#d87aaa",
-        "#c67fbc",
-        "#b283cd",
-        "#9e86de",
-        "#8887ef",
-        "#6f87ff",
-    ],
-    jsonKeyColors: [
-        p.Red,
-        p.Orange,
-        p.Yellow,
-        p.Green,
-        p.Blue,
-        p.DarkBlue,
-        p.Purple,
-        p.Pink,
-        p.White,
-    ],
+    bracketColors: ["#fc6984", "#ea7398", "#d87aaa", "#c67fbc", "#b283cd", "#9e86de", "#8887ef", "#6f87ff"],
+    jsonKeyColors: [p.Red, p.Orange, p.Yellow, p.Green, p.Blue, p.DarkBlue, p.Purple, p.Pink, p.White],
 }
 
 
