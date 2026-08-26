@@ -35,6 +35,16 @@ const supernal: any = {
         nofolder: "#6a3394",
         foreground: "#c0c0c0",
     },
+    title: {
+        active: {
+            foreground: "#8b9798",
+            background: "#1b1d23",
+        },
+        inactive: {
+            foreground: "#545f62",
+            background: "#202229",
+        },
+    },
     menu: {
         background: p.DarkGray,
         hover: "#333942",
@@ -92,12 +102,12 @@ function uiTheming(s: any): types.WorkbenchColors {
         "menubar.selectionBackground": s.menu.hover,
         "list.hoverBackground": s.menu.hover,
 
-        // title (top bar)
-        "titleBar.activeBackground": darkerdarkerGray,
-        "titleBar.activeForeground": "#8b9798",
-        "titleBar.inactiveBackground": darkerdarkerGray,
-        "titleBar.inactiveForeground": "#545f62",
-        "titleBar.border": darkerdarkerGray,
+        // title (top bar) & window in the modern ui
+        "titleBar.activeBackground": s.title.active.background,
+        "titleBar.activeForeground": s.title.active.foreground,
+        "titleBar.inactiveBackground": s.title.inactive.background,
+        "titleBar.inactiveForeground": s.title.inactive.foreground,
+        "titleBar.border": s.title.active.background,
 
         // status bar (bottom bar)
         "statusBar.foreground": s.statusbar.foreground,
