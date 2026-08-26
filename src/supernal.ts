@@ -86,27 +86,41 @@ const darkerdarkerGray = "#1b1d23";
 
 function uiTheming(s: any): types.WorkbenchColors {
     return {
+        // menu
         "menu.background": s.menu.background,
         "menu.selectionBackground": s.menu.hover,
         "menubar.selectionBackground": s.menu.hover,
         "list.hoverBackground": s.menu.hover,
+
         // title (top bar)
         "titleBar.activeBackground": darkerdarkerGray,
         "titleBar.activeForeground": "#8b9798",
         "titleBar.inactiveBackground": darkerdarkerGray,
         "titleBar.inactiveForeground": "#545f62",
         "titleBar.border": darkerdarkerGray,
+
         // status bar (bottom bar)
         "statusBar.foreground": s.statusbar.foreground,
         "statusBar.background": s.statusbar.background,
         "statusBar.debuggingBackground": s.statusbar.debugging,
         "statusBar.noFolderBackground": s.statusbar.nofolder,
+
+        // bracket highlights
+        "editorBracketHighlight.foreground1": s.bracketColors[0],
+        "editorBracketHighlight.foreground2": s.bracketColors[1],
+        "editorBracketHighlight.foreground3": s.bracketColors[2],
+        "editorBracketHighlight.foreground4": s.bracketColors[3],
+        "editorBracketHighlight.foreground5": s.bracketColors[4],
+        "editorBracketHighlight.foreground6": s.bracketColors[5],
+        "editorBracketHighlight.unexpectedBracket.foreground": s.syntax.function,
+
         // tabs
         "tab.activeBackground": s.bg.darker,
         "tab.inactiveBackground": s.bg.darker,
         "tab.border": "#505050",
         "tab.hoverBorder": "#0854a7",
         "editorGroupHeader.tabsBackground": darkerdarkerGray,
+
         // side bar & activity bar
         "activityBarBadge.background": "#0854a7",
         "sideBar.background": "#25282e",
@@ -114,6 +128,7 @@ function uiTheming(s: any): types.WorkbenchColors {
         "sideBar.border": darkerdarkerGray,
         "activityBar.border": darkerdarkerGray,
         "activityBar.background": darkerdarkerGray,
+
         // editor
         "editor.background": s.editor.background,
         "editorPane.background": s.editor.panes,
@@ -131,14 +146,7 @@ function uiTheming(s: any): types.WorkbenchColors {
         "diffEditor.insertedLineBackground": "#18a47c2f",
         "diffEditor.insertedTextBackground": "#18a47c2f",
         "gitDecoration.modifiedResourceForeground": "#ffee68", //todo(leigh): modified status theming
-        // bracket highlights
-        "editorBracketHighlight.foreground1": s.bracketColors[0],
-        "editorBracketHighlight.foreground2": s.bracketColors[1],
-        "editorBracketHighlight.foreground3": s.bracketColors[2],
-        "editorBracketHighlight.foreground4": s.bracketColors[3],
-        "editorBracketHighlight.foreground5": s.bracketColors[4],
-        "editorBracketHighlight.foreground6": s.bracketColors[5],
-        "editorBracketHighlight.unexpectedBracket.foreground": s.syntax.function
+
     }
 }
 
