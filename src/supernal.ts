@@ -28,7 +28,13 @@ const p: types.Palette = {
 }
 
 
-const supernal: types.ColorScheme = {
+const supernal: any = {
+    statusbar: {
+        background: p.Black,
+        debugging: "#952642",
+        nofolder: "#6a3394",
+        foreground: "#c0c0c0",
+    },
     bg: {
         default: p.DarkGray,
         darker: p.Black,
@@ -70,7 +76,7 @@ const supernal: types.ColorScheme = {
 
 const darkerdarkerGray = "#1b1d23";
 
-function uiTheming(s: types.ColorScheme): types.WorkbenchColors {
+function uiTheming(s: any): types.WorkbenchColors {
     return {
         "menu.background": s.bg.default,
         "menu.selectionBackground": "#333942",
@@ -83,11 +89,10 @@ function uiTheming(s: types.ColorScheme): types.WorkbenchColors {
         "titleBar.inactiveForeground": "#545f62",
         "titleBar.border": darkerdarkerGray,
         // status bar (bottom bar)
-        "statusBar.foreground": s.syntax.default,
-        "statusBar.border": darkerdarkerGray,
-        "statusBar.background": s.bg.darker,
-        "statusBar.debuggingBackground": "#952642",
-        "statusBar.noFolderBackground": "#6a3394",
+        "statusBar.foreground": s.statusbar.foreground,
+        "statusBar.background": s.statusbar.background,
+        "statusBar.debuggingBackground": s.statusbar.debugging,
+        "statusBar.noFolderBackground": s.statusbar.nofolder,
         // tabs
         "tab.activeBackground": s.bg.darker,
         "tab.inactiveBackground": s.bg.darker,
