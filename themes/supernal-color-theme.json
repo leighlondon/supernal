@@ -11,7 +11,6 @@
     "titleBar.inactiveForeground": "#545f62",
     "titleBar.border": "#1b1d23",
     "statusBar.foreground": "#c0c0c0",
-    "statusBar.border": "#1b1d23",
     "statusBar.background": "#191e24",
     "statusBar.debuggingBackground": "#952642",
     "statusBar.noFolderBackground": "#6a3394",
