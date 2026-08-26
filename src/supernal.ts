@@ -51,6 +51,7 @@ const supernal: any = {
     },
     editor: {
         background: "#1c2026",
+        foreground: "#c0c0c0",
         panes: "#14171b",
         selectionBackground: "#282d39",
     },
@@ -141,10 +142,12 @@ function uiTheming(s: any): types.WorkbenchColors {
 
         // editor
         "editor.background": s.editor.background,
+        "editor.foreground": s.editor.foreground,
         "editorPane.background": s.editor.panes,
         "editorStickyScroll.shadow": s.editor.selectionBackground,
         "editor.selectionBackground": s.editor.selectionBackground,
         "editorStickyScrollHover.background": s.editor.selectionBackground,
+
         "peekViewEditor.background": "#282d35",
         "peekViewResult.background": "#23262c",
         "quickInput.background": s.bg.default,
@@ -152,8 +155,8 @@ function uiTheming(s: any): types.WorkbenchColors {
         "input.background": s.bg.default,
         "input.border": "#505050",
         "panel.background": s.bg.default,
-        "editor.foreground": s.syntax.default,
         "banner.background": "#215dce",
+
         // diff stuff
         "diffEditor.insertedLineBackground": "#18a47c2f",
         "diffEditor.insertedTextBackground": "#18a47c2f",
