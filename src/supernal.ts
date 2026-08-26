@@ -35,6 +35,15 @@ const supernal: any = {
         nofolder: "#6a3394",
         foreground: "#c0c0c0",
     },
+    menu: {
+        background: p.DarkGray,
+        hover: "#333942",
+    },
+    editor: {
+        background: "#1c2026",
+        panes: "#14171b",
+        selectionBackground: "#282d39",
+    },
     bg: {
         default: p.DarkGray,
         darker: p.Black,
@@ -73,15 +82,14 @@ const supernal: any = {
     jsonKeyColors: [p.Red, p.Orange, p.Yellow, p.Green, p.Blue, p.DarkBlue, p.Purple, p.Pink, p.White],
 }
 
-
 const darkerdarkerGray = "#1b1d23";
 
 function uiTheming(s: any): types.WorkbenchColors {
     return {
-        "menu.background": s.bg.default,
-        "menu.selectionBackground": "#333942",
-        "menubar.selectionBackground": "#333942",
-        "list.hoverBackground": "#333942",
+        "menu.background": s.menu.background,
+        "menu.selectionBackground": s.menu.hover,
+        "menubar.selectionBackground": s.menu.hover,
+        "list.hoverBackground": s.menu.hover,
         // title (top bar)
         "titleBar.activeBackground": darkerdarkerGray,
         "titleBar.activeForeground": "#8b9798",
@@ -107,9 +115,9 @@ function uiTheming(s: any): types.WorkbenchColors {
         "activityBar.border": darkerdarkerGray,
         "activityBar.background": darkerdarkerGray,
         // editor
-        "editor.background": "#1c2026",
-        "editorPane.background": "#333942",
-        "editor.selectionBackground": "#354350",
+        "editor.background": s.editor.background,
+        "editorPane.background": s.editor.panes,
+        "editor.selectionBackground": s.editor.selectionBackground,
         "peekViewEditor.background": "#282d35",
         "peekViewResult.background": "#23262c",
         "quickInput.background": s.bg.default,
