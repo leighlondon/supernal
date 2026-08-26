@@ -132,7 +132,9 @@ function uiTheming(s: any): types.WorkbenchColors {
         // editor
         "editor.background": s.editor.background,
         "editorPane.background": s.editor.panes,
+        "editorStickyScroll.shadow": s.editor.selectionBackground,
         "editor.selectionBackground": s.editor.selectionBackground,
+        "editorStickyScrollHover.background": s.editor.selectionBackground,
         "peekViewEditor.background": "#282d35",
         "peekViewResult.background": "#23262c",
         "quickInput.background": s.bg.default,
