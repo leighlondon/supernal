@@ -158,11 +158,9 @@ function uiTheming(s: any): types.WorkbenchColors {
         // hover
         "editorHoverWidget.background": s.sidebar.background,
         "editorHoverWidget.foreground": s.sidebar.foreground,
-        "editorHoverWidget.border": s.sidebar.border,
 
         // widgets, like the editor's find+replace widget.
         "editorWidget.background": s.sidebar.background,
-        "editorWidget.border": s.sidebar.border,
         "editorWidget.resizeBorder": s.hero.highlight,
         "dropdown.background": s.editor.background,
         "dropdown.border": s.menu.hover,
@@ -171,10 +169,8 @@ function uiTheming(s: any): types.WorkbenchColors {
         // side bar & activity bar
         "activityBarBadge.background": s.hero.highlight,
         "sideBar.background": s.sidebar.background,
-        "sideBarSectionHeader.background": s.bg.darker,
-        "sideBar.border": darkerdarkerGray,
-        "activityBar.border": darkerdarkerGray,
-        "activityBar.background": darkerdarkerGray,
+        "sideBarSectionHeader.background": s.sidebar.background,
+        "activityBar.background": s.editor.background,
 
         // editor
         "editor.background": s.editor.background,
