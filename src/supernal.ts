@@ -48,6 +48,16 @@ const supernal: any = {
             background: "#202229",
         },
     },
+    tab: {
+        active: {
+            foreground: "#8b9798",
+            background: "#1b1d23",
+        },
+        inactive: {
+            foreground: "#545f62",
+            background: "#202229",
+        },
+    },
     menu: {
         background: p.DarkGray,
         hover: "#333942",
@@ -138,10 +148,11 @@ function uiTheming(s: any): types.WorkbenchColors {
         "editorBracketHighlight.unexpectedBracket.foreground": s.syntax.function,
 
         // tabs
-        "tab.activeBackground": s.bg.darker,
-        "tab.inactiveBackground": s.bg.darker,
+        "tab.activeBackground": s.tab.active.background,
+        "tab.inactiveBackground": s.tab.inactive.background,
         "tab.border": "#505050",
-        "tab.hoverBorder": "#0854a7",
+        "tab.activeBorderTop": s.hero.highlight,
+        "tab.hoverBorder": s.hero.highlight,
         "editorGroupHeader.tabsBackground": darkerdarkerGray,
 
         // hover
@@ -173,6 +184,9 @@ function uiTheming(s: any): types.WorkbenchColors {
         "editor.selectionBackground": s.editor.selectionBackground,
         "editorStickyScrollHover.background": s.editor.selectionBackground,
 
+
+        "textPreformat.foreground": s.editor.foreground,
+
         "peekViewEditor.background": "#282d35",
         "peekViewResult.background": "#23262c",
         "quickInput.background": s.bg.default,
@@ -186,7 +200,6 @@ function uiTheming(s: any): types.WorkbenchColors {
         "diffEditor.insertedLineBackground": "#18a47c2f",
         "diffEditor.insertedTextBackground": "#18a47c2f",
         "gitDecoration.modifiedResourceForeground": "#ffee68", //todo(leigh): modified status theming
-
     }
 }
 
