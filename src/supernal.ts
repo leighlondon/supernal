@@ -150,6 +150,8 @@ function uiTheming(s: any): types.WorkbenchColors {
         "editorWidget.background": s.sidebar.background,
         "editorWidget.border": s.sidebar.border,
         "editorWidget.resizeBorder": s.hero.highlight,
+        "dropdown.background": s.editor.background,
+        "dropdown.border": s.menu.hover,
 
         // side bar & activity bar
         "activityBarBadge.background": s.hero.highlight,
