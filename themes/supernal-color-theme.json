@@ -10,6 +10,7 @@
     "titleBar.inactiveBackground": "#202229",
     "titleBar.inactiveForeground": "#545f62",
     "titleBar.border": "#1b1d23",
+    "commandCenter.background": "#25282e",
     "statusBar.foreground": "#c0c0c0",
     "statusBar.background": "#191e24",
     "statusBar.debuggingBackground": "#952642",
