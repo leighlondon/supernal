@@ -119,6 +119,9 @@ function uiTheming(s: any): types.WorkbenchColors {
         "titleBar.inactiveForeground": s.title.inactive.foreground,
         "titleBar.border": s.title.active.background,
 
+        // command center, the top middle.
+        "commandCenter.background": s.sidebar.background,
+
         // status bar (bottom bar)
         "statusBar.foreground": s.statusbar.foreground,
         "statusBar.background": s.statusbar.background,
