@@ -3,6 +3,8 @@
 
 this is all data for testing.
 
+an inline coderef `s3://bucket/key`
+
 ## h2
 
 this is all data for testing.
