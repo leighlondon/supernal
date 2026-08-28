@@ -29,6 +29,9 @@ const p: types.Palette = {
 
 
 const supernal: any = {
+    hero: {
+        highlight: "#6a3394",
+    },
     statusbar: {
         background: p.Black,
         debugging: "#952642",
@@ -141,9 +144,15 @@ function uiTheming(s: any): types.WorkbenchColors {
         // hover
         "editorHoverWidget.background": s.sidebar.background,
         "editorHoverWidget.foreground": s.sidebar.foreground,
+        "editorHoverWidget.border": s.sidebar.border,
+
+        // widgets, like the editor's find+replace widget.
+        "editorWidget.background": s.sidebar.background,
+        "editorWidget.border": s.sidebar.border,
+        "editorWidget.resizeBorder": s.hero.highlight,
 
         // side bar & activity bar
-        "activityBarBadge.background": "#0854a7",
+        "activityBarBadge.background": s.hero.highlight,
         "sideBar.background": s.sidebar.background,
         "sideBarSectionHeader.background": s.bg.darker,
         "sideBar.border": darkerdarkerGray,
