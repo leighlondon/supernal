@@ -148,12 +148,12 @@ function uiTheming(s: any): types.WorkbenchColors {
         "editorBracketHighlight.unexpectedBracket.foreground": s.syntax.function,
 
         // tabs
-        "tab.activeBackground": s.tab.active.background,
-        "tab.inactiveBackground": s.tab.inactive.background,
-        "tab.border": "#505050",
+        "tab.activeBackground": s.editor.background,
+        "tab.inactiveBackground": s.editor.background,
+        "tab.border": s.editor.panes,
         "tab.activeBorderTop": s.hero.highlight,
         "tab.hoverBorder": s.hero.highlight,
-        "editorGroupHeader.tabsBackground": darkerdarkerGray,
+        "editorGroupHeader.tabsBackground": s.editor.background,
 
         // hover
         "editorHoverWidget.background": s.sidebar.background,
