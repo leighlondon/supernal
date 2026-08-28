@@ -30,6 +30,8 @@
     "editorHoverWidget.foreground": "#c0c0c0",
     "editorWidget.background": "#25282e",
     "editorWidget.resizeBorder": "#6a3394",
+    "dropdown.background": "#1c2026",
+    "dropdown.border": "#333942",
     "activityBarBadge.background": "#6a3394",
     "sideBar.background": "#25282e",
     "sideBarSectionHeader.background": "#191e24",
