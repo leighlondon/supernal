@@ -55,6 +55,12 @@ const supernal: any = {
         panes: "#14171b",
         selectionBackground: "#282d39",
     },
+    sidebar: {
+        background: "#25282e",
+        foreground: "#c0c0c0",
+        panes: "#14171b",
+        selectionBackground: "#282d39",
+    },
     bg: {
         default: p.DarkGray,
         darker: p.Black,
@@ -132,9 +138,13 @@ function uiTheming(s: any): types.WorkbenchColors {
         "tab.hoverBorder": "#0854a7",
         "editorGroupHeader.tabsBackground": darkerdarkerGray,
 
+        // hover
+        "editorHoverWidget.background": s.sidebar.background,
+        "editorHoverWidget.foreground": s.sidebar.foreground,
+
         // side bar & activity bar
         "activityBarBadge.background": "#0854a7",
-        "sideBar.background": "#25282e",
+        "sideBar.background": s.sidebar.background,
         "sideBarSectionHeader.background": s.bg.darker,
         "sideBar.border": darkerdarkerGray,
         "activityBar.border": darkerdarkerGray,

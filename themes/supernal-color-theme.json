@@ -26,6 +26,8 @@
     "tab.border": "#505050",
     "tab.hoverBorder": "#0854a7",
     "editorGroupHeader.tabsBackground": "#1b1d23",
+    "editorHoverWidget.background": "#25282e",
+    "editorHoverWidget.foreground": "#c0c0c0",
     "activityBarBadge.background": "#0854a7",
     "sideBar.background": "#25282e",
     "sideBarSectionHeader.background": "#191e24",
