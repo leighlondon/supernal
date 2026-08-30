@@ -30,8 +30,8 @@ const p: types.Palette = {
 
 const supernal: any = {
     hero: {
-        highlight: "#6a3394",
-        dimmer: "#542975",
+        highlight: "#7337a1",
+        dimmer: "#391c50",
     },
     statusbar: {
         background: p.Black,
@@ -156,6 +156,15 @@ function uiTheming(s: any): types.WorkbenchColors {
         "tab.hoverBorder": s.hero.highlight,
         "editorGroupHeader.tabsBackground": s.editor.background,
 
+        // modern tabs include buttons
+        // "modernTab.activeBackground": s.editor.background,
+        // "modernTab.activeForeground": s.editor.foreground,
+        // "modernTab.hoverBackground": s.menu.hover,
+        // "modernEditorTab.activeBackground": s.tab.active.background,
+        "modernEditorTab.activeHoverActionBackground": s.hero.highlight,
+        "modernEditorTab.hoverActionBackground": s.hero.dimmer,
+        // "modernEditorTab.inactiveBackground": s.tab.inactive.background,
+
         // hover
         "editorHoverWidget.background": s.sidebar.background,
         "editorHoverWidget.foreground": s.sidebar.foreground,
@@ -167,7 +176,7 @@ function uiTheming(s: any): types.WorkbenchColors {
         "dropdown.border": s.menu.hover,
         "button.background": s.hero.highlight,
         "focusBorder": s.hero.highlight,
-        "input.border": s.hero.highlight,
+        "input.border": s.hero.dimmer,
 
         // side bar & activity bar
         "activityBarBadge.background": s.hero.highlight,
@@ -188,7 +197,6 @@ function uiTheming(s: any): types.WorkbenchColors {
         "quickInput.background": s.bg.default,
         "list.activeSelectionBackground": "#333942",
         "input.background": s.bg.default,
-        "input.border": "#505050",
         "panel.background": s.bg.default,
         "banner.background": "#215dce",
 
