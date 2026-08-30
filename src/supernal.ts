@@ -31,6 +31,7 @@ const p: types.Palette = {
 const supernal: any = {
     hero: {
         highlight: "#6a3394",
+        dimmer: "#542975",
     },
     statusbar: {
         background: p.Black,
@@ -51,11 +52,11 @@ const supernal: any = {
     tab: {
         active: {
             foreground: "#8b9798",
-            background: "#1b1d23",
+            background: "#323743",
         },
         inactive: {
             foreground: "#545f62",
-            background: "#202229",
+            background: "#24262f",
         },
     },
     menu: {
@@ -165,6 +166,8 @@ function uiTheming(s: any): types.WorkbenchColors {
         "dropdown.background": s.editor.background,
         "dropdown.border": s.menu.hover,
         "button.background": s.hero.highlight,
+        "focusBorder": s.hero.highlight,
+        "input.border": s.hero.highlight,
 
         // side bar & activity bar
         "activityBarBadge.background": s.hero.highlight,
@@ -180,9 +183,6 @@ function uiTheming(s: any): types.WorkbenchColors {
         "editor.selectionBackground": s.editor.selectionBackground,
         "editorStickyScrollHover.background": s.editor.selectionBackground,
 
-
-        "textPreformat.foreground": s.editor.foreground,
-
         "peekViewEditor.background": "#282d35",
         "peekViewResult.background": "#23262c",
         "quickInput.background": s.bg.default,
@@ -191,6 +191,9 @@ function uiTheming(s: any): types.WorkbenchColors {
         "input.border": "#505050",
         "panel.background": s.bg.default,
         "banner.background": "#215dce",
+
+        // markdown preview's inline `<pre>` or backtick-wrapped stuff uses this.
+        "textPreformat.foreground": s.editor.foreground,
 
         // diff stuff
         "diffEditor.insertedLineBackground": "#18a47c2f",
