@@ -1,7 +1,8 @@
-
 # testdata
 
 this is all data for testing.
+
+> Status: A useful test, to be sure.
 
 an inline coderef `s3://bucket/key`
 

@@ -30,7 +30,8 @@ const p: types.Palette = {
 
 const supernal: any = {
     hero: {
-        highlight: "#6a3394",
+        highlight: "#6037a1",
+        dimmer: "#391c50",
     },
     statusbar: {
         background: p.Black,
@@ -51,11 +52,11 @@ const supernal: any = {
     tab: {
         active: {
             foreground: "#8b9798",
-            background: "#1b1d23",
+            background: "#323743",
         },
         inactive: {
             foreground: "#545f62",
-            background: "#202229",
+            background: "#24262f",
         },
     },
     menu: {
@@ -112,8 +113,6 @@ const supernal: any = {
     jsonKeyColors: [p.Red, p.Orange, p.Yellow, p.Green, p.Blue, p.DarkBlue, p.Purple, p.Pink, p.White],
 }
 
-const darkerdarkerGray = "#1b1d23";
-
 function uiTheming(s: any): types.WorkbenchColors {
     return {
         // menu
@@ -155,6 +154,15 @@ function uiTheming(s: any): types.WorkbenchColors {
         "tab.hoverBorder": s.hero.highlight,
         "editorGroupHeader.tabsBackground": s.editor.background,
 
+        // modern tabs include buttons
+        // "modernTab.activeBackground": s.editor.background,
+        // "modernTab.activeForeground": s.editor.foreground,
+        // "modernTab.hoverBackground": s.menu.hover,
+        // "modernEditorTab.activeBackground": s.tab.active.background,
+        "modernEditorTab.activeHoverActionBackground": s.hero.highlight,
+        "modernEditorTab.hoverActionBackground": s.hero.dimmer,
+        // "modernEditorTab.inactiveBackground": s.tab.inactive.background,
+
         // hover
         "editorHoverWidget.background": s.sidebar.background,
         "editorHoverWidget.foreground": s.sidebar.foreground,
@@ -165,6 +173,8 @@ function uiTheming(s: any): types.WorkbenchColors {
         "dropdown.background": s.editor.background,
         "dropdown.border": s.menu.hover,
         "button.background": s.hero.highlight,
+        "focusBorder": s.hero.highlight,
+        "input.border": s.hero.dimmer,
 
         // side bar & activity bar
         "activityBarBadge.background": s.hero.highlight,
@@ -180,17 +190,18 @@ function uiTheming(s: any): types.WorkbenchColors {
         "editor.selectionBackground": s.editor.selectionBackground,
         "editorStickyScrollHover.background": s.editor.selectionBackground,
 
-
-        "textPreformat.foreground": s.editor.foreground,
-
         "peekViewEditor.background": "#282d35",
         "peekViewResult.background": "#23262c",
         "quickInput.background": s.bg.default,
         "list.activeSelectionBackground": "#333942",
         "input.background": s.bg.default,
-        "input.border": "#505050",
         "panel.background": s.bg.default,
         "banner.background": "#215dce",
+
+        // markdown preview's inline `<pre>` or backtick-wrapped stuff uses this.
+        "textPreformat.foreground": s.editor.foreground,
+        "textBlockQuote.background": s.sidebar.background,
+        "textBlockQuote.border": s.hero.highlight,
 
         // diff stuff
         "diffEditor.insertedLineBackground": "#18a47c2f",
