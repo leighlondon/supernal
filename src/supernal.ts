@@ -30,7 +30,7 @@ const p: types.Palette = {
 
 const supernal: any = {
     hero: {
-        highlight: "#7337a1",
+        highlight: "#6037a1",
         dimmer: "#391c50",
     },
     statusbar: {
