@@ -113,8 +113,6 @@ const supernal: any = {
     jsonKeyColors: [p.Red, p.Orange, p.Yellow, p.Green, p.Blue, p.DarkBlue, p.Purple, p.Pink, p.White],
 }
 
-const darkerdarkerGray = "#1b1d23";
-
 function uiTheming(s: any): types.WorkbenchColors {
     return {
         // menu
