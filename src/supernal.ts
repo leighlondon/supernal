@@ -202,6 +202,8 @@ function uiTheming(s: any): types.WorkbenchColors {
 
         // markdown preview's inline `<pre>` or backtick-wrapped stuff uses this.
         "textPreformat.foreground": s.editor.foreground,
+        "textBlockQuote.background": s.sidebar.background,
+        "textBlockQuote.border": s.hero.highlight,
 
         // diff stuff
         "diffEditor.insertedLineBackground": "#18a47c2f",

@@ -57,6 +57,8 @@
     "panel.background": "#21252b",
     "banner.background": "#215dce",
     "textPreformat.foreground": "#c0c0c0",
+    "textBlockQuote.background": "#25282e",
+    "textBlockQuote.border": "#6037a1",
     "diffEditor.insertedLineBackground": "#18a47c2f",
     "diffEditor.insertedTextBackground": "#18a47c2f",
     "gitDecoration.modifiedResourceForeground": "#ffee68"
