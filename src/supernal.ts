@@ -67,7 +67,7 @@ const supernal: any = {
         background: "#1c2026",
         foreground: "#c0c0c0",
         panes: "#14171b",
-        selectionBackground: "#282d39",
+        selectionBackground: "#383f50",
     },
     sidebar: {
         background: "#25282e",
