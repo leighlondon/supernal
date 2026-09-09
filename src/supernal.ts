@@ -66,6 +66,7 @@ const supernal: any = {
     editor: {
         background: "#1c2026",
         foreground: "#c0c0c0",
+        highlight: "#21262d",
         panes: "#14171b",
         selectionBackground: "#383f50",
     },
@@ -186,9 +187,17 @@ function uiTheming(s: any): types.WorkbenchColors {
         "editor.background": s.editor.background,
         "editor.foreground": s.editor.foreground,
         "editorPane.background": s.editor.panes,
+        "editor.lineHighlightBackground": s.editor.highlight,
         "editorStickyScroll.shadow": s.editor.selectionBackground,
         "editor.selectionBackground": s.editor.selectionBackground,
         "editorStickyScrollHover.background": s.editor.selectionBackground,
+
+        // searching, mapping
+        "editor.findMatchHighlightBackground": "#ff005d8a",
+        "minimap.findMatchHighlight": "#ff005d8a",
+        "editor.findMatchBorder": "#9e86de",
+        "editor.findMatchBackground": "#483381",
+        "minimap.selectionHighlight": "#7b3fb456",
 
         "peekViewEditor.background": "#282d35",
         "peekViewResult.background": "#23262c",
